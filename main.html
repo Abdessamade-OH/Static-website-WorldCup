@@ -6,17 +6,20 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="./styles.css" />
         <script src="./script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Ajouter ce stylesheet pour l'icon de sous bar-->
     </head>
     <body>
         <header>
 			<div class="logo"></div>
 			<div class="Pages"></div>
 			<nav>
-				<ul>
-					<li>
-						<a></a>
-					</li>
+				<ul>	<!-- ajouter une liste pour les elements de navigation. -->
+					<li><a>Acceuil</a></li>
+					<li><a class="menu">Groupes <i class="fa fa-caret-down"></i></a></li>
+					<li><a>Matchs</a></li>
+					<li><a>Classment</a></li>
 				</ul>
+				<nav class="sous-menu"></nav>
 			</nav>
         </header>
         <main>
@@ -24,6 +27,5 @@
         	<div class="volet3"></div>
         	<div class="volet4"></div>
         </main>
-
     </body>
 </html>
