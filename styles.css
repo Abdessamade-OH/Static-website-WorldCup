@@ -8,3 +8,11 @@ html {
 h1 {
     text-align: center;
 }
+header {
+    position: fixed;
+    height:230px;
+    width:100%;
+    margin-left: -8px;
+    margin-top: -8px;
+    background-color: rgb(226, 43, 73);
+}
