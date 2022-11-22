@@ -8,19 +8,11 @@ html {
 h1 {
     text-align: center;
 }
-.logo{
-    position: relative;
-    top: 30%;
-    left: 07%;
-    width: 172px;
-    height: 78.18px;
-
-}
 header {
     position: fixed;
     height:230px;
     width:100%;
     margin-left: -8px;
     margin-top: -8px;
-    background-color: rgb(150, 16, 58);
+    background-color: rgb(226, 43, 73);
 }
