@@ -15,37 +15,28 @@ body{
 	margin: 0;
 	padding: 0;
 }
-h1 {
-    text-align: center;
-}
-
-ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
 
 header {
     position: fixed;
     height:230px;
     width:100%;
-    margin-left: -8px;
+    /*margin-left: -8px;*/
     margin-top: -8px;
     background-color: var(--color-red);
     z-index: 1;
     border-bottom: 1.5px var(--color-purple) solid ;
 }
+	/*abdou*/
 	/* z-index pour rester devant*/
 nav{
 	width: 75%;
 	height: 30%;
 	position: absolute;
-	top: 68%;			/*Je sais pas pourquoi en fesant 70% produit un bug*/
+	top: 70.5%;
 	left: 25%;
 }
 	/*Modification de la liste*/
-nav ul{
+nav ul, .sous-menu ul{
 	list-style-type: none;
 	padding:0;
 	margin: 0;
@@ -53,40 +44,82 @@ nav ul{
 	align-items: center;
 	flex-wrap: nowrap;
 	height: 100%;
+	width: 100%;
 }
 @media only screen and (max-width: 1000px){
-	nav ul{
-		overflow-x:scroll;
-		overflow-y: hidden;
-	}
+
 	nav{
 		top: 160px; /*on utilise içi les px pour eviter le bug qui se produise avec les pourcentages*/
 	}
+	.sous-menu{
+		margin-top: -2px;
+	}
 }
+
 	/*Modification des elements de la liste*/
-nav ul li{
-	display: inline;
-	padding: 1.5rem 3rem;
+nav ul>li{
+	display: flex;
+	height: 100%;
+	width: 25%;
 	border: 1px solid var(--color-black);
+	border-top: none;
 	border-bottom: none;
+	align-items: center;
+	justify-content: center;
+}
+nav ul>li:first-of-type{
+	border-left:none;
+}
+nav ul>li:last-of-type{
+	border-right:none;
 }
 	/*Modification de chaque lien de navigation*/
 	/*les classes sont de cette maniere pour eviter les problemes avec d'autre elements a,li,ul*/
 nav a{
 	text-decoration: none;
-	font-size: 1.5rem;
 	display: block;
 	text-align: center;
+	font-size: 3vw;
 }
 nav li:hover{
 	background-color: var(--color-white);
 }
-.menu:hover{
+.groupes:hover{
 	color: var(--color-red);
+}
+
+/*activation de sous menu*/
+.menu:hover .sous-menu {
+	display: block;
 }
 .sous-menu{
 	display: none;
+	position: fixed;
+	width: 75%;
+	height: 15%;
+	background-color: var(--color-purple);
+	z-index: 1;
+	top: 222px;
 }
+
+.sous-menu>ul>li{
+	display: flex;
+	width: 12.5%;
+	height: 100%;
+	border: 1px solid var(--color-black);
+	border-top: none;
+	align-items: center;
+	justify-content: center;
+}
+.sous-menu a {
+	float: left;
+	display: block;
+	text-decoration: none;
+	font-size: 2vw;
+	text-align: center;
+}
+
+
 
 /*youssef*/
 .logo{
