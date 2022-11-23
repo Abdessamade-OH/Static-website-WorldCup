@@ -15,7 +15,7 @@ body{
 	margin: 0;
 	padding: 0;
 }
-h1 {
+/*h1 {
     text-align: center;
 }
 
@@ -24,18 +24,19 @@ ul{
 	margin: 0;
 	padding: 0;
 	width: 100%;
-}
+}*/
 
 header {
     position: fixed;
     height:230px;
     width:100%;
-    margin-left: -8px;
+    /*margin-left: -8px;*/
     margin-top: -8px;
     background-color: var(--color-red);
     z-index: 1;
     border-bottom: 1.5px var(--color-purple) solid ;
 }
+	/*abdou*/
 	/* z-index pour rester devant*/
 nav{
 	width: 75%;
@@ -45,7 +46,7 @@ nav{
 	left: 25%;
 }
 	/*Modification de la liste*/
-nav ul{
+nav ul, .sous-menu ul{
 	list-style-type: none;
 	padding:0;
 	margin: 0;
@@ -53,18 +54,19 @@ nav ul{
 	align-items: center;
 	flex-wrap: nowrap;
 	height: 100%;
+	width: 100%;
 }
 @media only screen and (max-width: 1000px){
-	nav ul{
-		overflow-x:scroll;
-		overflow-y: hidden;
-	}
+
 	nav{
 		top: 160px; /*on utilise içi les px pour eviter le bug qui se produise avec les pourcentages*/
 	}
+	/*.sous-menu{
+		height: 100px;		 L'idee etait d'agrendir le height de sous menu 
+	}*/
 }
 	/*Modification des elements de la liste*/
-nav ul li{
+nav ul>li{
 	display: inline;
 	padding: 1.5rem 3rem;
 	border: 1px solid var(--color-black);
@@ -81,12 +83,43 @@ nav a{
 nav li:hover{
 	background-color: var(--color-white);
 }
-.menu:hover{
+.groupes:hover{
 	color: var(--color-red);
+}
+
+/*activation de sous menu*/
+.menu:hover .sous-menu {
+	display: block;
 }
 .sous-menu{
 	display: none;
+	position: fixed;
+	width: 75%;
+	height: 10%;
+	background-color: var(--color-purple);
+	z-index: 1;
+	top: 222px;
+
 }
+
+.sous-menu>ul>li{
+	display: flex;
+	width: 12.5%;
+	height: 100%;
+	border: 1px solid var(--color-black);
+	align-items: center;
+	justify-content: center;
+}
+.sous-menu a {
+	float: left;
+	display: block;
+	text-decoration: none;
+	font-size: 1rem;
+	text-align: center;
+	width: 200px;
+}
+
+
 
 /*youssef*/
 .logo{
