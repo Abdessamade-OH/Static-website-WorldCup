@@ -6,20 +6,30 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="./styles.css" />
         <script src="./script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Ajouter ce stylesheet pour l'icon de sous bar-->
     </head>
     <body>
         <header>
 			<div class="logo">
-                <a href="https://www.theguardian.com/international"><img class ="logo_img" src="./data/logo.png" alt="WC QATAR 2022"></a>
-            </div>
-			
+				<a href="https://www.theguardian.com/international"><img class ="logo_img" src="./data/logo.png" alt="WC QATAR 2022"></a>
+			</div>
+			<div class="Pages"></div>
+			<nav>
+				<ul>	<!-- ajouter une liste pour les elements de navigation. -->
+					<li><a>Acceuil</a></li>
+					<li><a class="menu">Groupes <i class="fa fa-caret-down"></i></a></li>
+					<li><a>Matchs</a></li>
+					<li><a>Classment</a></li>
+				</ul>
+				<nav class="sous-menu"></nav>
+			</nav>
         </header>
-        
+        <main>
         	<div class="volet2"></div>
         	<div class="volet3"></div>
         	<div class="volet4"></div>
-            
-            <aside class="volet5">
+        	
+        	<aside class="volet5">
                 <ul type="none">
                     <li><a href="">
                             <figure><img id="KSAimg" src="./data/référence/KSA.jpeg" alt="">
@@ -55,8 +65,6 @@
         </li>
                 </ul>
             </aside>
-            
-        
-
+        </main>
     </body>
 </html>

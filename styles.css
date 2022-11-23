@@ -1,26 +1,90 @@
+:root{
+	--color-red: rgb(226, 43, 73);
+	--color-white: white;
+	--color-black: rgb(74, 12, 168);
+} /*root pour avoir les variable accessible aux tous les classes.*/
 html {
     box-sizing: border-box;
-    
-}
-body{
-    margin: 0px;
-    margin-top: -16px;
 }
 
 * {
     box-sizing: inherit;
 }
+body{
+	margin: 0;
+	padding: 0;
+}
 h1 {
     text-align: center;
 }
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
 header {
     position: fixed;
     height:230px;
     width:100%;
-    
-    background-color: rgb(226, 43, 73);
-    border-bottom: 1.5px rgb(74, 12, 168) solid ;
+    margin-left: -8px;
+    margin-top: -8px;
+    background-color: var(--color-red);
+    z-index: 1;
+    border-bottom: 1.5px var(--color-black) solid ;
 }
+	/* z-index pour rester devant*/
+nav{
+	width: 75%;
+	height: 30%;
+	position: absolute;
+	top: 70%;			/*Je sais pas pourquoi en fesant 70% produit un bug*/
+	left: 25%;
+}
+	/*Modification de la liste*/
+nav ul{
+	list-style-type: none;
+	border: 1px solid black;
+	padding:0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	height: 100%;
+	border: 1px solid black;
+}
+@media only screen and (max-width: 1000px){
+	nav ul{
+		overflow-x:scroll;
+		overflow-y: hidden;
+	}
+	nav{
+		top: 160px; /*on utilise içi les px pour eviter le bug qui se produise avec les pourcentages*/
+	}
+}
+	/*Modification des elements de la liste*/
+nav ul li{
+	display: inline;
+	padding: 1.5rem 3rem;
+}
+	/*Modification de chaque lien de navigation*/
+	/*les classes sont de cette maniere pour eviter les problemes avec d'autre elements a,li,ul*/
+nav a{
+	text-decoration: none;
+	font-size: 1.5rem;
+	display: block;
+	text-align: center;
+}
+nav li:hover{
+	background-color: var(--color-white);
+}
+.menu:hover{
+	color: var(--color-red);
+}
+
+/*youssef*/
 .logo{
     position: relative;
     left: 8%;
@@ -50,3 +114,4 @@ figure{
     width: 280px;
     left: -20px;
 }
+
