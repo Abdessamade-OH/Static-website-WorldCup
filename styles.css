@@ -2,6 +2,7 @@
 	--color-red: rgb(226, 43, 73);
 	--color-white: white;
 	--color-purple: rgb(74, 12, 168);
+	--color-black: black;
 } /*root pour avoir les variable accessible aux tous les classes.*/
 html {
     box-sizing: border-box;
@@ -52,7 +53,6 @@ nav ul{
 	align-items: center;
 	flex-wrap: nowrap;
 	height: 100%;
-	/*border: 1px solid black;*/
 }
 @media only screen and (max-width: 1000px){
 	nav ul{
@@ -67,7 +67,7 @@ nav ul{
 nav ul li{
 	display: inline;
 	padding: 1.5rem 3rem;
-	border: 1px solid black;
+	border: 1px solid var(--color-black);
 	border-bottom: none;
 }
 	/*Modification de chaque lien de navigation*/
@@ -84,11 +84,8 @@ nav li:hover{
 .menu:hover{
 	color: var(--color-red);
 }
-/*modification de la sous menu*/
 .sous-menu{
 	display: none;
-	width: 0px;
-	height: 0px;
 }
 
 /*youssef*/
