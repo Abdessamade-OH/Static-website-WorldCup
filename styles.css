@@ -21,7 +21,7 @@ header {
     height:230px;
     width:100%;
     /*margin-left: -8px;*/
-    margin-top: -8px;
+    top:0px;
     background-color: var(--color-red);
     z-index: 1;
     border-bottom: 1.5px var(--color-purple) solid ;
@@ -145,6 +145,7 @@ nav li:hover{
 	
     
 }
+
 .volet5 ul {
 	position: relative;
 	top: 222px;
@@ -168,9 +169,38 @@ nav li:hover{
 .volet5 a{
 	text-decoration: none;
 }
+.teams_v2{
+	position: relative;
+	text-align: left;
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 80px ;
+	font-size: 30px;
+	width: 170px;
+	height: 55px;
+	color: azure;
+	border: 1px blue solid;
+	background-color: var(--color-red);
+ }
 
 #NEWSimg{
     height: 180px;
     width: 280px;
+	
+}
+/* volet 2 */
+.volet2{
+	position: relative;
+	top: 205px;
+	width: 230px;
+	
+	border-right: 1px blue solid;
+
 }
 
+.volet2 ul {
+	position: relative;
+	padding-top: 20px ;
+	margin-top: 25px;
+	left: -10px;
+	
+}
