@@ -163,7 +163,7 @@ nav li:hover{
 	position: fixed;
 	top: 20vh;
 	right: 0;
-	height: calc(80vh - 50px);
+	height: calc(72vh);
 	width: 25vw;
 	border: 2px solid black;
 	background: repeating-linear-gradient(
