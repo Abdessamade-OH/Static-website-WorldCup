@@ -26,6 +26,71 @@ header {
     z-index: 1;
     border-bottom: 1.5px var(--color-purple) solid ;
 }
+/* Nouha */
+
+.marquee{
+    margin-top: -133px;
+    padding-top: 24px;
+	margin-left: 192px;
+    box-sizing: border-box;
+    width:85vw;
+    height: 40vh;
+    /* background-color: #111; */
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+    display: inherit;
+}
+/* .marquee:before, .marquee:after{
+    position: absolute;
+    top: 0;
+    width: 1rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+} */
+/* .marquee:before{
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after{
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+} */
+
+.marquee-cntent{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling 10s linear infinite;
+}
+@keyframes scrolling{
+    0% {transform : translate(0);}
+    50%{transform: translate(calc(0.5*15vw*10));}
+
+}
+ .marquee-cntent:hover{
+
+    animation-play-state: paused;
+} 
+.marquee-cntent li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: self-start;
+    width: 8vw;
+    flex-shrink: 0;
+    font-size: 5rem;
+    white-space: nowrap;
+}
+
+.marquee-cntent li img{
+    width: 100%;
+    border: 2px solid #eee;
+}
+
+
 	/*abdou*/
 	/* z-index pour rester devant*/
 nav{
@@ -34,7 +99,7 @@ nav{
 	position: absolute;
 	top: 69%;
 	left: 25%;
-	//border: 2px solid black;
+	/* border: 2px solid black; */
 }
 	/*Modification de la liste*/
 nav ul, .sous-menu ul{
@@ -47,7 +112,7 @@ nav ul, .sous-menu ul{
 	flex-wrap: nowrap;
 	height: 100%;
 	width: 100%;
-	//border: 2px solid yellow;
+	/* //border: 2px solid yellow; */
 }
 @media only screen and (max-width: 1000px){
 	.sous-menu a{
