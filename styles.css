@@ -172,11 +172,11 @@ nav li:hover{
 .teams_v2{
 	position: relative;
 	text-align: left;
-	padding: 9px 10px 0px 10px;
+	padding: 9px 10px 8px 10px;
 	margin-bottom: 40px ;
-	font-size: 27px;
-	width: 170px;
-	height: 55px;
+	font-size: 26px;
+	width: 90%;
+	height: 100%;
 	color: azure;
 	border: 1px blue solid;
 	background-color: var(--color-red);
@@ -191,8 +191,7 @@ nav li:hover{
 .volet2{
 	position: relative;
 	top: 205px;
-	width: 230px;
-	
+	width: 18%;
 	border-right: 1px blue solid;
 
 }
