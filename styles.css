@@ -172,6 +172,9 @@ nav li:hover{
 					var(--color-lime) 10%
 				);
 }
+.volet5 a{
+	text-decoration: none;
+}
 .sidebar{
 	position: absolute;
 	width: 95%;
@@ -191,10 +194,7 @@ nav li:hover{
 	width: 100%;
 	object-fit: cover;
 }
-.sidebar figcaption{
-	color: var(--color-white);
-	text-decoration: none;
-}
+
 .actualite{
 	width: 95%;
 	margin-left: 2.5%;
@@ -202,6 +202,7 @@ nav li:hover{
 	margin-bottom: 1rem;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+	color: var(--color-white);
 }
 .actualite:last-of-type{
 	border: none;
@@ -222,8 +223,6 @@ nav li:hover{
 	text-align: center;
 	color: var(--color-white);
 }
-
-
 
 
 
