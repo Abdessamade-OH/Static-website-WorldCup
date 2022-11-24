@@ -29,45 +29,44 @@ header {
 /* Nouha */
 
 .marquee{
-    margin-top: -133px;
-    padding-top: 24px;
-	margin-left: 192px;
-    box-sizing: border-box;
-    width:85vw;
-    height: 40vh;
+    width:60vw;
+    height: 25vh;
+	margin-left: 421px;
     /* background-color: #111; */
     color: #eee;
     overflow: hidden;
     position: relative;
-    display: inherit;
+	margin-top: -140px;
+	padding-top: 18px;
 }
-/* .marquee:before, .marquee:after{
+.marquee:before, .marquee:after{
     position: absolute;
     top: 0;
     width: 1rem;
     height: 100%;
     content: "";
     z-index: 1;
-} */
-/* .marquee:before{
+}
+.marquee:before{
     left: 0;
-    background: linear-gradient(to right, #111 0%, transparent 100%);
+    /* background: linear-gradient(to right, #111 0%, transparent 100%); */
 }
 
 .marquee:after{
     right: 0;
-    background: linear-gradient(to left, #111 0%, transparent 100%);
-} */
+    /* background: linear-gradient(to left, #111 0%, transparent 100%); */
+}
 
 .marquee-cntent{
     list-style: none;
     height: 100%;
     display: flex;
+    justify-content: flex-start;
     animation: scrolling 10s linear infinite;
 }
 @keyframes scrolling{
     0% {transform : translate(0);}
-    50%{transform: translate(calc(0.5*15vw*10));}
+    100%{transform: translate(calc(-2*7vw*10));}
 
 }
  .marquee-cntent:hover{
@@ -78,8 +77,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-items: self-start;
-    width: 8vw;
+    width: 20vw;
     flex-shrink: 0;
     font-size: 5rem;
     white-space: nowrap;
