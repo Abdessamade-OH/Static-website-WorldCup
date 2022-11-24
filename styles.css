@@ -134,21 +134,43 @@ nav li:hover{
 }
 .volet5{
     padding-top: 10px;
-    position: relative;
-    top: 230px;
-    left: 75%;
+    position: fixed;
+    height: 835px;
+    left: 76%;
+	top:0px;
     border-left:  1.5px rgb(74, 12, 168) solid ;
     width: 25%;
+	overflow: scroll;
+	
+	
     
 }
-figure{
-    margin-left: -30px;
-    font-size: small;
+.volet5 ul {
+	position: relative;
+	top: 222px;
+	
+	
 }
-#KSAimg{
-    
+.volet5 li {
+	margin-top: 25px;
+	background-color: var(--color-red);
+	width: 280px;
+	
+}
+.volet5 li figcaption{
+	width: 280px;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	color: aliceblue;
+	
+}
+.volet5 a{
+	text-decoration: none;
+}
+
+#NEWSimg{
     height: 180px;
     width: 280px;
-    left: -20px;
 }
 
