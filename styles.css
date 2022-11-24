@@ -3,6 +3,8 @@
 	--color-white: white;
 	--color-purple: rgb(74, 12, 168);
 	--color-black: black;
+	--color-green: green;
+	--color-lime: lime;
 } /*root pour avoir les variable accessible aux tous les classes.*/
 html {
     box-sizing: border-box;
@@ -18,10 +20,8 @@ body{
 
 header {
     position: fixed;
-    height:230px;
+    height:20vh;
     width:100%;
-    /*margin-left: -8px;*/
-    margin-top: -8px;
     background-color: var(--color-red);
     z-index: 1;
     border-bottom: 1.5px var(--color-purple) solid ;
@@ -32,11 +32,13 @@ nav{
 	width: 75%;
 	height: 30%;
 	position: absolute;
-	top: 70.5%;
+	top: 69%;
 	left: 25%;
+	//border: 2px solid black;
 }
 	/*Modification de la liste*/
 nav ul, .sous-menu ul{
+	position: relative;
 	list-style-type: none;
 	padding:0;
 	margin: 0;
@@ -45,14 +47,37 @@ nav ul, .sous-menu ul{
 	flex-wrap: nowrap;
 	height: 100%;
 	width: 100%;
+	//border: 2px solid yellow;
 }
 @media only screen and (max-width: 1000px){
-
-	nav{
-		top: 160px; /*on utilise içi les px pour eviter le bug qui se produise avec les pourcentages*/
+	.sous-menu a{
+		font-size: 1.9vw;
 	}
-	.sous-menu{
+	nav a{
+		font-size: 2.7vw;
+	}
+	.sous-menu {
 		margin-top: -2px;
+	}
+	.actualite{
+		font-size: 2.2vw;
+	}
+	.volet5-header{
+		font-size: 0.7rem;
+	}
+}
+@media only screen and (min-width: 1000px){
+	.sous-menu a{
+		font-size: 1.3vw;
+	}
+	nav a{
+		font-size: 2.3vw;
+	}
+	.actualite{
+		font-size: 1.5vw;
+	}
+	.volet5-header{
+		font-size: 1rem;
 	}
 }
 
@@ -79,7 +104,6 @@ nav a{
 	text-decoration: none;
 	display: block;
 	text-align: center;
-	font-size: 3vw;
 }
 nav li:hover{
 	background-color: var(--color-white);
@@ -94,12 +118,12 @@ nav li:hover{
 }
 .sous-menu{
 	display: none;
-	position: fixed;
+	position: absolute;
 	width: 75%;
-	height: 15%;
+	height: 10vh;
 	background-color: var(--color-purple);
 	z-index: 1;
-	top: 222px;
+	top: calc(100% );
 }
 
 .sous-menu>ul>li{
@@ -115,7 +139,6 @@ nav li:hover{
 	float: left;
 	display: block;
 	text-decoration: none;
-	font-size: 2vw;
 	text-align: center;
 }
 
@@ -132,45 +155,78 @@ nav li:hover{
     height: 70px;
     width: 154px;
 }
+
+
+/*abdou*/
 .volet5{
-    padding-top: 10px;
-    position: fixed;
-    height: 835px;
-    left: 76%;
-	top:0px;
-    border-left:  1.5px rgb(74, 12, 168) solid ;
-    width: 25%;
-	overflow: scroll;
-	
-	
-    
+	position: fixed;
+	top: 20vh;
+	right: 0;
+	height: calc(80vh - 50px);
+	width: 25vw;
+	border: 2px solid black;
+	background: repeating-linear-gradient(
+					180deg,
+					var(--color-lime) 0%,
+					var(--color-green) 5%,
+					var(--color-lime) 10%
+				);
 }
-.volet5 ul {
-	position: relative;
-	top: 222px;
-	
-	
-}
-.volet5 li {
-	margin-top: 25px;
-	background-color: var(--color-red);
-	width: 280px;
-	
-}
-.volet5 li figcaption{
-	width: 280px;
-	font-size: 13px;
-	font-weight: bold;
-	text-align: left;
-	color: aliceblue;
+.sidebar{
+	position: absolute;
+	width: 95%;
+	height: 85%;
+	border: 1px solid yellow;
+	overflow-y: scroll;
+	top: 15%;	
+	left: 2.5%;
+	background: linear-gradient(
+					45deg,
+					var(--color-purple),
+					var(--color-black)
+				);
 	
 }
-.volet5 a{
+.sidebar img{
+	width: 100%;
+	object-fit: cover;
+}
+.sidebar figcaption{
+	color: var(--color-white);
 	text-decoration: none;
 }
-
-#NEWSimg{
-    height: 180px;
-    width: 280px;
+.actualite{
+	width: 95%;
+	margin-left: 2.5%;
+	border-bottom: 3px solid var(--color-red);
+	margin-bottom: 1rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
+.actualite:last-of-type{
+	border: none;
+}
+.volet5-header{
+	width: 80%;
+	height: 15%;
+	top:0;
+	border: 1px solid var(--color-red);
+	margin: 0 auto;
+	background: linear-gradient(
+					45deg,
+					var(--color-red),
+					var(--color-purple)
+				);
+}
+.volet5-header h1{
+	text-align: center;
+	color: var(--color-white);
+}
+
+
+
+
+
+
+
 
