@@ -6,8 +6,9 @@
 	--color-green: green;
 	--color-lime: lime;
 } /*root pour avoir les variable accessible aux tous les classes.*/
-html {
+html, body {
     box-sizing: border-box;
+    font-family: Arial, Sans-serif;
 }
 
 * {
@@ -16,6 +17,10 @@ html {
 body{
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 500px;
+	overflow-x: hidden;
 }
 
 header {
@@ -127,7 +132,14 @@ nav ul, .sous-menu ul{
 		font-size: 2.2vw;
 	}
 	.volet5-header{
-		font-size: 0.7rem;
+		font-size: 0.6rem;
+	}
+	.col h1 {
+		font-size: 1rem;
+		padding-top: 0.5rem;
+	}
+	.col:not(#liens) li{
+		font-size: 0.8rem;
 	}
 }
 @media only screen and (min-width: 1000px){
@@ -142,6 +154,12 @@ nav ul, .sous-menu ul{
 	}
 	.volet5-header{
 		font-size: 1rem;
+	}
+	.col h1 {
+		font-size: 1.75rem;
+	}
+	.col:not(#liens) li{
+		font-size: 1.3rem;
 	}
 }
 
@@ -299,6 +317,76 @@ nav li:hover{
 	color: var(--color-white);
 
 }
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 8vh;
+	min-height: 20px;
+	border-top: 1px solid var(--color-purple);
+	background-color: var(--color-red);
+	overflow: none;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-out;
+}
+footer:hover{
+	transition-duration: 0.35s;
+	transition-timing-function: ease-in;
+	height: calc(8vh + 10vh);
+	min-height: 50px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+	height: 100%;
+	justify-content: space-evenly;
+	gap: 2vw;
+}
+.col{
+	height: 100%;
+	text-align: center;
+}
+.col h1 {
+	margin: 0.2rem 0;
+	height: 8vh;
+	margin-bottom: -1vh;
+}
+.col ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.col a{
+	text-decoration: none;
+	color: inherit;
+	font-weight: bold;
+}
+#liens li{
+	font-size: calc(1.5vh + 1.5vw);
+	display: inline;
+	margin-right: 3vw;
+}
+#liens li:last-of-type{
+	margin-right: 0;
+}
+#admins ul{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+#version p{
+	padding: 0;
+	margin: 0;
+}
+.border{
+	width: 3px;
+	height: 100%;
+	background-color: var(--color-white);
+}
+
 /* volet 2 */
 .volet2{
 	position: relative;
@@ -313,6 +401,5 @@ nav li:hover{
 	padding-top: 20px ;
 	margin-top: 25px;
 	left: -10px;
-	
 }
 
