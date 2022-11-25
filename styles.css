@@ -141,6 +141,9 @@ nav ul, .sous-menu ul{
 	.col:not(#liens) li{
 		font-size: 0.8rem;
 	}
+	footer:hover {
+		overflow-y: auto;
+	}
 }
 @media only screen and (min-width: 1000px){
 	.sous-menu a{
@@ -160,6 +163,9 @@ nav ul, .sous-menu ul{
 	}
 	.col:not(#liens) li{
 		font-size: 1.3rem;
+	}
+	footer:hover {
+		overflow-y: hidden;
 	}
 }
 
@@ -335,7 +341,7 @@ footer:hover{
 	height: calc(8vh + 10vh);
 	min-height: 50px;
 	overflow-x: hidden;
-	overflow-y: scroll;
+
 }
 .container{
 	display: flex;
@@ -353,6 +359,8 @@ footer:hover{
 .col h1 {
 	margin: 0.2rem 0;
 	height: 8vh;
+}
+.col:not(#liens) h1{
 	margin-bottom: -1vh;
 }
 .col ul{
@@ -379,7 +387,7 @@ footer:hover{
 }
 #version p{
 	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 }
 .border{
 	width: 3px;
