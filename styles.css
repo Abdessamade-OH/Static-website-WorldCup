@@ -360,7 +360,7 @@ footer:hover{
 	margin: 0.2rem 0;
 	height: 8vh;
 }
-.col:not(#liens) h1{
+.col:not(#liens, #admins) h1{
 	margin-bottom: -1vh;
 }
 .col ul{
@@ -384,6 +384,12 @@ footer:hover{
 #admins ul{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	column-gap: 2px;
+	background-color: var(--color-black);
+}
+#admins ul li{
+	background-color: var(--color-red);
+	padding-right: 5px;
 }
 #version p{
 	padding: 0;
