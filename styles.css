@@ -419,7 +419,7 @@ footer img {
 /* volet 2 */
 .volet2{
 	position: relative;
-	top:132px;
+	top:20vh;
 	width: 18%;
 	border-right: 1px blue solid;
 
