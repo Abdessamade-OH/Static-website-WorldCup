@@ -70,7 +70,7 @@
         				<i class='fas fa-plus-square'></i>
         			</div>
         		</a>
-        		<div class="volet5-header">
+        		<div class="volet-header">
         			<a onclick="closeVol5()">
         				<div class="close">
         					<i class='fas fa-window-close'></i>
@@ -108,12 +108,25 @@
             		</a>
 			</div>
             </aside>
-            <div class="volet2">
+            <div class="volet2" id="volet2">
+            	<a onclick="openVol2()">
+        			<div class="open2" id="openButton2">
+        				<i class='fas fa-plus-square'></i>
+        			</div>
+        		</a>
+        		<div class="volet-header teams">
+        			<a onclick="closeVol2()">
+        				<div class="close">
+        					<i class='fas fa-window-close'></i>
+        				</div>
+        			</a>
+        			<h1>Les Equipes</h1>
+        		</div>
                 <ul type="none">
-                    <li class="teams_v2">&#127466&#127480 Spain</li>
-                    <li class="teams_v2">&#127474&#127462 Morocco</li>
-                    <li class="teams_v2">&#127482&#127480 USA</li>
-                    <li class="teams_v2">&#127478&#127462 QATAR</li>
+                    <li>&#127466&#127480 Spain</li>
+                    <li>&#127474&#127462 Morocco</li>
+                    <li>&#127482&#127480 USA</li>
+                    <li>&#127478&#127462 QATAR</li>
                 </ul>
             </div>
         </main>
@@ -142,7 +155,7 @@
         		</div>
         		
         		<div class="border"></div>
-        		
+        			
         		<div class="col" id="admins">
         			<h1>Admins  <i class='fas fa-users'></i></h1>
         			<ul> <!-- ordre alphabétique ^^ -->
