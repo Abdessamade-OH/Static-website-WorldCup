@@ -61,12 +61,21 @@
 
         </header>
         <main>
-        	<div class="volet2"></div>
         	<div class="volet3"></div>
         	<div class="volet4"></div>
         	
-        	<aside class="volet5">
+        	<aside class="volet5" id="volet5">
+        		<a onclick="openVol5()">
+        			<div class="open" id="openButton">
+        				<i class='fas fa-plus-square'></i>
+        			</div>
+        		</a>
         		<div class="volet5-header">
+        			<a onclick="closeVol5()">
+        				<div class="close">
+        					<i class='fas fa-window-close'></i>
+        				</div>
+        			</a>
         			<h1>Les Actualités</h1>
         		</div>
         		<div class="sidebar">
@@ -92,7 +101,7 @@
                     </a>
                     
                		<a href="">
-               			<div class="actualite">
+               			<div class="actualite" id="last">
                 			<img id="NEWSimg" src="./data/référence/DANIALVES.jpeg" alt="">
                 			<figcaption>ADani Alves: I love this game. I loved football when they didn’t pay me’</figcaption> 
                 		</div>
