@@ -8,7 +8,7 @@
 } /*root pour avoir les variable accessible aux tous les classes.*/
 html, body {
     box-sizing: border-box;
-    font-family: Arial, Sans-serif;
+    font-family: Arial, Sans-serif;font-family: 'Ropa Sans', sans-serif;
 }
 
 * {
@@ -116,6 +116,7 @@ nav ul, .sous-menu ul{
 	flex-wrap: nowrap;
 	height: 100%;
 	width: 100%;
+	font-family: 'Ropa Sans', sans-serif;
 	/* //border: 2px solid yellow; */
 }
 @media only screen and (max-width: 1000px){
