@@ -398,7 +398,7 @@ nav li:hover{
 	position: fixed;
 	margin-top: -2px;
 	left: 15%;
-	visibility: visible;
+	visibility: hidden;
 	z-index: 1;
 	font-size: 2rem;
 }
