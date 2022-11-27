@@ -35,3 +35,15 @@ function openVol2(){
 	//openButton.style.transition ="visibility 0.5s";
 	console.log(width);
 }
+
+//landing page
+function takeUHome(){
+	const section = document.querySelector("section");
+	if (section.style.display === "none") {
+		section.style.display = "block";
+		} else {
+		section.style.display = "none";
+		  }
+
+
+}
