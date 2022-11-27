@@ -1,0 +1,29 @@
+.volet3{
+	position: absolute;
+	top: 20vh;
+	left: 0;
+	width: 100%;
+	height: 35%;
+	border: 2px solid yellow;
+}
+.left{
+	position: absolute;
+	left: 0;
+	width: 15%;
+	height: 100%;
+	border: 1px solid black;
+}
+.image{
+	position: absolute;
+	left: 15%;
+	width: calc(100% - 15% - 25vw);
+	height: 100%;
+	border: 1px solid black;
+}
+.right{
+	position: absolute;
+	right: 0;
+	width: 25vw;
+	height: 100%;
+	border: 1px solid black;
+}
