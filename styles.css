@@ -93,6 +93,12 @@ header {
     width: 100%;
     border: 2px solid #eee;
 }
+@media only screen and (max-width: 600px)  {
+	.marquee{
+		width: 100vw;
+		left: -225px;
+	}
+} 
 
 
 	/*abdou*/
