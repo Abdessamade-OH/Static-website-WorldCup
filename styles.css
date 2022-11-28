@@ -5,6 +5,8 @@
 	--color-black: black;
 	--color-green: green;
 	--color-lime: lime;
+	--color-gray: #cecece;
+	--color-darkGreen: #263421;
 } /*root pour avoir les variable accessible aux tous les classes.*/
 html, body {
     box-sizing: border-box;
@@ -521,6 +523,8 @@ footer img {
 	overflow-x: hidden;
 	overflow-y: auto;
 	transition: left 0.5s  ease-in-out;
+	visibility:hidden;
+	left: -15%;
 }
 
 .volet2 ul {
@@ -531,10 +535,13 @@ footer img {
 	padding-left: 0;
 	margin: 0 auto;
 }
-
+#openButton2{
+	visibility: visible;
+	left:0;
+}
 .volet2 li{
 	position: relative;
-	text-align: center;
+	text-align: left;
 	border: 1px blue solid;
 	background-color: var(--color-red);
  }

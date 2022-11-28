@@ -1,3 +1,8 @@
+window.onload = () => {
+	console.log("Hello world!");
+}
+
+
 function closeVol5(){
 	let vol5= document.getElementById("volet5");
 	//vol5.style.width=0;
@@ -39,7 +44,7 @@ function openVol2(){
 function closeVol3(){
 	let vol3= document.getElementById("volet3");
 	//vol5.style.width=0;
-	vol3.style.top= "-300px";
+	vol3.style.top= "-250px";
 	vol3.style.visibility="hidden";
 	let openButton = document.getElementById("openButton3");
 	openButton.style.top= "19.5%";
