@@ -101,7 +101,7 @@ header {
 } 
 /* LANDIN PAGE */
 
-section{
+.landingPage{
     position: absolute;
     width: 60%;
     min-height: 88vh;
@@ -148,22 +148,17 @@ section{
 }
 
 
-@media only screen and(min-width:1000px){
-    /* .content .info h2{
-        font-size: 45px;
-        line-height:100px ;
 
-    } */
  
 
-}
+
 @media (max-width:560px){
     .content .info h2{
         font-size: 15px;
         line-height:40px ;
 
     }
-	.section{
+	.landingPage{
 		position:absolute;
 		margin-left: -41px;
 		left: 116px;
@@ -614,9 +609,11 @@ footer img {
 .volet-header.teams{
 	height: 15%;
 	width: 100%;
+	background-color: aqua;
 }
 .volet2 a{
 	text-decoration: none;
 	cursor: pointer;
 }
+
 

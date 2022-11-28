@@ -17,12 +17,17 @@ function openVol5(){
 }
 function closeVol2(){
 	let vol2= document.getElementById("volet2");
+	
 	//vol5.style.width=0;
 	vol2.style.left= "-15%";
+	
 	//vol5.style.visibility="hidden";
 	let openButton = document.getElementById("openButton2");
 	openButton.style.left= "0";
-	openButton.style.visibility="visible"
+	openButton.style.visibility="visible";
+	
+
+	
 
 }
 function openVol2(){
@@ -34,16 +39,7 @@ function openVol2(){
 	openButton.style.visibility="hidden";
 	//openButton.style.transition ="visibility 0.5s";
 	console.log(width);
-}
-
-//landing page
-function takeUHome(){
-	const section = document.querySelector("section");
-	if (section.style.display === "none") {
-		section.style.display = "block";
-		} else {
-		section.style.display = "none";
-		  }
-
 
 }
+
+
