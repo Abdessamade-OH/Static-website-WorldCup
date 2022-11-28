@@ -1,39 +1,102 @@
 .volet3{
 	position: absolute;
-	top: 20vh;
+	top: 20%;
 	left: 0;
 	width: 100%;
 	height: 225px;
 	border: 2px solid yellow;
+	transition: all 0.5s  ease-in-out;
 }
 .left{
 	position: absolute;
 	left: 0;
-	width: 15%;
 	height: 100%;
 	border: 1px solid black;
 }
 .image{
 	position: absolute;
-	left: 15%;
-	width: 60%;
+
 	height: 100%;
 	border: 1px solid black;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: space-between;
 }
 .image img{
 	height: 100%;
 	object-fit: cover;
 	border-radius: 1%;
-	
 }
 .right{
 	position: absolute;
 	right: 0;
-	width: 25vw;
 	height: 100%;
 	border: 1px solid black;
 }
+.openVol3{
+	position: fixed;
+	right: 37%;
+	z-index: 1;
+	visibility: hidden;
+	font-size: 25px;
+}
+.closeVol3{
+	position: absolute;
+	right: 20%;
+	bottom: -3.5px;
+	font-size: 25px;
+}
+
+
+@media only screen and (max-width: 600px){
+	.right{
+		width: 0;
+	}
+	.left{
+		width: 0;
+	}
+	.image{
+		width: 100%;
+		left: 0%;
+	}
+}
+@media only screen and (min-width: 600px){
+	.right{
+		width: 25%;
+	}
+	.left{
+		width: 0;
+	}
+	.image{
+		width: 75%;
+		left: 0%;
+	}
+}
+.image h1, p{
+		display: block;
+}
+@media only screen and (min-width: 750px){
+	.right{
+		width: 25%;
+	}
+	.left{
+		width: 15%;
+	}
+	.image{
+		width: 60%;
+		left: 15%;
+	}
+	.image h1, p{
+		display: none;
+	}
+}
+@media only screen and (min-width: 1000px){
+	.image h1, p{
+		display: block;
+	}
+}
+
+
+
+

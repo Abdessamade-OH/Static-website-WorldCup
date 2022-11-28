@@ -13,8 +13,8 @@ function openVol5(){
 	vol5.style.visibility="visible";
 	let openButton = document.getElementById("openButton");
 	openButton.style.visibility="hidden";
-	console.log(width);
 }
+
 function closeVol2(){
 	let vol2= document.getElementById("volet2");
 	//vol5.style.width=0;
@@ -35,3 +35,22 @@ function openVol2(){
 	//openButton.style.transition ="visibility 0.5s";
 	console.log(width);
 }
+
+function closeVol3(){
+	let vol3= document.getElementById("volet3");
+	//vol5.style.width=0;
+	vol3.style.top= "-300px";
+	vol3.style.visibility="hidden";
+	let openButton = document.getElementById("openButton3");
+	openButton.style.top= "19.5%";
+	openButton.style.visibility="visible";
+}
+function openVol3(){
+	let vol3= document.getElementById("volet3");
+	//vol5.style.width= "25%";
+	vol3.style.top= "20%";
+	vol3.style.visibility="visible";
+	let openButton = document.getElementById("openButton3");
+	openButton.style.visibility="hidden";
+}
+

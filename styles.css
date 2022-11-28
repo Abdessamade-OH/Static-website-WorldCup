@@ -22,6 +22,7 @@ body{
 	min-width: 500px;
 	min-height: 400px;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 header {
