@@ -20,7 +20,24 @@ window.onload = () => {
 	resetOpacity(over750);
 	over750.addListener(resetOpacity);
 	
-	
+	document.getElementById("field").addEventListener("click", ()=>{
+		if(window.matchMedia("(max-width: 750px)").matches && Open2){
+			document.getElementById("field").style.opacity="1";
+			closeVol2();
+			wasClosed2 = true;
+		}
+		if(window.matchMedia("(max-width: 600px)").matches && (Open2 || Open5)){
+			document.getElementById("field").style.opacity="1";
+			if(Open2){
+				closeVol2();
+				wasClosed2 = true;
+			}
+			if(Open5){
+				closeVol5();
+				wasClosed5 = true;
+			}
+		}
+	});
 }
 
 function checkMedia750(Media750){
@@ -43,6 +60,7 @@ function checkMedia750(Media750){
 		auto2=false;
 		lessThan750 = false;
 	}
+	
 }
 function checkMedia600(Media600){
 	if(Media600.matches){

@@ -201,6 +201,10 @@ nav ul, .sous-menu ul{
 	.col:not(#liens) li{
 		font-size: 1.3rem;
 	}
+	#version h1, #liens h1{
+		font-size: 1.5rem;
+	}
+	
 	footer:hover {
 		overflow-y: hidden;
 	}
