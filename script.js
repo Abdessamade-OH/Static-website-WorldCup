@@ -4,6 +4,8 @@ var wasClosed2 = true;
 var wasClosed5=false;
 var lessThan600 = false;
 var lessThan750 = false;
+var auto2 = false;
+var auto5 = false;
 window.onload = () => {
 	console.log("Hello world!");
 	const Media750 = window.matchMedia('(max-width: 750px)');
@@ -34,8 +36,11 @@ function checkMedia750(Media750){
 		lessThan750 = true;
 	}
 	else {
-		if(wasClosed2==false)
+		if(wasClosed2==false){
+			auto2==true;
 			openVol2();
+		}
+		auto2=false;
 		lessThan750 = false;
 	}
 }
@@ -51,8 +56,11 @@ function checkMedia600(Media600){
 		lessThan600 = true;
 	}
 	else {
-		if(wasClosed5==false)
+		if(wasClosed5==false){
+			auto5=true;
 			openVol5();
+		}
+		auto5 = false;
 		lessThan600 = false;
 	}
 }
@@ -83,7 +91,7 @@ function openVol5(){
 	let openButton = document.getElementById("openButton");
 	openButton.style.visibility="hidden";
 	Open5 = true;
-	if(lessThan600 && wasClosed5==true){
+	if(lessThan600 && auto5==false){
 		document.getElementById("field").style.opacity="0.2";
 	}
 }
@@ -112,7 +120,7 @@ function openVol2(){
 	openButton.style.visibility="hidden";
 	//openButton.style.transition ="visibility 0.5s";
 	Open2 = true;
-	if(lessThan750 && wasClosed2==true){
+	if(lessThan750 && auto2==false){
 		document.getElementById("field").style.opacity="0.2";
 	}
 }
