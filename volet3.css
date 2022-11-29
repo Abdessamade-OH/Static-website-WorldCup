@@ -8,6 +8,7 @@
 	transition: all 0.4s  ease-in-out;
 	background-color: var(--color-gray);
 }
+
 .left{
 	position: absolute;
 	left: 0;
@@ -20,7 +21,6 @@
 	height: 90%;
 	width: 85%;
 	margin: 0 auto;
-	text-align: left;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -39,6 +39,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 .image{
 	position: absolute;
 	height: 100%;
@@ -66,6 +67,7 @@
 	border: 1px solid black;
 	box-shadow: 0 0 5px 5px var(--color-darkGreen);
 }
+
 .team-title{
 	flex-direction: column;
 	align-items: center;
@@ -75,6 +77,7 @@
 .team-title h1{
 	padding: 0 0.7rem;
 }
+
 .team-info{
 	flex-direction: column;
 	align-items: center;
@@ -88,12 +91,65 @@
 	color: var(--color-black);
 	overflow-y: auto;
 }
+
 .right{
 	position: absolute;
 	right: 0;
+	top: 0;
 	height: 100%;
 	border: 1px solid black;
-	border-radius: 8px;
+}
+.right-card{
+	position: relative;
+	top: 5.625px;
+	height: 95%;
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background-color: linen;
+	box-shadow: 0 0 5px 5px black;
+	border-radius: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.right-card ul{
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+	text-align: center;
+	list-style-type: none;
+}
+.right-card li{
+	text-align: left;
+	margin-bottom: 8px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 40px 1fr 1fr;
+	text-align: left;
+	column-gap: 10px;
+}
+/*.right-card li:nth-of-type(odd){
+	background-color:	gray;
+}*/
+.right-card h2{
+	margin: 0;
+	margin-left: 20px;
+}
+.right-card h2:first-of-type{
+	margin-top: 20px;
+}
+.role{
+	background-color: var(--color-gray);
+	color: var(--color-red);
+	border: 1px solid var(--color-black);
+	border-radius: 3px;
+	margin-right: 5px;
+	width: 35px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
 }
 .openVol3{
 	position: fixed;
@@ -153,12 +209,22 @@
 	}
 	
 }
+@media only screen and (max-width: 750px){
+	.right-card li{
+		margin-left: 8px;
+		font-size: 0.7rem;
+	}
+}
 @media only screen and (max-width: 950px){
 	.team-title{
 		display: none;
 	}
 	.left-card img{
 		height: 45%;
+	}
+	.right-card li{
+		margin-left: 15px;
+		font-size: 0.8rem;
 	}
 }
 @media only screen and (min-width: 950px){
@@ -174,13 +240,17 @@
 	.left-card img{
 		height: 55%;
 	}
+	.right-card li{
+		margin-left: 25px;
+		font-size: 1.2rem;
+	}
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1250px){
 	.team-info{
 		display: none;
 	}
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1250px){
 	.team-title{
 		margin:0 1rem;
 	}

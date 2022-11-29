@@ -29,12 +29,13 @@ body{
 
 header {
     position: fixed;
-    height:20vh;
+    height:20%;
     width:100%;
     top:0px;
     background-color: var(--color-red);
     z-index: 1;
     border-bottom: 1.5px var(--color-purple) solid ;
+    box-shadow: 0 0 3px 3px;
 }
 /* Nouha */
 
