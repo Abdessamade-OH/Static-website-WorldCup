@@ -1,0 +1,72 @@
+.container0{
+   display: flex;
+   justify-content: center;
+   position: relative;
+   top: -100px;
+}
+.card{
+    height: 100px;
+    margin:50px;
+    box-shadow: 5px 5px 20px black ;
+    color: brown;
+    background-color: wheat;
+    border-radius: 5px 43%;
+}
+.card>.versus{
+    text-align: center;
+    margin-top: -45px;
+    position: relative;
+    top: -55px;
+}
+h2{
+    position: relative;
+    top: -20px;
+
+}
+.pays1>li{
+    list-style: none;
+    width: 25vw;
+    display: flex;
+    justify-content: right;
+    font-size: 53px;
+    position: relative;
+    right: 47px;
+    top: -40px;
+}
+.pays2>li{
+    list-style: none;
+    width: 25vw;
+    display: flex;
+    justify-content: left;
+    font-size: 53px;
+    margin-top: -43px;
+    position: relative;
+    left: 47px;
+    top: -65px;
+}
+.dateHeure{
+    font-size: large;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+}
+p{
+    background-color: antiquewhite;
+    font-size: larger;
+    border-radius: 5px 43%;
+    margin-top: 7px;
+    position: relative;
+    bottom:60px;
+    opacity: 0;
+    visibility: hidden;
+
+}
+.card:hover{
+    cursor: pointer;
+
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+    
+}    
