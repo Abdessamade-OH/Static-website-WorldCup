@@ -59,6 +59,7 @@
 	background-color: linen;
 	box-shadow: 0 0 5px 5px black;
 	border-radius: 20px;
+	//opacity: 0.2;
 }
 .image img{
 	height: 100%;

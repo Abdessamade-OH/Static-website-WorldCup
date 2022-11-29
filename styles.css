@@ -425,6 +425,7 @@ footer{
 	transition-duration: 0.25s;
 	transition-timing-function: ease-out;
 	z-index: 2;
+	box-shadow: 0 0 5px black;
 }
 footer:hover{
 	transition-duration: 0.35s;
