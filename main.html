@@ -82,11 +82,12 @@
         			</a>
         			<h1>Les Equipes</h1>
         		</div>
-                <ul type="none">
-                    <li>&#127466&#127480 Spain</li>
-                    <li>&#127474&#127462 Morocco</li>
-                    <li>&#127482&#127480 USA</li>
-                    <li>&#127478&#127462 QATAR</li>
+                <ul type="none" class = "TeamsGrp">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<!--<li onclick="showTeam(event)" value="1">&#127463&#127466 Belgique</li>-->
+                    <!--<li onclick="showTeam(event)"value="2" >&#127469&#127479 Croitie</li>-->
+					<li onclick="showTeam(event)" value="0">&#127474&#127462 Maroc <button class="modify" onclick="">Modifier</button></li>
+                    <!--<li onclick="showTeam(event)" value="3">&#127464&#127462 Canada</li>-->
                 </ul>
             </div>
             
@@ -94,7 +95,7 @@
             <div class="volet3" id="volet3">
             
             	<div class="left">
-            		<div class="left-card">
+            		<div class="left-card" id="left-card">
             			<img src="./data/user.png" alt="">
             			<h3>name LASTNAME</h3>
             			<h4>Age: XX</h4>
@@ -102,7 +103,7 @@
             	</div>
             	
             	<div class="image">
-            		<dic class="image-card">
+            		<div class="image-card">
             			<div class="team-title">
             				<h1>Morocco</h1>
             				<span class="flag">&#127474&#127462</span>
@@ -224,13 +225,14 @@
             			</a>
         				<a onclick="closeVol3()" id="closeButton3" class="closeVol3">
         					<i class='fas fa-window-close'></i>
-        				</a>	
+        				</a>
+        			</div>	
             	</div>
             	
             	<div class="right">
             		<div class="right-card">
             			<h2>Main players</h2>
-            			<ul>
+            			<ul id="Main_players">
             				<li><span class="role">MGK</span><span>Lorem Ipsum dolor</span></span><span>11</span></li>
             				<li><span class="role">TNT</span><span>Lorem Ipsum</span><span>11</span></li>
             				<li><span class="role">FBI</span><span>Lorem Ipsum dolor</span><span>11</span></li>
@@ -239,7 +241,7 @@
             				<li><span class="role">cat</span><span>Lorem Ipsum</span><span>11</span></li>
             			</ul>
             			<h2>Substitute players</h2>
-            			<ul>
+            			<ul id="Sub_players">
             				<li><span class="role">MVP</span><span>Lorem Ipsum dolor</span><span>11</span></li>
             				<li><span class="role">RP</span><span>Lorem Ipsum</span><span>11</span></li>
             				<li><span class="role">BD</span><span>Lorem Ipsum dolor</span><span>11</span></li>
