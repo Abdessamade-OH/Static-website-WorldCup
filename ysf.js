@@ -1,19 +1,23 @@
 class Joueur {
 	constructor(Nom, Poste, Age, Taille, Numero, pic) {
+		this.pic="./data/user.png";
 		this.Nom = Nom;
 		this.Poste = Poste;
 		this.Age = Age;
 		this.Taille = Taille;
 		this.Numero = Numero;
-		this.pic = pic
+		if(pic!=null)
+		this.pic = pic;
 	}
 }
 class Manager {
-	constructor(Nom, Age, pic, Description) {
+	constructor(Nom, Age, pic, caption,teamNbr ,Description) {
 		this.Nom = Nom;
 		this.Age = Age;
-		this.pic = pic
+		this.pic = pic;
 		this.Description = Description;
+		this.caption = caption;
+		this.pic = teamNbr;
 	}
 }
 
@@ -23,31 +27,31 @@ var Teams = [];
 	
 	Teams.push(Team1 = [])
 	Teams[0].push(new Manager("Hoalid RAGRAGI", 42,"./data/Walid.png"));
-	Teams[0].push(new Joueur("Yassine BONO ", "GK", 30, 189, 1));
-	Teams[0].push(new Joueur("Achraf HAKIMI", "DD", 19, 182, 2));
-	Teams[0].push(new Joueur("Naif AGUERD", "DC", 25, 179, 4));
-	Teams[0].push(new Joueur("Rouman SAISS", "DC", 32, 179, 5));
-	Teams[0].push(new Joueur("Nousair MEZRAOUI", "DG", 26, 179, 3));
-	Teams[0].push(new Joueur("Soufiane AMRABET", "MDC", 27, 179, 6));
-	Teams[0].push(new Joueur("Azzdine OUNAHI", "MOC", 23, 175, 8));
-	Teams[0].push(new Joueur("Salim AMELAH", "MOC", 19, 179, 12));
-	Teams[0].push(new Joueur("Hakim ZIYECH", "AG", 28, 179, 7));
-	Teams[0].push(new Joueur("Youssef EN-NSIRI", "AT", 24, 179, 9));
-	Teams[0].push(new Joueur("Soufiane BOUFAL", "AD", 29, 175, 23));
+	Teams[0].push(new Joueur("Yassine BONO ", "GK", 30, 189, 1,"./IMG/bono.webp"));
+	Teams[0].push(new Joueur("Achraf HAKIMI", "DD", 19, 182, 2,"./IMG/hakimi.webp"));
+	Teams[0].push(new Joueur("Naif AGUERD", "DC", 26, 179, 4,"./IMG/agreud.webp"));
+	Teams[0].push(new Joueur("Rouman SAISS", "DC", 32, 179, 5,"./IMG/saiss.webp"));
+	Teams[0].push(new Joueur("Nousair MEZRAOUI", "DG", 26, 179, 3,"./IMG/mazraoui.webp"));
+	Teams[0].push(new Joueur("Soufiane AMRABET", "MDC", 27, 179, 6,"./IMG/amrabet.webp"));
+	Teams[0].push(new Joueur("Azzdine OUNAHI", "MOC", 23, 175, 8,"./IMG/ONAHI.webp"));
+	Teams[0].push(new Joueur("Salim AMELAH", "MOC", 29, 179, 12,"./IMG/AMALAH.webp"));
+	Teams[0].push(new Joueur("Hakim ZIYECH", "AG", 28, 179, 7,"./IMG/ZIYACH.webp"));
+	Teams[0].push(new Joueur("Youssef EN-NSIRI", "AT", 24, 179, 9,"./IMG/NESYRI.webp"));
+	Teams[0].push(new Joueur("Soufiane BOUFAL", "AD", 29, 175, 23,"./IMG/BOUFOL.webp"));
 	Teams[0].push(new Joueur("Ahmed-Reda TAGNAOUTI", "GK", 22, 192, 33));
 	Teams[0].push(new Joueur("Mounir MOHAMDI", "GK", 32, 189, 14));
 	Teams[0].push(new Joueur("Yahya ATIAT-ALAH", "DD", 27, 184, 21));
-	Teams[0].push(new Joueur("Badr BANOUN", "DC", 29, 179, 18));
+	Teams[0].push(new Joueur("Badr BANOUN", "DC", 28, 179, 18));
 	Teams[0].push(new Joueur("Jawad AL-YAMIQ", "DC", 29, 179, 20));
-	Teams[0].push(new Joueur("Achraf DARI", "DC", 29, 179, 21));
+	Teams[0].push(new Joueur("Achraf DARI", "DC", 25, 179, 21));
 	Teams[0].push(new Joueur("Abdelhamide SABIRI", "MDC", 23, 183, 11));
 	Teams[0].push(new Joueur("Ilias CHAIR", "MOC", 23, 183, 26));
 	Teams[0].push(new Joueur("Bilal EL KHANNOUS ", "MOC", 18, 180, 10));
-	Teams[0].push(new Joueur("Yahya JABRANE", "MDC", 31, 187, 22));
-	Teams[0].push(new Joueur("Walid CHEDDIRA", "AT", 31, 187));
+	Teams[0].push(new Joueur("Yahya JABRANE", "MDC", 29, 187, 22));
+	Teams[0].push(new Joueur("Walid CHEDDIRA", "AT", 21, 187));
 	Teams[0].push(new Joueur("Abderrazak HAMDALLAH", "AT", 32, 179));
-	Teams[0].push(new Joueur("Zakaria ABOUKHLAL", "AD", 22, 179));
-	Teams[0].push(new Joueur("EZ ABDE", "AD", 22, 175));
+	Teams[0].push(new Joueur("Zakaria ABOUKHLAL", "AD", 24, 179));
+	Teams[0].push(new Joueur("EZ ABDE", "AD", 21, 175));
 }
 
 
@@ -81,6 +85,11 @@ function showTeam(event) {
 	z.appendChild(pic);
 	z.appendChild(name);
 	z.appendChild(age);
+	let play=document.getElementsByClassName("player");
+	for (let index = 1; index < 12; index++) {
+		play[index-1].innerHTML='<span>'+arr[index].Nom+'</span> <div class="min-card"><img src="'+arr[index].pic+'" alt="player image" /> <h3>'+arr[index].Nom+'</h3><h4>Age: '+arr[index].Age+'</h4> </div>';
+		
+	}
 }
 function createTeam(event){
 	
@@ -88,7 +97,7 @@ function createTeam(event){
 	Teams.push(Team2=[]);
 	Team2.push(new Joueur("Manage ","",0,180,Teams.length-1,"./data/user.png"));
 	for (let index = 1; index < 27; index++) {
-		Team2.push(new Joueur("Lorem Ipsum","PLY",0,180,index));
+		Team2.push(new Joueur("Amine"+index,"PLY",25,180,index));
 	}
 	let li = document.createElement("li");
 	li.setAttribute("onclick","showTeam(event)");
@@ -102,7 +111,9 @@ function modifyTeam(event){
 	document.getElementById("modify").style.display="block";
 	document.getElementById("mod").addEventListener("click",function add32(){
 		event.target.parentElement.innerHTML= document.getElementById("nationSelector").value+' <button class="modify" onclick="modifyTeam(event)">Modifier</button>';
+		document.getElementById("team-title").innerHTML='<h1>'+document.getElementById("nationSelector").value+'</h1>';
 		document.getElementById("modify").style.display="none";
+	
 	});
 	
 
