@@ -50,9 +50,7 @@ var Teams = [];
 	Teams[0].push(new Joueur("EZ ABDE", "AD", 22, 175));
 }
 
-window.onload = () => {
-	console.log("Hello world!");
-}
+
 
 function showTeam(event) {
 	let a = event.target.value;
