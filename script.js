@@ -80,6 +80,9 @@ function checkMedia600(Media600){
 		}
 		auto5 = false;
 		lessThan600 = false;
+		if(Open2==false){
+			document.getElementById("field").style.opacity="1";
+		}
 	}
 }
 function resetOpacity(over750){
