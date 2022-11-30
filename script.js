@@ -103,6 +103,12 @@ function closeVol5(){
 		document.getElementById("field").style.opacity="1";
 	}
 	
+	document.getElementById("volet4").style.right="0%";
+	if(Open2){
+		document.getElementById("volet4").style.width="85%";
+	}
+	else
+		document.getElementById("volet4").style.width="100%";
 }
 function openVol5(){
 	let vol5= document.getElementById("volet5");
@@ -115,6 +121,13 @@ function openVol5(){
 	if(lessThan600 && auto5==false){
 		document.getElementById("field").style.opacity="0.2";
 	}
+	
+	document.getElementById("volet4").style.right="25%";
+	if(Open2){
+		document.getElementById("volet4").style.width="60%";
+	}
+	else
+		document.getElementById("volet4").style.width="75%";
 }
 
 function closeVol2(){
@@ -132,6 +145,13 @@ function closeVol2(){
 	if(lessThan750 && !lessThan600){
 		document.getElementById("field").style.opacity="1";
 	}
+	
+	document.getElementById("volet4").style.left="0%";
+	if(Open5){
+		document.getElementById("volet4").style.width="75%";
+	}
+	else
+	document.getElementById("volet4").style.width="100%";
 }
 function openVol2(){
 	let vol2= document.getElementById("volet2");
@@ -144,6 +164,13 @@ function openVol2(){
 	if(lessThan750 && auto2==false){
 		document.getElementById("field").style.opacity="0.2";
 	}
+	
+	document.getElementById("volet4").style.left="15%";
+	if(Open5){
+		document.getElementById("volet4").style.width="60%";
+	}
+	else
+	document.getElementById("volet4").style.width="85%";
 }
 
 function closeVol3(){
@@ -152,14 +179,21 @@ function closeVol3(){
 	vol3.style.top= "-250px";
 	vol3.style.visibility="hidden";
 	let openButton = document.getElementById("openButton3");
-	openButton.style.top= "19.5%";
+	openButton.style.top= "110px";
 	openButton.style.visibility="visible";
+	
+	document.getElementById("volet4").style.top="110px";
+	document.getElementById("volet4").style.height="calc(100% - 150px)";
 }
 function openVol3(){
 	let vol3= document.getElementById("volet3");
 	//vol5.style.width= "25%";
-	vol3.style.top= "20%";
+	vol3.style.top= "110px";
 	vol3.style.visibility="visible";
 	let openButton = document.getElementById("openButton3");
 	openButton.style.visibility="hidden";
+	
+	document.getElementById("volet4").style.top="335px";
+	document.getElementById("volet4").style.height="calc(100% - 375px)";
+	
 }

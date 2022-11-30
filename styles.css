@@ -34,8 +34,7 @@ header {
     top:0px;
     background-color: var(--color-red);
     z-index: 1;
-    border-bottom: 1.5px var(--color-purple) solid ;
-    box-shadow: 0 0 3px 3px;
+    box-shadow: 0 0 10px 2px;
 }
 /* Nouha */
 
@@ -430,14 +429,15 @@ footer{
 	transition-timing-function: ease-out;
 	z-index: 2;
 	box-shadow: 0 0 5px black;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 footer:hover{
 	transition-duration: 0.35s;
 	transition-timing-function: ease-in;
 	height: calc(8vh + 10vh);
 	min-height: 50px;
-	overflow-x: hidden;
-
+	
 }
 .container{
 	width: 100%;
