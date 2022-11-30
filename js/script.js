@@ -38,6 +38,7 @@ window.onload = () => {
 			}
 		}
 	});
+	
 }
 
 function checkMedia750(Media750){
@@ -104,6 +105,7 @@ function closeVol5(){
 	}
 	
 	document.getElementById("volet4").style.right="0%";
+	document.getElementById("volet4").style.transitionDelay = "0s";
 	if(Open2){
 		document.getElementById("volet4").style.width="85%";
 	}
@@ -123,6 +125,7 @@ function openVol5(){
 	}
 	
 	document.getElementById("volet4").style.right="25%";
+	document.getElementById("volet4").style.transitionDelay = "0.4s";
 	if(Open2){
 		document.getElementById("volet4").style.width="60%";
 	}
@@ -147,6 +150,7 @@ function closeVol2(){
 	}
 	
 	document.getElementById("volet4").style.left="0%";
+	document.getElementById("volet4").style.transitionDelay = "0s";
 	if(Open5){
 		document.getElementById("volet4").style.width="75%";
 	}
@@ -166,6 +170,7 @@ function openVol2(){
 	}
 	
 	document.getElementById("volet4").style.left="15%";
+	document.getElementById("volet4").style.transitionDelay = "0.4s";
 	if(Open5){
 		document.getElementById("volet4").style.width="60%";
 	}
@@ -184,6 +189,7 @@ function closeVol3(){
 	
 	document.getElementById("volet4").style.top="110px";
 	document.getElementById("volet4").style.height="calc(100% - 150px)";
+	document.getElementById("volet4").style.transitionDelay = "0s";
 }
 function openVol3(){
 	let vol3= document.getElementById("volet3");
@@ -195,5 +201,31 @@ function openVol3(){
 	
 	document.getElementById("volet4").style.top="335px";
 	document.getElementById("volet4").style.height="calc(100% - 375px)";
+	document.getElementById("volet4").style.transitionDelay = "0.4s";
 	
+	if(lessThan600){
+		if(Open2)
+			closeVol2();
+		if(Open5)
+			closeVol5();
+	}
+	if(lessThan750){
+		if(Open5)
+			closeVol5();
+	}	
+}
+
+function classement(){
+	console.log("Classment: done.");
+	closeVol2();
+	closeVol3();
+	document.getElementById("classement").style.display='block';
+	document.getElementById("acceuil").style.display='none';
+}
+function acceuil(){
+	console.log("Acceuil: done.");
+	closeVol2();
+	closeVol3();
+	document.getElementById("classement").style.display='none';
+	document.getElementById("acceuil").style.display='flex';
 }
