@@ -6,6 +6,7 @@
 	height: 225px;
 	transition: all 0.4s  ease-in-out;
 	background-color: var(--color-gray);
+	
 }
 
 .left{
@@ -325,7 +326,7 @@
 		visibility: visible;
 	}
 	.image{
-		width: 60%;
+		width: 60.2%;
 		left: 15%;
 	}
 	
