@@ -15,18 +15,20 @@
     margin-left: -16px;
     width: 19%;
 }
-.card>.versus{
+/* .card>.versus{
     text-align: center;
     margin-top: -45px;
     position: relative;
     top: -55px;
-}
+    font-size: xxx-large;
+}*/
 h2{
     position: relative;
     top: -20px;
 
 }
-.pays1>li{
+
+/*.pays1>li{
     list-style: none;
     width: 25vw;
     display: flex;
@@ -46,14 +48,14 @@ h2{
     position: relative;
     left: 47px;
     top: -65px;
-}
+} */
 .dateHeure{
     font-size: large;
     line-height: 20px;
     display: flex;
     justify-content: center;
 }
-p{
+.pays2>p{
     background-color: antiquewhite;
     font-size: larger;
     border-radius: 5px 43%;
@@ -72,4 +74,20 @@ p{
     opacity: 1;
     visibility: visible;
     
-}    
+}   .match{
+    font-size: 300%;
+    position: relative;
+    top: -34px;
+    left: 52px;
+    margin: 0;
+
+}
+@media  only screen and (max-width: 600px) {
+    .match{
+        font-size: 177%;
+        position: relative;
+        top: -26px;
+        left: 1px;
+    }
+}
+
