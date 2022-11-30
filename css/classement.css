@@ -5,6 +5,7 @@
     height: 100%;
     display: flex;
     align-items: last baseline;
+    display: none;
 }
 .styled-table{
     border-collapse: collapse;

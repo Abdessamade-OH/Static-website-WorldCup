@@ -218,4 +218,5 @@ function classement(){
 	console.log("Classment: done.");
 	closeVol2();
 	closeVol3();
+	document.getElementById("classement").style.display='block';
 }
