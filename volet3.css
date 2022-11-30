@@ -59,14 +59,135 @@
 	background-color: linen;
 	box-shadow: 0 0 5px 5px black;
 	border-radius: 20px;
-	//opacity: 0.2;
 }
 .image img{
 	height: 100%;
 	object-fit: cover;
 	border-radius: 10px;
-	border: 1px solid black;
+	border: 1px solid var(--color-black);
 	box-shadow: 0 0 5px 5px var(--color-darkGreen);
+}
+
+.image-container{
+	height:100%;
+	width: 429.4px;
+	position: relative;
+	border: 2 solid yellow;
+}
+.player{
+	position: absolute;
+	top :0;
+	left: 0;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1.5px;
+	font-size: 12px;
+	font-family: sans-serif;
+	color: var(--color-black);
+}
+.min-card{
+	margin-top: 3px;
+	position: absolute;
+	display: none;
+	width: 80px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	background-color: linen;
+	box-shadow: 0 0 5px black;
+	border-radius: 10px;
+	font-size: 0.53rem;
+	display: none;
+	z-index:1;
+}
+.player:hover .min-card{
+	display:flex;
+}
+.min-card:hover{
+	visibility: hidden;
+}
+.min-card *{
+	margin: 0;
+	padding: 0;
+}
+.min-card img{
+	margin-top: 2.5px;
+	height: 60px;
+	box-shadow: 0 0 3px black;
+	border-radius: 7px;
+	object-fit: cover;
+}
+#player-1{
+	top: 104px;
+	left: 28px;
+	margin-top: 10px;
+	margin-left: -27px;
+}
+#player-1:hover{
+	color: var(--color-black);
+}
+#player-2{
+	top: 173px;
+	left: 153px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-3{
+	top: 126px;
+	left: 117px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-4{
+	top: 75px;
+	left: 117px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-5{
+	top: 32px;
+	left: 153px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-6{
+	top: 144px;
+	left: 205px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-7{
+	top: 69px;
+	left: 204px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-8{
+	top: 104px;
+	left: 250px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-9{
+	top: 163px;
+	left: 310px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-10{
+	top: 105px;
+	left: 344px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-11{
+	top: 42px;
+	left: 310px;
+	margin-top: 10px;
+	margin-left: -30px;
 }
 
 .team-title{
