@@ -3,6 +3,7 @@
    justify-content: center;
    position: relative;
    top: -100px;
+   left: -94px;
 }
 .card{
     height: 100px;
@@ -11,6 +12,8 @@
     color: brown;
     background-color: wheat;
     border-radius: 5px 43%;
+    margin-left: -16px;
+    width: 19%;
 }
 .card>.versus{
     text-align: center;
@@ -30,7 +33,7 @@ h2{
     justify-content: right;
     font-size: 53px;
     position: relative;
-    right: 47px;
+    right: 124px;
     top: -40px;
 }
 .pays2>li{
