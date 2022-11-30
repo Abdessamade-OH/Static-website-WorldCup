@@ -38,6 +38,7 @@ window.onload = () => {
 			}
 		}
 	});
+	
 }
 
 function checkMedia750(Media750){
@@ -219,4 +220,12 @@ function classement(){
 	closeVol2();
 	closeVol3();
 	document.getElementById("classement").style.display='block';
+	document.getElementById("acceuil").style.display='none';
+}
+function acceuil(){
+	console.log("Acceuil: done.");
+	closeVol2();
+	closeVol3();
+	document.getElementById("classement").style.display='none';
+	document.getElementById("acceuil").style.display='flex';
 }

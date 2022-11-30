@@ -6,9 +6,7 @@
 	//border: 7px solid yellow;
 	overflow-x: hidden;
 	overflow-y: auto;
-	z-index: 1;
-	//transition-delay: 0.4s;
 }
-nav a:not(#groupes):hover{
+nav li:not(.menu):hover{
 	cursor: pointer;
 }
