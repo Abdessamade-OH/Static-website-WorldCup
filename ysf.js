@@ -22,7 +22,7 @@ var Teams = [];
 {
 	
 	Teams.push(Team1 = [])
-	Teams[0].push(new Joueur("Hoalid RAGRAGI","", 42, 0, 0, "./data/Walid.png"));
+	Teams[0].push(new Manager("Hoalid RAGRAGI", 42,"./data/Walid.png"));
 	Teams[0].push(new Joueur("Yassine BONO ", "GK", 30, 189, 1));
 	Teams[0].push(new Joueur("Achraf HAKIMI", "DD", 19, 182, 2));
 	Teams[0].push(new Joueur("Naif AGUERD", "DC", 25, 179, 4));
@@ -56,8 +56,6 @@ window.onload = () => {
 
 function showTeam(event) {
 	let a = event.target.value;
-	
-
 	let arr = [];
 	arr=Teams[a];
 	let x = document.getElementById("Main_players");
@@ -87,39 +85,28 @@ function showTeam(event) {
 	z.appendChild(age);
 }
 function createTeam(event){
-	console.log(11);
+	
 	let x = event.target.parentElement;
 	Teams.push(Team2=[]);
-	Team2.push(new Joueur("Lorem Ipsum ","",0,180,Teams.length-1,"./data/user.png"));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));
-	Team2.push(new Joueur("Lorem Ipsum ","JR",0,180,99));	
+	Team2.push(new Joueur("Manage ","",0,180,Teams.length-1,"./data/user.png"));
+	for (let index = 1; index < 27; index++) {
+		Team2.push(new Joueur("Lorem Ipsum","PLY",0,180,index));
+	}
 	let li = document.createElement("li");
 	li.setAttribute("onclick","showTeam(event)");
 	li.setAttribute("value",parseInt(Teams.length-1));
-	li.innerHTML='Equipe'
+	li.innerHTML=' 🏳 Equipe<button class="modify" onclick="modifyTeam(event)">Modifier</button>'
 	x.appendChild(li)
 }
+
+function modifyTeam(event){
+	
+	document.getElementById("modify").style.display="block";
+	document.getElementById("mod").addEventListener("click",function add32(){
+		event.target.parentElement.innerHTML= document.getElementById("nationSelector").value+' <button class="modify" onclick="modifyTeam(event)">Modifier</button>';
+		document.getElementById("modify").style.display="none";
+	});
+	
+
+}
+

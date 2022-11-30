@@ -1,0 +1,19 @@
+#modify{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0.457);
+    display: none;
+}
+#modify select{
+    background-color: rgba(240, 248, 255, 0.552);
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+#modify button{
+    background-color: rgba(240, 248, 255, 0.552);
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
