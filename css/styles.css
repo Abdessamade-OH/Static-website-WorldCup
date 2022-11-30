@@ -25,15 +25,18 @@ body{
 	min-height: 400px;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	z-index: -100;
 }
-
+main{
+	height: 0%;
+}
 header {
     position: fixed;
     height:110px;
     width:100%;
     top:0px;
     background-color: var(--color-red);
-    z-index: 1;
+    z-index: 3;
     box-shadow: 0 0 10px 2px;
 }
 /* Nouha */
@@ -342,6 +345,7 @@ nav li:hover{
 					var(--color-lime) 10%
 				);
 	transition: right 0.5s  ease-in-out;
+	z-index: 3;
 }
 .volet5 a{
 	text-decoration: none;
@@ -531,6 +535,7 @@ footer img {
 	transition: left 0.5s  ease-in-out;
 	visibility:hidden;
 	left: -15%;
+	z-index: 3;
 }
 
 .volet2 ul {

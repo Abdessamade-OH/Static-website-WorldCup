@@ -4,18 +4,22 @@
         <title>Project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./styles.css" />
-        <link rel="stylesheet" href="./volet3.css" />
-		<link rel="stylesheet" href="form_ysf.css" />
-        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/volet3.css" />
+        <link rel="stylesheet" href="./css/volet4.css" />
+        <link rel="stylesheet" href="./css/classement.css" />
+		<link rel="stylesheet" href="./css/form.css" />
+        <script src="./js/script.js"></script>
+        <script src="./js/ysf.js"></script>
+        
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Ajouté ce stylesheet pour l'icon de sous bar-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" /> <!--Ajouté ce stylesheet pour les icones de footer-->
-        <link rel="stylesheet" href="./volet4.css" />
         
-        <script src="./ysf.js"></script>
+        
+        
         
     </head>
     <body>
@@ -215,53 +219,7 @@
 			</select>
 			<button id ="mod" type="submit" > Modifier </button>
 		</div>
-        <header id="volet1">
-			<div class="logo">
-			
-			<!-- <i class='fas fa-adjust'></i> -->
-			
-			
-				<a href="https://www.theguardian.com/international"><img class ="logo_img" src="./data/logo.png" alt="WC QATAR 2022"></a>
-			</div>
-			<div class="Pages"></div>
-			<nav>
-				<ul>	<!-- ajouter une liste pour les elements de navigation. -->
-					<li><a>Acceuil</a></li>
-					<li class="menu">
-						<a class="groupes">Groupes <i class="fa fa-caret-down"></i></a>
-						<nav class="sous-menu">
-							<ul>
-								<li><a>Groupe 1</a></li>
-								<li><a>Groupe 2</a></li>
-								<li><a>Groupe 3</a></li>
-								<li><a>Groupe 4</a></li>
-								<li><a>Groupe 5</a></li>
-								<li><a>Groupe 6</a></li>
-								<li><a>Groupe 7</a></li>
-								<li><a>Groupe 8</a></li>
-							</ul>
-						</nav>
-					</li>
-					<li><a>Matchs</a></li>
-					<li><a>Classment</a></li>
-				</ul>
-			</nav>
-			<!-- page defilante -->
-			<div class="marquee">  <!--static part-->
-                <ul class="marquee-cntent"> <!--moving part-->
-					<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100" ></li>
-					<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100" ></li>
-					 <li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/castrol.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/QAir.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/QNB.jpeg" width="78.5833" height="100"></li>
-                    <li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100"></li>
-                </ul>
-
-        </header>
+        
         
         <main>
       
@@ -451,7 +409,65 @@
             	
            	 </div>
             
-            <div class="volet4" id="volet4"></div>
+            <div class="volet4" id="volet4">
+            	
+				<!-- classement -->
+				<div class="classement">
+					<table class="styled-table">
+						<thead>
+							<tr>
+								
+								<th class="team-num"></th>
+								<th>Équipes</th>
+								<th>MJ</th>
+								<th>G</th>
+								<th>N</th>
+								<th>P</th>
+								<th>PTS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="team-num">1</td>
+								<td>&#127474&#127462 Maroc</td>
+								<td>3</td>
+								<td>3</td>
+								<td>0</td>
+								<td>0</td>
+								<td>9</td>
+							</tr>
+							<tr>
+								<td class="team-num">2</td>
+								<td>&#127466&#127480 Espagne</td>
+								<td>3</td>
+								<td>2</td>
+								<td>0</td>
+								<td>1</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td class="team-num">3</td>
+								<td>&#127482&#127480 USA</td>
+								<td>3</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="team-num">4</td>
+								<td>&#127478&#127462 Qatar</td>
+								<td>3</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+				
+            </div>
             
             <aside class="volet5" id="volet5">
         		<a onclick="openVol5()">
@@ -499,7 +515,53 @@
             </aside>
             
         </main>
-        
+        <header id="volet1">
+			<div class="logo">
+			
+			<!-- <i class='fas fa-adjust'></i> -->
+			
+			
+				<a href="https://www.theguardian.com/international"><img class ="logo_img" src="./data/logo.png" alt="WC QATAR 2022"></a>
+			</div>
+			<div class="Pages"></div>
+			<nav>
+				<ul>	<!-- ajouter une liste pour les elements de navigation. -->
+					<li><a id="acceuil">Acceuil</a></li>
+					<li class="menu">
+						<a class="groupes" id="groupes">Groupes <i class="fa fa-caret-down"></i></a>
+						<nav class="sous-menu">
+							<ul>
+								<li><a>Groupe 1</a></li>
+								<li><a>Groupe 2</a></li>
+								<li><a>Groupe 3</a></li>
+								<li><a>Groupe 4</a></li>
+								<li><a>Groupe 5</a></li>
+								<li><a>Groupe 6</a></li>
+								<li><a>Groupe 7</a></li>
+								<li><a>Groupe 8</a></li>
+							</ul>
+						</nav>
+					</li>
+					<li><a id="matchs">Matchs</a></li>
+					<li><a onclick="classement()" id="classement">Classment</a></li>
+				</ul>
+			</nav>
+			<!-- page defilante -->
+			<div class="marquee">  <!--static part-->
+                <ul class="marquee-cntent"> <!--moving part-->
+					<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100" ></li>
+					<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100" ></li>
+					 <li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100"></li>
+					<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100"></li>
+					<li><img class="imgSize" src="data/castrol.jpeg" width="78.5833" height="100"></li>
+					<li><img class="imgSize" src="data/QAir.jpeg" width="78.5833" height="100"></li>
+					<li><img class="imgSize" src="data/QNB.jpeg" width="78.5833" height="100"></li>
+                    <li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100"></li>
+					<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100"></li>
+					<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100"></li>
+                </ul>
+
+        </header>
         <footer>
         	<img src="./data/touche.png" />
 			<div class="container">
