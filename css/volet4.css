@@ -3,7 +3,7 @@
 	width: 100%;
 	height: calc(100vh - 150px);
 	top: 110px;
-	border: 7px solid yellow;
+	//border: 7px solid yellow;
 	overflow-x: hidden;
 	overflow-y: auto;
 	z-index: 1;

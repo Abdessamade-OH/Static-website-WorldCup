@@ -431,7 +431,7 @@ footer{
 	overflow: none;
 	transition-duration: 0.25s;
 	transition-timing-function: ease-out;
-	z-index: 2;
+	z-index: 4;
 	box-shadow: 0 0 5px black;
 	overflow-x: hidden;
 	overflow-y: hidden;
