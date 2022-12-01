@@ -1,6 +1,7 @@
 .volet3{
 	position: absolute;
-	top: 109px;
+	top: -250px;
+	visibility: hidden;
 	left: 0;
 	width: 100%;
 	height: 225px;
@@ -43,7 +44,7 @@
 .image{
 	position: absolute;
 	height: 100%;
-	border: 1px solid black;
+	//border: 1px solid black;
 	background-color: inherit;
 }
 .image-card{
