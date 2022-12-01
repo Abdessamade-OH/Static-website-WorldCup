@@ -337,7 +337,8 @@ nav li:hover{
 	right: 0;
 	height: calc(100vh - 150px);
 	width: 25%;
-	border: 2px solid black;
+	//border: 2px solid black;
+	box-shadow: 0 0 10px 3px;
 	//background: repeating-linear-gradient(
 					180deg,
 					var(--color-black) 0%,
@@ -521,6 +522,8 @@ footer img {
 .volet2{
 	position: relative;
 	top:110px;
+	left: -15%;
+	visibility: hidden;
 	width: 15%;
 	height: calc(100vh - 150px);
 	z-index: 1;
@@ -534,7 +537,7 @@ footer img {
 				);
 	overflow-x: hidden;
 	overflow-y: auto;
-	transition: left 0.4s  ease-in-out;
+	transition: left 0.45s  ease-in-out;
 	visibility:hidden;
 	left: -15%;
 	z-index: 3;
@@ -549,7 +552,7 @@ footer img {
 	margin: 0 auto;
 }
 #openButton2{
-	visibility: visible;
+	visibility: hidden;
 	left:0;
 }
 .volet2 li{

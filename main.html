@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="./css/home.css" />
         <link rel="stylesheet" href="./css/tab.css">
 		<link rel="stylesheet" href="./css/form.css" />
+		<link rel="stylesheet" href="./css/form2.css" />
         <script src="./js/script.js"></script>
         <script src="./js/ysf.js"></script>
         
@@ -239,13 +240,43 @@
         			</a>
         			<h1>Les Equipes</h1>
         		</div>
-                <ul type="none" class = "TeamsGrp">
+                <ul type="none" class = "TeamsGrp" id="Groupe1">
+                
 					<button onclick="createTeam(event)">Cree une Equipes</button>
 					<!--<li onclick="showTeam(event)" value="1">&#127463&#127466 Belgique</li>-->
                     <!--<li onclick="showTeam(event)"value="2" >&#127469&#127479 Croitie</li>-->
 					<li onclick="showTeam(event)" value="0">&#127474&#127462 Maroc <button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                     <!--<li onclick="showTeam(event)" value="3">&#127464&#127462 Canada</li>-->
                 </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe2">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe3">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe4">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe5">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe6">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe7">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                <ul type="none" class = "TeamsGrp" id="Groupe8">
+					<button onclick="createTeam(event)">Cree une Equipes</button>
+					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+                </ul>
+                
             </div>
             
             
@@ -484,170 +515,226 @@
                			 <tr>	
                     		<th>picture</th>
                     		<th>#</th>
-                    <th>Nom</th>
-                    <th>Prenom</th>
-                    <th>Gestion</th>
-                </tr>
-                <!--1-->
-                <tr>
-                    <th>
-                        <img src="IMG/207834-1668503728.webp" alt="player image">
-                    </th>
-                    <th>1</th>
-                    <th>Bono</th>
-                    <th>Yassine</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-        
-                </tr>
-                <tr>
-                    <th>
-                        <img src="IMG/204198-1666278687.webp" alt="player image">
-                    </th>
-                    <th>6</th>
-                    <th>ROMAIN</th>
-                    <th>Sais</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-        
-                <tr>
-                    <th>
-                        <img src="IMG/361914-1659355782.webp" alt="player image">
-                    </th>
-                    <th>5</th>
-                    <th>Agured</th>
-                    <th>Nayef</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-        
-                <tr>
-                    <th>
-                        <img src="IMG/hakimi.webp" alt="player image">
-                    </th>
-                    <th>2</th>
-                    <th>Hackimi</th>
-                    <th>Achraf</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-                     
-                <tr>
-                    <th>
-                        <img src="IMG/mazraoui.webp" alt="player image">
-                    </th>
-                    <th>3</th>
-                    <th>Mazraoui</th>
-                    <th>Noussair</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-                
-                <!--5-->
-                <tr>
-                    <th>
-                        <img src="IMG/amrabet.webp" alt="player image">
-                    </th>
-                    <th>4</th>
-                    <th>Amrabat</th>
-                    <th>Sofyan</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-        
-                <tr>
-                    <th>
-                        <img src="IMG/ONAHI.webp" alt="player image">
-                    </th>
-                    <th>8</th>
-                    <th>Ounahi</th>
-                    <th>Azzedine</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-        
-                <tr>
-                    <th>
-                        <img src="IMG/AMALAH.webp" alt="player image">
-                    </th>
-                    <th>15</th>
-                    <th>Amallah</th>
-                    <th>Selim</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-        
-                <tr>
-                    <th>
-                        <img src="IMG/BOUFOL.webp" alt="player image">
-                    </th>
-                    <th>17</th>
-                    <th>Boufal</th>
-                    <th>Sofiane</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-        
-                <tr>
-                    <th>
-                        <img src="IMG/NESYRI.webp" alt="player image">
-                    </th>
-                    <th>19</th>
-                    <th>En-Nesyri</th>
-                    <th>Youssef</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-                
-                <!--10-->
-                <tr>
-                    <th>
-                        <img src="IMG/ZIYACH.webp" alt="player image">
-                    </th>
-                    <th>19</th>
-                    <th>Ziyach</th>
-                    <th>Hackim</th>
-                    <th>
-                        <button>Editer</button>
-                        <button>Modifier</button>
-                        <button>Supprimer</button>
-                    </th>
-                </tr>
-            </table>
-        </div>
+                    		<th>Nom</th>
+                    		<th>Prenom</th>
+                    		<th>Gestion</th>
+				        </tr>
+				        <!--1-->
+				        <tr>
+				            <th>
+				                <img src="IMG/207834-1668503728.webp" alt="player image">
+				            </th>
+				            <th>1</th>
+				            <th>Bono</th>
+				            <th>Yassine</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
 				
-            </div>
+				        </tr>
+				        <tr>
+				            <th>
+				                <img src="IMG/204198-1666278687.webp" alt="player image">
+				            </th>
+				            <th>6</th>
+				            <th>ROMAIN</th>
+				            <th>Sais</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				
+				        <tr>
+				            <th>
+				                <img src="IMG/361914-1659355782.webp" alt="player image">
+				            </th>
+				            <th>5</th>
+				            <th>Agured</th>
+				            <th>Nayef</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				
+				        <tr>
+				            <th>
+				                <img src="IMG/hakimi.webp" alt="player image">
+				            </th>
+				            <th>2</th>
+				            <th>Hackimi</th>
+				            <th>Achraf</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				             
+				        <tr>
+				            <th>
+				                <img src="IMG/mazraoui.webp" alt="player image">
+				            </th>
+				            <th>3</th>
+				            <th>Mazraoui</th>
+				            <th>Noussair</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				        
+				        <!--5-->
+				        <tr>
+				            <th>
+				                <img src="IMG/amrabet.webp" alt="player image">
+				            </th>
+				            <th>4</th>
+				            <th>Amrabat</th>
+				            <th>Sofyan</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				
+				        <tr>
+				            <th>
+				                <img src="IMG/ONAHI.webp" alt="player image">
+				            </th>
+				            <th>8</th>
+				            <th>Ounahi</th>
+				            <th>Azzedine</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				
+				        <tr>
+				            <th>
+				                <img src="IMG/AMALAH.webp" alt="player image">
+				            </th>
+				            <th>15</th>
+				            <th>Amallah</th>
+				            <th>Selim</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				
+				        <tr>
+				            <th>
+				                <img src="IMG/BOUFOL.webp" alt="player image">
+				            </th>
+				            <th>17</th>
+				            <th>Boufal</th>
+				            <th>Sofiane</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				
+				        <tr>
+				            <th>
+				                <img src="IMG/NESYRI.webp" alt="player image">
+				            </th>
+				            <th>19</th>
+				            <th>En-Nesyri</th>
+				            <th>Youssef</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+				        
+				        <!--10-->
+				        <tr>
+				            <th>
+				                <img src="IMG/ZIYACH.webp" alt="player image">
+				            </th>
+				            <th>19</th>
+				            <th>Ziyach</th>
+				            <th>Hackim</th>
+				            <th>
+				                <button onclick="formTab()">Editer</button>
+				                <button>Modifier</button>
+				                <button>Supprimer</button>
+				            </th>
+				        </tr>
+            		</table>
+        		</div>	
+            
+            
+            <!--Form-->
+                <div class="grl" id="form-tab">
+                
+				  <div class="container2">
+					<div class="title">Editer joueur</div>
+					<div class="content">
+					  <form action="#">
+						<div class="user-details">
+							<div class="input-box">
+							  <input type="text" placeholder="Nom" required>
+							</div>
+							<div class="input-box">
+							  <input type="text" placeholder="Prenom" required>
+							</div>
+							<div class="input-box">
+							  <input type="text" placeholder="#Numero" required>
+							</div>
+							
+							<div class="upload">
+							  <button type = "button" class = "btn">
+								<i class = "P-upload">Photo de joueur :</i>
+								<input type="file" placeholder="choisir photo">
+							  </button>
+							</div>
+						  </div>
+
+
+						  <div class="foot-details">
+							<input type="checkbox" name="foot" id="dot-1">
+							<input type="checkbox" name="foot" id="dot-2">
+							
+							<span class="foot-title">Foot</span>
+							<div class="category">
+							  <label for="dot-1">
+							  <span class="dot one"></span>
+							  <span class="foot-used">Right</span>
+							  </label>
+							  <label for="dot-2">
+								<span class="dot two"></span>
+								<span class="foot-used">Left</span>
+							  </label>
+							  
+							</div>
+						  </div>
+
+						
+						<div class="button">
+						  <input type="submit" value="Register">
+						</div>
+					  </form>
+					</div>
+				  </div>
+				  
+				</div>
+				
+			</div>
             
             <aside class="volet5" id="volet5">
         		<a onclick="openVol5()">
@@ -711,14 +798,14 @@
 						<a class="groupes" id="groupes">Groupes <i class="fa fa-caret-down"></i></a>
 						<nav class="sous-menu">
 							<ul>
-								<li onclick="table()"><a>Groupe 1</a></li>
-								<li onclick="table()"><a>Groupe 2</a></li>
-								<li onclick="table()"><a>Groupe 3</a></li>
-								<li onclick="table()"><a>Groupe 4</a></li>
-								<li onclick="table()"><a>Groupe 5</a></li>
-								<li onclick="table()"><a>Groupe 6</a></li>
-								<li onclick="table()"><a>Groupe 7</a></li>
-								<li onclick="table()"><a>Groupe 8</a></li>
+								<li onclick="table('Groupe1')"><a>Groupe 1</a></li>
+								<li onclick="table('Groupe2')"><a>Groupe 2</a></li>
+								<li onclick="table('Groupe3')"><a>Groupe 3</a></li>
+								<li onclick="table('Groupe4')"><a>Groupe 4</a></li>
+								<li onclick="table('Groupe5')"><a>Groupe 5</a></li>
+								<li onclick="table('Groupe6')"><a>Groupe 6</a></li>
+								<li onclick="table('Groupe7')"><a>Groupe 7</a></li>
+								<li onclick="table('Groupe8')"><a>Groupe 8</a></li>
 							</ul>
 						</nav>
 					</li>

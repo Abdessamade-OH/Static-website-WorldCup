@@ -1,4 +1,4 @@
-table{
+.div-tab table{
     border-collapse: collapse;
     width: 98%;
     height: 98%;
@@ -6,12 +6,12 @@ table{
     border-radius: 12px 12px 0 0;
     overflow: hidden;
    }
-td , th{
+.div-tab td , th{
     padding-block: min(2vh,100px) ;
     text-align: center;
  
    }
-th{
+.div-tab th{
     background-color: rgb(48, 45, 45);
     color: #fafafa;
     font-family: 'Open Sans',Sans-serif;
@@ -19,13 +19,13 @@ th{
     text-transform: uppercase;
    
    }
-tr{
+.div-tab tr{
     width: 100%;
     background-color: #fafafa;
     font-family: 'Montserrat', sans-serif;
    }
 
-table button{
+.div-tab table button{
     background-color: white;
     color:  rgb(108, 82, 125);
     border-color:  rgb(108, 82, 125);
@@ -44,7 +44,7 @@ table button{
     z-index: 1;
     right: 0%;
 }
-input{
+.div-tab input{
         border-color: gray;
 
         width: 22vw;

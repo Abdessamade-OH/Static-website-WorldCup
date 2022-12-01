@@ -225,6 +225,8 @@ function classement(){
 	document.getElementById("classement").style.display='block';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("div-tab").style.display='none';
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
 }
 function acceuil(){
 	console.log("Acceuil: done.");
@@ -233,11 +235,26 @@ function acceuil(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("div-tab").style.display='none';
 	document.getElementById("acceuil").style.display='flex';
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
 }
-function table(){
+function table(grp){
 	console.log("Table: done.");
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("div-tab").style.display='flex';
+	document.getElementById("form-tab").style.display="none";
 	openVol2();
+	let teams = document.getElementsByClassName("TeamsGrp");
+	
+	for (let i = 0; i<teams.length; i++){
+		teams[i].style.display="none";
+	}
+	
+	document.getElementById(grp).style.display="block";
+}
+function formTab(){
+	console.log("Form: done");
+	document.getElementById("form-tab").style.display="flex";
+	document.getElementById("div-tab").style.display="none";
 }
