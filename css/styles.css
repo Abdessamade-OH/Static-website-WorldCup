@@ -572,4 +572,14 @@ footer img {
 	text-decoration: none;
 	cursor: pointer;
 }
-
+.grp-title{
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	text-align: left;
+	font-weight: bold;
+	display: inline-block;
+}
+.TeamsGrp li{
+	cursor:pointer;
+}

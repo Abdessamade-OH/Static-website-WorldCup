@@ -241,40 +241,47 @@
         			<h1>Les Equipes</h1>
         		</div>
                 <ul type="none" class = "TeamsGrp" id="Groupe1">
-                
+                	<h3 class="grp-title">Groupe 1</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
 					<!--<li onclick="showTeam(event)" value="1">&#127463&#127466 Belgique</li>-->
                     <!--<li onclick="showTeam(event)"value="2" >&#127469&#127479 Croitie</li>-->
-					<li onclick="showTeam(event)" value="0">&#127474&#127462 Maroc <button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0">&#127474&#127462 Maroc <button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                     <!--<li onclick="showTeam(event)" value="3">&#127464&#127462 Canada</li>-->
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe2">
+                	<h3 class="grp-title">Groupe 2</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe3">
+                	<h3 class="grp-title">Groupe 3</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe4">
+                    <h3 class="grp-title">Groupe 4</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe5">
+                	<h3 class="grp-title">Groupe 5</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe6">
+                	<h3 class="grp-title">Groupe 6</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe7">
+                	<h3 class="grp-title">Groupe 7</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe8">
+                	<h3 class="grp-title">Groupe 8</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event)" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
+					<li onclick="showTeam(event); openVol3();" value="0"><button class="modify" onclick="modifyTeam(event)">Modifier</button></li>
                 </ul>
                 
             </div>
@@ -798,14 +805,14 @@
 						<a class="groupes" id="groupes">Groupes <i class="fa fa-caret-down"></i></a>
 						<nav class="sous-menu">
 							<ul>
-								<li onclick="table('Groupe1')"><a>Groupe 1</a></li>
-								<li onclick="table('Groupe2')"><a>Groupe 2</a></li>
-								<li onclick="table('Groupe3')"><a>Groupe 3</a></li>
-								<li onclick="table('Groupe4')"><a>Groupe 4</a></li>
-								<li onclick="table('Groupe5')"><a>Groupe 5</a></li>
-								<li onclick="table('Groupe6')"><a>Groupe 6</a></li>
-								<li onclick="table('Groupe7')"><a>Groupe 7</a></li>
-								<li onclick="table('Groupe8')"><a>Groupe 8</a></li>
+								<li onclick="group('Groupe1')"><a>Groupe 1</a></li>
+								<li onclick="group('Groupe2')"><a>Groupe 1</a></li>
+								<li onclick="group('Groupe3')"><a>Groupe 3</a></li>
+								<li onclick="group('Groupe4')"><a>Groupe 4</a></li>
+								<li onclick="group('Groupe5')"><a>Groupe 5</a></li>
+								<li onclick="group('Groupe6')"><a>Groupe 6</a></li>
+								<li onclick="group('Groupe7')"><a>Groupe 7</a></li>
+								<li onclick="group('Groupe8')"><a>Groupe 8</a></li>
 							</ul>
 						</nav>
 					</li>

@@ -215,7 +215,8 @@ function openVol3(){
 	if(lessThan750){
 		if(Open5)
 			closeVol5();
-	}	
+	}
+	table();	
 }
 
 function classement(){
@@ -238,12 +239,14 @@ function acceuil(){
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
 }
-function table(grp){
+function table(){
 	console.log("Table: done.");
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("div-tab").style.display='flex';
 	document.getElementById("form-tab").style.display="none";
+}
+function group(grp){
 	openVol2();
 	let teams = document.getElementsByClassName("TeamsGrp");
 	
@@ -253,6 +256,7 @@ function table(grp){
 	
 	document.getElementById(grp).style.display="block";
 }
+
 function formTab(){
 	console.log("Form: done");
 	document.getElementById("form-tab").style.display="flex";
