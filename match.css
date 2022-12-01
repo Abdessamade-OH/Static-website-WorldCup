@@ -2,8 +2,10 @@
    display: flex;
    justify-content: center;
    position: relative;
-   top: -100px;
-   left: -94px;
+   top: 0px;
+   left: 37px;
+   width: 100%;
+   margin-bottom: -74px;
 }
 .card{
     height: 100px;
@@ -13,7 +15,7 @@
     background-color: wheat;
     border-radius: 5px 43%;
     margin-left: -16px;
-    width: 19%;
+    width: 100%;
 }
 /* .card>.versus{
     text-align: center;
@@ -75,19 +77,50 @@ h2{
     visibility: visible;
     
 }   .match{
-    font-size: 300%;
+    font-size: 253%;
     position: relative;
     top: -34px;
-    left: 52px;
+    left: 0px;
     margin: 0;
 
 }
 @media  only screen and (max-width: 600px) {
     .match{
-        font-size: 177%;
+        font-size: 50%;
         position: relative;
         top: -26px;
         left: 1px;
     }
 }
 
+
+.container1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    left: 32px;
+    top: 0px;
+    margin-bottom: -74px;
+    
+}
+.container2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0px;
+    left: 32px;
+    width: 100%;
+   
+    
+ }
+.mainContainer{
+    background-color: brown;
+    position: relative;
+    top: -286px;
+    right: -22px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 75%;
+}
