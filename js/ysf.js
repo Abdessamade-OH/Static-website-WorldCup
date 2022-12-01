@@ -83,7 +83,7 @@ function showTeam(event) {
 	let name = document.createElement("h3");
 	let age = document.createElement("h4");
 	let pic = document.createElement("img");
-	let title=document.getElementById("team-title");
+	let title=document.querySelector("#team-title .flag");
 	name.innerHTML = arr[0].Nom;
 	pic.src = arr[0].pic;
 	age.innerHTML = "Age :" + arr[0].Age;
@@ -114,9 +114,10 @@ function createTeam(event){
 }
 
 function modifyTeam(event){
-	
+	event.preventDefault();
 	document.getElementById("modify").style.display="block";
 	let a = event.target.parentElement;
+
 	document.getElementById("mod").addEventListener("click",function add32(){
 		a.innerHTML= document.getElementById("nationSelector").value+' <button class="modify" onclick="modifyTeam(event)">Modifier</button> <button class="modify" onclick="del(event)">supprimé</button>';
 		document.getElementById("team-title").innerHTML='<h1>'+document.getElementById("nationSelector").value+'</h1>';
@@ -133,10 +134,27 @@ function del(event){
 	for (let index = 0; index < array.length; index++) {
 		array.pop();
 	}
-
+	let caption = document.getElementById("team-info");
+	let title=document.querySelector("#team-title .flag");
+	let play=document.getElementsByClassName("player");
+	let x = document.getElementById("Main_players");
+	let y = document.getElementById("Sub_players");
+	let z = document.getElementById("left-card");
+	x.innerHTML = "";
+	y.innerHTML = "";
+	z.innerHTML = "";
+	title.innerHTML="";
+	caption.innerHTML="";
+	for (let index = 1; index < 12; index++) {
+		play[index-1].innerHTML="";
+	}
+	event.preventDefault();
 }
 function delPlayer(event){
-
+	let a=event.target.parentElement;
+	a.remove();
+}
+function addPlayer(){
+	
 
 }
-
