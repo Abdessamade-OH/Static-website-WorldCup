@@ -4,6 +4,7 @@
     width: 100%;
     background-color: rgba(240, 248, 255, 0.457);
     display: none;
+    z-index: 5;
 }
 #modify select{
     background-color: rgba(240, 248, 255, 0.552);
