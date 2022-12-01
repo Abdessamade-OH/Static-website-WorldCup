@@ -11,13 +11,16 @@ class Joueur {
 	}
 }
 class Manager {
-	constructor(Nom, Age, pic, caption,teamNbr ,Description) {
+	constructor(Nom, Age, pic, caption,teamNbr ,Description,Nation) {
+		this.pic="./data/user.png";
 		this.Nom = Nom;
 		this.Age = Age;
+		if(pic!=null)
 		this.pic = pic;
 		this.Description = Description;
 		this.caption = caption;
-		this.pic = teamNbr;
+		this.teamNbr = teamNbr;
+		this.Nation=Nation
 	}
 }
 
@@ -26,7 +29,7 @@ var Teams = [];
 {
 	
 	Teams.push(Team1 = [])
-	Teams[0].push(new Manager("Hoalid RAGRAGI", 42,"./data/Walid.png"));
+	Teams[0].push(new Manager("Hoalid RAGRAGI", 42,"./data/Walid.png","Atlas Lions, fearless and victorious !",0,"titulaire de 2 botola maroccaine et une ligue des chamipns avec les pd","🇲🇦Maroc"));
 	Teams[0].push(new Joueur("Yassine BONO ", "GK", 30, 189, 1,"./IMG/bono.webp"));
 	Teams[0].push(new Joueur("Achraf HAKIMI", "DD", 19, 182, 2,"./IMG/hakimi.webp"));
 	Teams[0].push(new Joueur("Naif AGUERD", "DC", 26, 179, 4,"./IMG/agreud.webp"));
@@ -76,9 +79,11 @@ function showTeam(event) {
 		li.innerHTML = '<span class="role">' + arr[i].Poste + '</span><span>' + arr[i].Nom + '</span></span><span>'+arr[i].Numero+'</span></li>';
 		y.appendChild(li);
 	}
+	let caption = document.getElementById("team-info");
 	let name = document.createElement("h3");
 	let age = document.createElement("h4");
 	let pic = document.createElement("img");
+	let title=document.getElementById("team-title");
 	name.innerHTML = arr[0].Nom;
 	pic.src = arr[0].pic;
 	age.innerHTML = "Age :" + arr[0].Age;
@@ -88,34 +93,50 @@ function showTeam(event) {
 	let play=document.getElementsByClassName("player");
 	for (let index = 1; index < 12; index++) {
 		play[index-1].innerHTML='<span>'+arr[index].Nom+'</span> <div class="min-card"><img src="'+arr[index].pic+'" alt="player image" /> <h3>'+arr[index].Nom+'</h3><h4>Age: '+arr[index].Age+'</h4> </div>';
-		
 	}
+	caption.innerHTML=arr[0].caption;
+	title.innerHTML=arr[0].Nation.substring(0, 4);
 }
 function createTeam(event){
 	
 	let x = event.target.parentElement;
 	Teams.push(Team2=[]);
-	Team2.push(new Joueur("Manage ","",0,180,Teams.length-1,"./data/user.png"));
+	Team2.push(new Manager("Nom entraineur", 50,"./data/user.png","Croyons en nos ambitions",Teams.length-1,"palmares",'Equipe'+parseInt(Teams.length-1 )));
 	for (let index = 1; index < 27; index++) {
-		Team2.push(new Joueur("Amine"+index,"PLY",25,180,index));
+		Team2.push(new Joueur("Player "+index,"PLY",25,180,index));
 	}
 	let li = document.createElement("li");
 	li.setAttribute("onclick","showTeam(event)");
 	li.setAttribute("value",parseInt(Teams.length-1));
-	li.innerHTML=' 🏳 Equipe<button class="modify" onclick="modifyTeam(event)">Modifier</button>'
+	li.innerHTML='🇸🇦Equipe<button class="modify" onclick="modifyTeam(event)">Modifier</button><button class="modify" onclick="del(event)">supprimé</button>'
+	Team2[0].Nation="🇸🇦Equipe";
 	x.appendChild(li)
 }
 
 function modifyTeam(event){
 	
 	document.getElementById("modify").style.display="block";
+	let a = event.target.parentElement;
 	document.getElementById("mod").addEventListener("click",function add32(){
-		event.target.parentElement.innerHTML= document.getElementById("nationSelector").value+' <button class="modify" onclick="modifyTeam(event)">Modifier</button>';
+		a.innerHTML= document.getElementById("nationSelector").value+' <button class="modify" onclick="modifyTeam(event)">Modifier</button> <button class="modify" onclick="del(event)">supprimé</button>';
 		document.getElementById("team-title").innerHTML='<h1>'+document.getElementById("nationSelector").value+'</h1>';
+		Teams[a.value][0].Nation=document.getElementById("nationSelector").value[0];
 		document.getElementById("modify").style.display="none";
 	
 	});
-	
+}
+function del(event){
+	let a = event.target.parentElement.value;
+	event.target.parentElement.remove();
+	let arr = [];
+	array = Teams[a];
+	for (let index = 0; index < array.length; index++) {
+		array.pop();
+	}
+
+}
+function delPlayer(event){
+
 
 }
 
