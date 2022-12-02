@@ -105,6 +105,8 @@ function checkMedia860(media860){
 			document.getElementById("CONTAIN").style.top="0";
 			document.getElementById("FT").style.position="sticky";
 			document.getElementById("FT").style.left="65%";
+			document.getElementById("FT").style.height="90%";
+			document.getElementById("FT").style.top="5%";
 		}
 	}
 	else{
@@ -113,10 +115,12 @@ function checkMedia860(media860){
 		console.log("under 860px");
 		over860 = false;
 		if(openCard){
-			document.getElementById("CONTAIN").style.top="300px";
+			document.getElementById("CONTAIN").style.top="200px";
 			document.getElementById("FT").style.width="100%";
 			document.getElementById("FT").style.left="0%";
 			document.getElementById("FT").style.position="absolute";
+			document.getElementById("FT").style.height="200px";
+			document.getElementById("FT").style.top="0%";
 		}
 	}
 }
@@ -257,6 +261,7 @@ function classement(){
 	document.getElementById("div-tab").style.display='none';
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
+	document.getElementById("FT").style.display="none";
 }
 function acceuil(){
 	console.log("Acceuil: done.");
@@ -267,6 +272,7 @@ function acceuil(){
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
+	document.getElementById("FT").style.display="none";
 	
 	document.getElementById("acceuil").style.display='flex';
 }
@@ -275,9 +281,12 @@ function table(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("form-tab").style.display="none";
+	document.getElementById("FT").style.display="none";
+	
 	document.getElementById("div-tab").style.display="flex";
 	
 	document.getElementById("CONTAIN").style.display='block';
+	document.getElementById("CONTAIN").style.width="100%";
 }
 function group(grp){
 	openVol2();
@@ -304,9 +313,15 @@ function playerCard(){
 	if(over860){
 		document.getElementById("CONTAIN").style.width="65%";
 		document.getElementById("CONTAIN").style.width="65%";
+		document.getElementById("FT").style.width="90%";
+		document.getElementById("FT").style.top="5%";
 	}
 	else{
-		document.getElementById("CONTAIN").style.top="300px";
+		document.getElementById("CONTAIN").style.top="200px";
+		document.getElementById("FT").style.width="100%";
+		document.getElementById("FT").style.height="200px";
+		document.getElementById("FT").style.top="0%";
+		document.getElementById("FT").style.left="0%";
 	}	
 }
 
