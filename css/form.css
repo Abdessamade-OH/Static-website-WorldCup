@@ -1,20 +1,44 @@
+textarea{
+    width: 243px;
+    height: 104px;
+}
 #modify{
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(240, 248, 255, 0.457);
+    height: 50%;
+    width: 50%;
+    top: 163px;
+    left: 268px;
     display: none;
+    background-color: rgba(240, 248, 255, 0.457);
+  
     z-index: 5;
 }
 #modify select{
     background-color: rgba(240, 248, 255, 0.552);
-    position: relative;
-    top: 50%;
-    left: 50%;
+    
+  
 }
 #modify button{
     background-color: rgba(240, 248, 255, 0.552);
-    position: relative;
-    top: 50%;
-    left: 50%;
+   
 }
+.contain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    top: 100px;
+}
+ @media only screen and(max-width:500px){
+    #modify{
+        position: absolute;
+        top: 143px;
+        left: 111px;
+        
+       
+    }
+
+} 
