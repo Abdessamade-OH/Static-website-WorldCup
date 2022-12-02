@@ -4,6 +4,7 @@
 	height: calc(100vh - 150px);
 	top: 110px;
 	//border: 7px solid yellow;
+	background-color: var(--color-gray);
 	overflow-x: hidden;
 	overflow-y: auto;
 }

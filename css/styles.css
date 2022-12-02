@@ -337,13 +337,15 @@ nav li:hover{
 	right: 0;
 	height: calc(100vh - 150px);
 	width: 25%;
-	border: 2px solid black;
-	background: repeating-linear-gradient(
+	//border: 2px solid black;
+	box-shadow: 0 0 10px 3px;
+	//background: repeating-linear-gradient(
 					180deg,
-					var(--color-lime) 0%,
-					var(--color-green) 5%,
-					var(--color-lime) 10%
+					var(--color-black) 0%,
+					var(--color-purple) 5%,
+					var(--color-black) 10%
 				);
+	background-color: var(--color-gray);
 	transition: right 0.5s  ease-in-out;
 	z-index: 3;
 }
@@ -353,12 +355,12 @@ nav li:hover{
 }
 .sidebar{
 	position: absolute;
-	width: 95%;
+	width: 98%;
 	height: 85%;
-	border: 1px solid yellow;
+	//border: 1px solid yellow;
 	overflow-y: scroll;
 	top: 15%;	
-	left: 2.5%;
+	left: 1%;
 	background: linear-gradient(
 					45deg,
 					var(--color-purple),
@@ -384,10 +386,10 @@ nav li:hover{
 	border-bottom: none;
 }
 .volet-header{
-	width: 85%;
+	width: 98%;
 	height: 15%;
 	top:0;
-	border: 1px solid var(--color-red);
+	//border: 1px solid var(--color-red);
 	margin: 0 auto;
 	background: linear-gradient(
 					45deg,
@@ -399,6 +401,7 @@ nav li:hover{
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	align-items: center;
+	box-shadow: 0 0 10px 2px;
 }
 .volet-header h1{
 	text-align: center;
@@ -519,6 +522,8 @@ footer img {
 .volet2{
 	position: relative;
 	top:110px;
+	left: -15%;
+	visibility: hidden;
 	width: 15%;
 	height: calc(100vh - 150px);
 	z-index: 1;
@@ -532,7 +537,7 @@ footer img {
 				);
 	overflow-x: hidden;
 	overflow-y: auto;
-	transition: left 0.5s  ease-in-out;
+	transition: left 0.45s  ease-in-out;
 	visibility:hidden;
 	left: -15%;
 	z-index: 3;
@@ -547,7 +552,7 @@ footer img {
 	margin: 0 auto;
 }
 #openButton2{
-	visibility: visible;
+	visibility: hidden;
 	left:0;
 }
 .volet2 li{
@@ -567,4 +572,14 @@ footer img {
 	text-decoration: none;
 	cursor: pointer;
 }
-
+.grp-title{
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	text-align: left;
+	font-weight: bold;
+	display: inline-block;
+}
+.TeamsGrp li{
+	cursor:pointer;
+}

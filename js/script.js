@@ -8,6 +8,9 @@ var auto2 = false;
 var auto5 = false;
 window.onload = () => {
 	console.log("Hello world!");
+	
+	acceuil();
+	
 	const Media750 = window.matchMedia('(max-width: 750px)');
 	checkMedia750(Media750);
 	Media750.addListener(checkMedia750);
@@ -194,7 +197,7 @@ function closeVol3(){
 function openVol3(){
 	let vol3= document.getElementById("volet3");
 	//vol5.style.width= "25%";
-	vol3.style.top= "110px";
+	vol3.style.top= "109px";
 	vol3.style.visibility="visible";
 	let openButton = document.getElementById("openButton3");
 	openButton.style.visibility="hidden";
@@ -212,7 +215,8 @@ function openVol3(){
 	if(lessThan750){
 		if(Open5)
 			closeVol5();
-	}	
+	}
+	table();	
 }
 
 function classement(){
@@ -221,11 +225,40 @@ function classement(){
 	closeVol3();
 	document.getElementById("classement").style.display='block';
 	document.getElementById("acceuil").style.display='none';
+	document.getElementById("div-tab").style.display='none';
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
 }
 function acceuil(){
 	console.log("Acceuil: done.");
 	closeVol2();
 	closeVol3();
 	document.getElementById("classement").style.display='none';
+	document.getElementById("div-tab").style.display='none';
 	document.getElementById("acceuil").style.display='flex';
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+}
+function table(){
+	console.log("Table: done.");
+	document.getElementById("classement").style.display='none';
+	document.getElementById("acceuil").style.display='none';
+	document.getElementById("div-tab").style.display='flex';
+	document.getElementById("form-tab").style.display="none";
+}
+function group(grp){
+	openVol2();
+	let teams = document.getElementsByClassName("TeamsGrp");
+	
+	for (let i = 0; i<teams.length; i++){
+		teams[i].style.display="none";
+	}
+	
+	document.getElementById(grp).style.display="block";
+}
+
+function formTab(){
+	console.log("Form: done");
+	document.getElementById("form-tab").style.display="flex";
+	document.getElementById("div-tab").style.display="none";
 }
