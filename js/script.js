@@ -6,6 +6,9 @@ var lessThan600 = false;
 var lessThan750 = false;
 var auto2 = false;
 var auto5 = false;
+var over860 = true;
+var openCard = false;
+
 window.onload = () => {
 	console.log("Hello world!");
 	
@@ -19,9 +22,9 @@ window.onload = () => {
 	checkMedia600(Media600);
 	Media600.addListener(checkMedia600);
 	
-	const over860 = window.matchMedia('(min-width: 860px)');
-	checkMedia860(over860);
-	over860.addListener(checkMedia860);
+	const media860 = window.matchMedia('(min-width: 860px)');
+	checkMedia860(media860);
+	media860.addListener(checkMedia860);
 	
 	document.getElementById("field").addEventListener("click", ()=>{
 		if(window.matchMedia("(max-width: 750px)").matches && Open2){
@@ -91,16 +94,30 @@ function checkMedia600(Media600){
 	}
 }
 
-function checkMedia860(over860){
-	if(over860.matches){
-		document.getElementById("CONTAIN").style.width="65%";
-		document.getElementById("CONTAIN").style.width="65%";
+function checkMedia860(media860){
+	if(media860.matches){
 		console.log("over 860px");
+		over860 = true;
+		if(openCard){
+			document.getElementById("FT").style.width="35%";
+			document.getElementById("CONTAIN").style.width="65%";
+			document.getElementById("CONTAIN").style.width="65%";
+			document.getElementById("CONTAIN").style.top="0";
+			document.getElementById("FT").style.position="sticky";
+			document.getElementById("FT").style.left="65%";
+		}
 	}
 	else{
 		document.getElementById("CONTAIN").style.width="100%";
 		document.getElementById("CONTAIN").style.width="100%";
 		console.log("under 860px");
+		over860 = false;
+		if(openCard){
+			document.getElementById("CONTAIN").style.top="300px";
+			document.getElementById("FT").style.width="100%";
+			document.getElementById("FT").style.left="0%";
+			document.getElementById("FT").style.position="absolute";
+		}
 	}
 }
 
@@ -278,3 +295,19 @@ function formTab(){
 	document.getElementById("form-tab").style.display="flex";
 	document.getElementById("div-tab").style.display="none";
 }
+
+function playerCard(){
+	console.log("player card: done");
+	document.getElementById("FT").style.display="block";
+	openCard = true;
+	
+	if(over860){
+		document.getElementById("CONTAIN").style.width="65%";
+		document.getElementById("CONTAIN").style.width="65%";
+	}
+	else{
+		document.getElementById("CONTAIN").style.top="300px";
+	}	
+}
+
+

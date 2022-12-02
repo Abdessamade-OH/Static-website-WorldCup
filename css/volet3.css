@@ -85,6 +85,10 @@
 	font-size: 12px;
 	font-family: sans-serif;
 	color: var(--color-black);
+	cursor: pointer;
+}
+area{
+	cursor: pointer;
 }
 .min-card{
 	margin-top: 3px;
