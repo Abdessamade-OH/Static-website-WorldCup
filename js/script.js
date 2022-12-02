@@ -312,8 +312,8 @@ function playerCard(){
 	
 	if(over860){
 		document.getElementById("CONTAIN").style.width="65%";
-		document.getElementById("CONTAIN").style.width="65%";
-		document.getElementById("FT").style.width="90%";
+		document.getElementById("FT").style.height="90%";
+		document.getElementById("FT").style.width="35%";
 		document.getElementById("FT").style.top="5%";
 	}
 	else{
