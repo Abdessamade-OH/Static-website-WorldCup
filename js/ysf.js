@@ -1,6 +1,6 @@
 class Joueur {
 	constructor(Nom, Poste, Age, Taille, Numero, pic) {
-		this.pic="./data/user.png";
+		this.pic="./data/usr.png";
 		this.Nom = Nom;
 		this.Poste = Poste;
 		this.Age = Age;
@@ -84,12 +84,22 @@ function showTeam(event) {
 	let age = document.createElement("h4");
 	let pic = document.createElement("img");
 	let title=document.querySelector("#team-title .flag");
+	let tableau = document.getElementById("table");
 	name.innerHTML = arr[0].Nom;
 	pic.src = arr[0].pic;
 	age.innerHTML = "Age :" + arr[0].Age;
 	z.appendChild(pic);
 	z.appendChild(name);
 	z.appendChild(age);
+	tableau.innerHTML='<tr>	<th>picture</th><th>#</th><th>Nom</th><th>Gestion</th></tr>'
+	for (let index = 1; index < arr.length; index++) {
+		let tc = document.createElement("tr");
+		tc.setAttribute("value",index);
+		let pic = document.createElement("img");
+		pic.src = arr[index].pic;
+		tc.innerHTML='<th><img src="'+arr[index].pic+'" alt="player image"></th><th>'+arr[index].Numero+'</th><th>'+arr[index].Nom+'</th><th><button onclick="formTab()">Editer</button><button>Modifier</button><button onclick="delPlayer(event)">Supprimer</button></th> '
+		tableau.appendChild(tc);
+	}
 	let play=document.getElementsByClassName("player");
 	for (let index = 1; index < 12; index++) {
 		play[index-1].innerHTML='<span>'+arr[index].Nom+'</span> <div class="min-card"><img src="'+arr[index].pic+'" alt="player image" /> <h3>'+arr[index].Nom+'</h3><h4>Age: '+arr[index].Age+'</h4> </div>';
@@ -114,7 +124,7 @@ function createTeam(event){
 }
 
 function modifyTeam(event){
-	event.preventDefault();
+	
 	document.getElementById("modify").style.display="block";
 	let a = event.target.parentElement;
 
@@ -125,6 +135,7 @@ function modifyTeam(event){
 		document.getElementById("modify").style.display="none";
 	
 	});
+	event.preventDefault();
 }
 function del(event){
 	let a = event.target.parentElement.value;
@@ -148,10 +159,12 @@ function del(event){
 	for (let index = 1; index < 12; index++) {
 		play[index-1].innerHTML="";
 	}
+	
 	event.preventDefault();
 }
 function delPlayer(event){
-	let a=event.target.parentElement;
+	let a=event.target.parentElement.parentElement;
+	let x=a.value;
 	a.remove();
 }
 function addPlayer(){
