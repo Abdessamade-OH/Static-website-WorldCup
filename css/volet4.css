@@ -5,8 +5,8 @@
 	top: 110px;
 	//border: 7px solid yellow;
 	background-color: var(--color-gray);
-	overflow-x: hidden;
-	overflow-y: auto;
+	//overflow-x: hidden;
+	//overflow-y: auto;
 }
 nav li:not(.menu):hover{
 	cursor: pointer;

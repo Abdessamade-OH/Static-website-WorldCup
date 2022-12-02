@@ -1,0 +1,16 @@
+.FT{
+  	position: absolute;
+	width: 35%;
+	height: 300px;
+	background-color: var(--color-gray);
+	border: 3px solid yellow;
+	//z-index: 5;
+	top: 0;
+	right: 0;
+}
+
+#CONTAIN{
+	height: 100%;
+	border: 5px solid blue;
+	overflow-y: auto;
+}

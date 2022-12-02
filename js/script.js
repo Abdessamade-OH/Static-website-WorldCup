@@ -19,9 +19,9 @@ window.onload = () => {
 	checkMedia600(Media600);
 	Media600.addListener(checkMedia600);
 	
-	const over750 = window.matchMedia('(min-width: 750px)');
-	resetOpacity(over750);
-	over750.addListener(resetOpacity);
+	const over860 = window.matchMedia('(min-width: 860px)');
+	checkMedia860(over860);
+	over860.addListener(checkMedia860);
 	
 	document.getElementById("field").addEventListener("click", ()=>{
 		if(window.matchMedia("(max-width: 750px)").matches && Open2){
@@ -63,6 +63,7 @@ function checkMedia750(Media750){
 		}
 		auto2=false;
 		lessThan750 = false;
+		document.getElementById("field").style.opacity="1";
 	}
 	
 }
@@ -89,16 +90,27 @@ function checkMedia600(Media600){
 		}
 	}
 }
-function resetOpacity(over750){
-	if(over750.matches){
-		document.getElementById("field").style.opacity="1";
+
+function checkMedia860(over860){
+	if(over860.matches){
+		document.getElementById("CONTAIN").style.width="65%";
+		document.getElementById("CONTAIN").style.width="65%";
+		console.log("over 860px");
+	}
+	else{
+		document.getElementById("CONTAIN").style.width="100%";
+		document.getElementById("CONTAIN").style.width="100%";
+		console.log("under 860px");
 	}
 }
+
+
 
 function closeVol5(){
 	let vol5= document.getElementById("volet5");
 	//vol5.style.width=0;
 	vol5.style.right= "-25%";
+	//vol5.style.boxShadow="0";
 	//vol5.style.visibility="hidden";
 	let openButton = document.getElementById("openButton");
 	openButton.style.visibility="visible";
@@ -234,17 +246,21 @@ function acceuil(){
 	closeVol2();
 	closeVol3();
 	document.getElementById("classement").style.display='none';
-	document.getElementById("div-tab").style.display='none';
-	document.getElementById("acceuil").style.display='flex';
+	document.getElementById("CONTAIN").style.display='none';
+
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
+	
+	document.getElementById("acceuil").style.display='flex';
 }
 function table(){
 	console.log("Table: done.");
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
-	document.getElementById("div-tab").style.display='flex';
 	document.getElementById("form-tab").style.display="none";
+	document.getElementById("div-tab").style.display="flex";
+	
+	document.getElementById("CONTAIN").style.display='block';
 }
 function group(grp){
 	openVol2();
