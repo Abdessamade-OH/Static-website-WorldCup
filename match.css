@@ -1,3 +1,4 @@
+/* ------contenaire des cartes----- */
 .container0{
    display: flex;
    justify-content: center;
@@ -5,13 +6,13 @@
    top: 0px;
    left: 37px;
    width: 100%;
-   /* margin-bottom: -74px; */
    flex-direction: row;
-gap: 61px;
+   gap: 61px;
 }
+/* ---------proprietees des cartes------ */
 .card{
     height: 100px;
-    /* margin:50px; */
+   
     box-shadow: 5px 5px 20px black ;
     color: brown;
     background-color: wheat;
@@ -19,66 +20,20 @@ gap: 61px;
     margin-left: -16px;
     width: 100%;
 }
-/* .card>.versus{
-    text-align: center;
-    margin-top: -45px;
-    position: relative;
-    top: -55px;
-    font-size: xxx-large;
-}*/
- /* .title{
-    position: relative;
-    top: -20px;
-
-} */
-
-/*.pays1>li{
-    list-style: none;
-    width: 25vw;
-    display: flex;
-    justify-content: right;
-    font-size: 53px;
-    position: relative;
-    right: 124px;
-    top: -40px;
-}
-.pays2>li{
-    list-style: none;
-    width: 25vw;
-    display: flex;
-    justify-content: left;
-    font-size: 53px;
-    margin-top: -43px;
-    position: relative;
-    left: 47px;
-    top: -65px;
-} */
+/* ---------proprietees de temps------ */
 .dateHeure{
     font-size: large;
     line-height: 20px;
     display: flex;
     justify-content: right;
 }
-.pays2>p, .date{
-    background-color: antiquewhite;
-    font-size: larger;
-    border-radius: 5px 43%;
-    margin-top: 7px;
-    position: relative;
-    bottom:60px;
-    opacity: 0;
-    visibility: hidden;
 
-}
 .card:hover{
     cursor: pointer;
 
 }
-.card:hover p, .date{
-    opacity: 1;
-    visibility: visible;
-    
-}   .match{
+/* --------proprietees des matches----- */
+  .match{
     font-size: 405%;
     position: relative;
     top: 10px;
@@ -86,44 +41,78 @@ gap: 61px;
     margin: 0;
 
 }
-@media  only screen and (max-width: 800px) {
+/* --------Contenaire principale------- */
+.mainContainer{
+    background-color: brown;
+    position: relative;
+    top: -87px;
+    width: 75%;
+    overflow: auto;
+    height: 204px;
+}
+/* ------contenaire des groupes----- */
+.group{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+
+/* ------------------Ajuster la taille des cartes au fur et à mesure la taille de la fenêtre---------------- */
+
+
+@media  only screen and (max-width: 980px) {
     .match{
-        font-size: 169%;
+        font-size: 383%;
         position: relative;
-        top: -26px;
+        top: 13px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 911px) {
+    .match{
+        font-size: 359%;
+        position: relative;
+        top: 13px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 867px) {
+    .match{
+        font-size: 334%;
+        position: relative;
+        top: 13px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 814px) {
+    .match{
+        font-size: 308%;
+        position: relative;
+        top: 13px;
         left: 1px;
     }
 }
 
+@media  only screen and (max-width: 800px) {
+    .match{
+        font-size: 291%;
+        position: relative;
+        top: 8px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 700px) {
+    .match{
+        font-size: 183%;
+        position: relative;
+        top: 31px;
+        left: 1px;
+    }
+    .dateHeure{
+        margin-top: 20%;
+        margin-left: 10%;
+    }
 
-.container1{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    left: 32px;
-    top: 0px;
-    margin-bottom: -74px;
-    
 }
-.container2{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 0px;
-    left: 32px;
-    width: 100%;
-   
-    
- }
-.mainContainer{
-    background-color: brown;
-    position: relative;
-    top: -174px;
-    /* right: -22px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; */
-    width: 75%;
-    /* overflow: auto; */
-}
+
