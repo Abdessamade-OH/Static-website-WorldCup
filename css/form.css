@@ -4,10 +4,10 @@ textarea{
 }
 #modify{
     position: absolute;
-    height: 50%;
-    width: 50%;
-    top: 163px;
-    left: 268px;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
     display: none;
     background-color: rgba(240, 248, 255, 0.457);
   
@@ -24,13 +24,13 @@ textarea{
 }
 .contain{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     position: relative;
     gap: 20px;
-    top: 100px;
+    top: 254px;
 }
  @media only screen and(max-width:500px){
     #modify{
