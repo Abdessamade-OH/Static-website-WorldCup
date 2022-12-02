@@ -147,6 +147,10 @@ function closeVol5(){
 	}
 	else
 		document.getElementById("volet4").style.width="100%";
+		
+	/*if(!over860){
+		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 2 )";
+	}*/
 }
 function openVol5(){
 	let vol5= document.getElementById("volet5");
@@ -167,6 +171,10 @@ function openVol5(){
 	}
 	else
 		document.getElementById("volet4").style.width="75%";
+		
+	/*if(!over860){
+		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 4 )";
+	}*/
 }
 
 function closeVol2(){
@@ -323,6 +331,12 @@ function playerCard(){
 		document.getElementById("FT").style.top="0%";
 		document.getElementById("FT").style.left="0%";
 	}	
+}
+
+function closePlayerCard(){
+	document.getElementById("FT").style.display="none";
+	document.getElementById("CONTAIN").style.top="0%";
+	document.getElementById("CONTAIN").style.width="100%";
 }
 
 
