@@ -58,8 +58,6 @@ var Teams = [];
 	Teams[0].push(new Joueur("EZ ABDE", "AD", 21, 175));
 }
 
-
-
 function showTeam(event,c) {
 	
 	let a = event.target.value;
@@ -98,6 +96,9 @@ function showTeam(event,c) {
 	z.appendChild(pic);
 	z.appendChild(name);
 	z.appendChild(age);
+	let addPbotn = document.createElement("button");
+	addPbotn.setAttribute("onclick","addPlayer(event)");
+	
 	tableau.innerHTML='<tr>	<th>picture</th><th>#</th><th>Nom</th><th>Gestion</th></tr>'
 	for (let index = 1; index < arr.length; index++) {
 		if(arr[index]!=null){
@@ -116,6 +117,8 @@ function showTeam(event,c) {
 		play[index-1].innerHTML='<span>'+arr[index+11].Nom+'</span> <div class="min-card"><img src="'+arr[index+11].pic+'" alt="player image" /> <h3>'+arr[index+11].Nom+'</h3><h4>Age: '+arr[index+11].Age+'</h4> </div>'}
 	caption.innerHTML=arr[0].caption;
 	title.innerHTML=arr[0].Nation.substring(0, 4);
+	addPbotn.innerHTML="ajouter un joueur";
+	tableau.appendChild(addPbotn);
 }
 function createTeam(event){
 	
@@ -145,8 +148,6 @@ function modifyTeam(event){
 		x++;}}
 	);
 	showTeam(event,teamshowed);
-	stopPropagation();
-	
 	
 }
 function del(event){
@@ -182,7 +183,7 @@ function delPlayer(event){
 	Teams[teamshowed][x]=null;
 	showTeam(event,teamshowed);
 }
-function addPlayer(){
-	
-
+function addPlayer(event){
+	Teams[teamshowed].push(new Joueur("Nouveau Joueur"+Teams[teamshowed].length+1,"PLY",25,180,Teams[teamshowed].length+1)); 
+	showTeam(event,teamshowed);
 }
