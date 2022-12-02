@@ -6,10 +6,12 @@
    left: 37px;
    width: 100%;
    /* margin-bottom: -74px; */
+   flex-direction: row;
+gap: 61px;
 }
 .card{
     height: 100px;
-    margin:50px;
+    /* margin:50px; */
     box-shadow: 5px 5px 20px black ;
     color: brown;
     background-color: wheat;
@@ -24,11 +26,11 @@
     top: -55px;
     font-size: xxx-large;
 }*/
-h2, .title{
+ /* .title{
     position: relative;
     top: -20px;
 
-}
+} */
 
 /*.pays1>li{
     list-style: none;
@@ -55,7 +57,7 @@ h2, .title{
     font-size: large;
     line-height: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 .pays2>p, .date{
     background-color: antiquewhite;
@@ -77,16 +79,16 @@ h2, .title{
     visibility: visible;
     
 }   .match{
-    font-size: 253%;
+    font-size: 405%;
     position: relative;
-    top: -34px;
-    left: 0px;
+    top: 10px;
+    left: 32px;
     margin: 0;
 
 }
-@media  only screen and (max-width: 600px) {
+@media  only screen and (max-width: 800px) {
     .match{
-        font-size: 50%;
+        font-size: 169%;
         position: relative;
         top: -26px;
         left: 1px;
@@ -123,4 +125,5 @@ h2, .title{
     flex-wrap: wrap;
     flex-direction: column; */
     width: 75%;
+    /* overflow: auto; */
 }
