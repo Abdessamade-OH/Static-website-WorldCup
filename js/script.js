@@ -372,6 +372,15 @@ function formTab(event){
 	})
 }
 
+
+
+function fermer(){
+	let fermer=document.getElementById('modify');
+	fermer.style.display='none';
+
+}
+
+
 function playerCard(){
 	console.log("player card: done");
 	document.getElementById("FT").style.display="block";
@@ -402,5 +411,6 @@ function closePlayerCard(){
 	document.getElementById("CONTAIN").style.width="100%";
 	openCard = false;
 }
+
 
 
