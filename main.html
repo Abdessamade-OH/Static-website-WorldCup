@@ -7,12 +7,16 @@
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/volet3.css" />
         <link rel="stylesheet" href="./css/volet4.css" />
+        
         <link rel="stylesheet" href="./css/classement.css" />
         <link rel="stylesheet" href="./css/home.css" />
-        <link rel="stylesheet" href="./css/tab.css">
+        <link rel="stylesheet" href="./css/match.css" />
+        
+        <link rel="stylesheet" href="./css/tab.css" />
 		<link rel="stylesheet" href="./css/form.css" />
 		<link rel="stylesheet" href="./css/form2.css" />
-		<link rel="stylesheet" href="./css/FT.css">
+		<link rel="stylesheet" href="./css/FT.css" />
+		
         <script src="./js/script.js"></script>
         <script src="./js/ysf.js"></script>
         
@@ -446,6 +450,59 @@
 					</div>
 				</div>
 		
+				<!-- ----------------------Matches schedule----------------- -->
+				<div class="mainContainer" id="match">
+				
+					<!-- ---------------------------GRPA--------------------- -->
+					<div class="group">
+						 <h2 class="title">Group A</h2>
+						 <!-- -------- matches partie 1------------ -->
+							<div class="container0">
+							
+								<!-- -------carte des matches------- -->
+								<div class="card">
+									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
+									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+								</div>
+								
+								<!-- -------carte des matches------- -->
+								<div class="card">
+									<p class="match">&#127482&#127480 VS &#127474&#127462</p>
+									<span class="dateHeure">Sam. 03/12 | 18:00</span>
+								</div>
+								
+								<!-- -------carte des matches------- -->
+								<div class="card">
+									<span class="match">&#127482&#127480 VS  &#127474&#127462</span>
+									<span class="dateHeure">Jeu. 08/12 | 10:00</span>
+								</div>
+								
+							</div>
+							<!-- ------- matches partie2------------ -->
+							<div class="container0">
+							
+								<!-- -------carte des matches------- -->
+								<div class="card">
+									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
+									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+								</div>
+								
+								<!-- -------carte des matches------- -->
+								<div class="card">
+									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
+									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+								</div>
+								
+								<!-- -------carte des matches------- -->
+								<div class="card">
+									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
+									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+								</div>
+								
+							</div>
+					</div>
+				</div>
+		
 				<!-- classement -->
 				<div class="classement" id="classement">
 					<table class="styled-table">
@@ -689,7 +746,7 @@
 							</ul>
 						</nav>
 					</li>
-					<li id="match-li" ><a>Matchs</a></li>
+					<li id="match-li" onclick="match()"><a>Matchs</a></li>
 					<li id="classement-li" onclick="classement()"><a>Classment</a></li>
 				</ul>
 			</nav>

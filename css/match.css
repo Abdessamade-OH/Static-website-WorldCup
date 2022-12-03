@@ -1,0 +1,119 @@
+/* --------Contenaire principale------- */
+.mainContainer{
+	display: none;
+    background-color: brown;
+    position: relative;
+    width: 100%;
+}
+
+/* ------contenaire des cartes----- */
+.container0{
+   display: flex;
+   justify-content: center;
+   position: relative;
+   top: 0px;
+
+   padding: 20px;
+   width: 100%;
+   flex-direction: row;
+   gap: 61px;
+}
+/* ---------proprietees des cartes------ */
+.card{
+    height: 100px;
+   
+    box-shadow: 5px 5px 20px black ;
+    color: brown;
+    background-color: wheat;
+    border-radius: 5px 43%;
+    margin-left: -16px;
+    width: 100%;
+}
+/* ---------proprietees de temps------ */
+.dateHeure{
+    font-size: large;
+    line-height: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.card:hover{
+    cursor: pointer;
+
+}
+/* --------proprietees des matches----- */
+  .match{
+    font-size: 405%;
+    position: relative;
+    top: 10px;
+    left: 32px;
+    margin: 0;
+
+}
+
+/* ------contenaire des groupes----- */
+.group{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+
+/* ------------------Ajuster la taille des cartes au fur et à mesure la taille de la fenêtre---------------- */
+
+
+@media  only screen and (max-width: 980px) {
+    .match{
+        font-size: 383%;
+        position: relative;
+        top: 13px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 911px) {
+    .match{
+        font-size: 359%;
+        position: relative;
+        top: 13px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 867px) {
+    .match{
+        font-size: 334%;
+        position: relative;
+        top: 13px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 814px) {
+    .match{
+        font-size: 308%;
+        position: relative;
+        top: 13px;
+        left: 1px;
+    }
+}
+
+@media  only screen and (max-width: 800px) {
+    .match{
+        font-size: 291%;
+        position: relative;
+        top: 8px;
+        left: 1px;
+    }
+}
+@media  only screen and (max-width: 700px) {
+    .match{
+        font-size: 183%;
+        position: relative;
+        top: 31px;
+        left: 1px;
+    }
+    .dateHeure{
+        margin-top: 20%;
+        margin-left: 10%;
+    }
+
+}
+

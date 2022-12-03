@@ -281,12 +281,12 @@ function classement(){
 	closeVol3();
 
 	document.getElementById("acceuil").style.display='none';
-	document.getElementById("div-tab").style.display='none';
-	document.getElementById("form-tab").style.display="none";
+	document.getElementById("CONTAIN").style.display='none';
+	document.getElementById("match").style.display='none';
+	
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
 	
-	//document.getElementById("FT").style.display="none";
 	closePlayerCard();
 	
 	document.getElementById("classement").style.display='block';
@@ -295,15 +295,9 @@ function acceuil(){
 	console.log("Acceuil: done.");
 	closeVol2();
 	closeVol3();
-	document.getElementById("classement").style.display='none';
-/*<<<<<<< HEAD
-	document.getElementById("div-tab").style.display='none';
-	document.getElementById("form-tab").style.display="none";
 	
-
-	document.getElementById("openButton2").style.visibility="hidden";
-	document.getElementById("openButton3").style.visibility="hidden";
-=======*/
+	document.getElementById("classement").style.display='none';
+	document.getElementById("match").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
 
 	document.getElementById("openButton2").style.visibility="hidden";
@@ -313,6 +307,26 @@ function acceuil(){
 	
 	document.getElementById("acceuil").style.display='flex';
 }
+function match(){
+	console.log("Match: done.");
+	closeVol2();
+	closeVol3();
+	
+	document.getElementById("classement").style.display='none';
+	document.getElementById("acceuil").style.display='none';
+	document.getElementById("CONTAIN").style.display='none';
+
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+
+	closePlayerCard();
+	
+	document.getElementById("match").style.display='block';
+	
+	document.getElementById("volet4").style.backgroundColor="brown";
+}
+
+
 function table(){
 	console.log("Table: done.");
 	document.getElementById("classement").style.display='none';
@@ -334,6 +348,8 @@ function table(){
 	}
 	else
 		document.getElementById("CONTAIN").style.width="100%";
+		
+	document.getElementById("volet4").style.backgroundColor="#cecece";
 }
 function group(grp){
 	openVol2();
