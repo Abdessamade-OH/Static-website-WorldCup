@@ -1,5 +1,5 @@
-.grl{
-  height: 100%;
+.grl {
+  height: 141%;
   width: 100%;
   display: none;
   justify-content: center;
@@ -7,63 +7,74 @@
   padding: 10px;
   background: rgb(53, 11, 53);
 }
-.container2{
-  
+
+.container2 {
+
   width: 100%;
   max-width: 50vw;
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.container2 .title{
-  font-size: 25px;
+
+.container2 .title {
+  font-size: 23px;
   font-weight: 500;
+  display: flex;
+  gap: 460px;
+
 }
-.content form .user-details{
+
+.content form .user-details {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
-form .user-details .input-box{
+
+form .user-details .input-box {
   margin-bottom: 15px;
   display: block;
 }
 
-.user-details .input-box input{
+.user-details .input-box input {
   height: 45px;
   width: 34vw;
   max-width: 400px;
- 
+
   font-size: 16px;
   border-radius: 5px;
   padding-left: 15px;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
 }
+
 .user-details .input-box input:focus,
-.user-details .input-box input:valid{
+.user-details .input-box input:valid {
   border-color: rgb(184, 97, 97);
 }
 
 
 
- form .foot-details .foot-title{
+form .foot-details .foot-title {
   font-size: 20px;
   font-weight: 500;
- }
- form .category{
-   justify-content: space-between;
-   margin-left: 28px;
- }
- form .category label{
-    display: flex;
-    cursor: pointer;
-    margin: 8px;
- }
- form .category label .dot{
+}
+
+form .category {
+  justify-content: space-between;
+  margin-left: 28px;
+}
+
+form .category label {
+  display: flex;
+  cursor: pointer;
+  margin: 8px;
+}
+
+form .category label .dot {
   height: 18px;
   width: 18px;
   border-radius: 50%;
@@ -71,7 +82,56 @@ form .user-details .input-box{
   background: #d9d9d9;
   border: 5px solid transparent;
   transition: all 0.3s ease;
+
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two {
+  background: rgb(45, 32, 121);
+  border-color: #d9d9d9;
 }
+
+form input[type="checkbox"] {
+  display: none;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background: gray;
+  text-align: center;
+}
+
+
+.btn {
+  padding: 11px 16px;
+  border-radius: 3px;
+  color: black;
+  border-color: rgb(240, 230, 230);
+  background-color: white;
+  border-color: gray;
+  overflow: hidden;
+}
+
+.btn input[type="file"] {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.btn:hover {
+  background-color: gray;
+}
+
  #dot-1:checked ~ .category label .one,
  #dot-2:checked ~ .category label .two{
    background: rgb(45, 32, 121);
@@ -122,4 +182,5 @@ form .user-details .input-box{
 	left: 30px;
 	font-size: 2rem;
 }
+
 
