@@ -109,9 +109,9 @@ function checkMedia860(media860){
 			document.getElementById("FT").style.top="5%";
 			document.getElementById("card-close").style.left="3%";
 			
-			if(Open5){
+			/*if(Open5){
 				document.getElementById("card-img").style.height="60%";
-			}
+			}*/
 		}
 	}
 	else{
@@ -271,19 +271,21 @@ function openVol3(){
 	}
 	table();
 	
-	document.getElementById("FT").style.display="none";
 }
 
 function classement(){
 	console.log("Classment: done.");
 	closeVol2();
 	closeVol3();
-	document.getElementById("classement").style.display='block';
+
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("div-tab").style.display='none';
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
-	document.getElementById("FT").style.display="none";
+	//document.getElementById("FT").style.display="none";
+	closePlayerCard();
+	
+	document.getElementById("classement").style.display='block';
 }
 function acceuil(){
 	console.log("Acceuil: done.");
@@ -294,7 +296,8 @@ function acceuil(){
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
-	document.getElementById("FT").style.display="none";
+	//document.getElementById("FT").style.display="none";
+	closePlayerCard();
 	
 	document.getElementById("acceuil").style.display='flex';
 }
@@ -303,12 +306,22 @@ function table(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("form-tab").style.display="none";
-	document.getElementById("FT").style.display="none";
+	//document.getElementById("FT").style.display="none";
 	
 	document.getElementById("div-tab").style.display="flex";
 	
 	document.getElementById("CONTAIN").style.display='block';
-	document.getElementById("CONTAIN").style.width="100%";
+	
+	if(over860){
+		if(openCard){
+			document.getElementById("CONTAIN").style.width="65%";
+		}
+		else{
+			document.getElementById("CONTAIN").style.width="100%";
+		}
+	}
+	else
+		document.getElementById("CONTAIN").style.width="100%";
 }
 function group(grp){
 	openVol2();
@@ -346,13 +359,14 @@ function playerCard(){
 		document.getElementById("FT").style.left="0%";
 	}	
 	
-	closeVol3();
+	//closeVol3();
 }
 
 function closePlayerCard(){
 	document.getElementById("FT").style.display="none";
 	document.getElementById("CONTAIN").style.top="0%";
 	document.getElementById("CONTAIN").style.width="100%";
+	openCard = false;
 }
 
 

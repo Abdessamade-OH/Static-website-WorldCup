@@ -9,7 +9,9 @@
 	background-color: var(--color-gray);
 	z-index:2;
 }
-
+.volet3 i{
+	cursor: pointer;
+}
 .left{
 	position: absolute;
 	left: 0;
