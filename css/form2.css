@@ -115,3 +115,11 @@ form .user-details .input-box{
     background-color: gray;
   }
   
+  
+#form-close{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	font-size: 2rem;
+}
+
