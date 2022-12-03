@@ -85,7 +85,7 @@ form .category label .dot {
   background: #d9d9d9;
   border: 5px solid transparent;
   transition: all 0.3s ease;
-
+}
 
 #dot-1:checked~.category label .one,
 #dot-2:checked~.category label .two {
@@ -102,7 +102,7 @@ form .button {
   margin: 35px 0
 }
 
-form .button input {
+form .button #editer {
   height: 100%;
   width: 100%;
   border-radius: 5px;
@@ -161,22 +161,6 @@ form .button input {
  }
 
 
- .btn{
-    padding: 11px 16px;
-    border-radius: 3px;
-    color: black;
-    border-color: rgb(240, 230, 230);
-    background-color: white;
-    border-color: gray;
-    overflow: hidden;
-  } 
-  .btn input[type = "file"]{
-    cursor: pointer;
-    opacity: 0.5;
-  }
-  .btn:hover{
-    background-color: gray;
-  }
   
   
 #form-close{
