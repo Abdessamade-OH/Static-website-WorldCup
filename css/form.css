@@ -3,14 +3,17 @@ textarea{
     height: 104px;
 }
 #modify{
+    display: flex;
+    justify-content: center;
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0px;
     left: 0px;
+    
     display: none;
     background-color: rgba(240, 248, 255, 0.457);
-  
+    
     z-index: 5;
 }
 #modify select{
@@ -30,15 +33,28 @@ textarea{
     align-items: center;
     position: relative;
     gap: 20px;
-    top: 254px;
+    top: 30%;
+    
+    background-color: rgb(172, 160, 147);
+    width: fit-content;
+    height: 50%;
+    border-radius: 10px;
+    padding: 0px 20px;
 }
- @media only screen and(max-width:500px){
-    #modify{
-        position: absolute;
-        top: 143px;
-        left: 111px;
-        
-       
-    }
-
+.fermer{
+    position: absolute;
+    left:36%;
+    top: 31%;
+    z-index: 6;
+}
+ @media only screen and (max-width:700px){
+  .contain{
+    left: 20%;
+  }
 } 
+@media only screen and (min-width:700px){
+    .contain{
+      
+      left: 35%;
+    }
+  } 
