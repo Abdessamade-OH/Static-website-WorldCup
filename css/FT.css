@@ -53,11 +53,11 @@ i{
 	flex-direction: column;
 	flex-wrap: nowrap;
 	min-height: 30%;
+	min-width: 35%;
 	justify-content: center;
 	align-items: space-evenly;
 	border: 2px solid black;
 	border-radius: 2px;
-	padding: 5px;
 }
 .player-card h3,h4{
 	margin: 0;
