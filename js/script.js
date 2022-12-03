@@ -377,7 +377,8 @@ function formTab(event){
 function fermer(){
 	let fermer=document.getElementById('modify');
 	fermer.style.display='none';
-
+	
+	document.getElementById("modifyPlayer").style.display="none";
 }
 
 

@@ -207,3 +207,8 @@ function addPlayer(event){
 	showTeam(event,teamshowed);
 }
 
+/*function modifyPlayer(){
+	document.getElementById("modPlayer").style.display="flex";
+}*/
+
+
