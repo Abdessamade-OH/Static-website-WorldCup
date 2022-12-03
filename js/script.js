@@ -105,8 +105,13 @@ function checkMedia860(media860){
 			document.getElementById("CONTAIN").style.top="0";
 			document.getElementById("FT").style.position="sticky";
 			document.getElementById("FT").style.left="65%";
-			document.getElementById("FT").style.height="90%";
+			document.getElementById("FT").style.height="95%";
 			document.getElementById("FT").style.top="5%";
+			document.getElementById("card-close").style.left="3%";
+			
+			if(Open5){
+				document.getElementById("card-img").style.height="60%";
+			}
 		}
 	}
 	else{
@@ -121,6 +126,10 @@ function checkMedia860(media860){
 			document.getElementById("FT").style.position="absolute";
 			document.getElementById("FT").style.height="200px";
 			document.getElementById("FT").style.top="0%";
+			if(Open2 && Open5)
+				document.getElementById("card-close").style.left="10%";
+				
+			//document.getElementById("card-img").style.height="90%";
 		}
 	}
 }
@@ -151,6 +160,8 @@ function closeVol5(){
 	/*if(!over860){
 		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 2 )";
 	}*/
+	
+	document.getElementById("card-close").style.left="10%";
 }
 function openVol5(){
 	let vol5= document.getElementById("volet5");
@@ -200,6 +211,7 @@ function closeVol2(){
 	}
 	else
 	document.getElementById("volet4").style.width="100%";
+	document.getElementById("card-close").style.left="5%";
 }
 function openVol2(){
 	let vol2= document.getElementById("volet2");
@@ -257,7 +269,9 @@ function openVol3(){
 		if(Open5)
 			closeVol5();
 	}
-	table();	
+	table();
+	
+	document.getElementById("FT").style.display="none";
 }
 
 function classement(){
@@ -320,7 +334,7 @@ function playerCard(){
 	
 	if(over860){
 		document.getElementById("CONTAIN").style.width="65%";
-		document.getElementById("FT").style.height="90%";
+		document.getElementById("FT").style.height="95%";
 		document.getElementById("FT").style.width="35%";
 		document.getElementById("FT").style.top="5%";
 	}
@@ -331,6 +345,8 @@ function playerCard(){
 		document.getElementById("FT").style.top="0%";
 		document.getElementById("FT").style.left="0%";
 	}	
+	
+	closeVol3();
 }
 
 function closePlayerCard(){
