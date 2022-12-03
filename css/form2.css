@@ -19,6 +19,9 @@
 .container2 .title{
   font-size: 25px;
   font-weight: 500;
+  display: flex;
+  gap: 460px;
+
 }
 .content form .user-details{
   display: flex;
