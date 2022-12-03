@@ -76,6 +76,7 @@ header {
     display: flex;
     justify-content: flex-start;
     animation: scrolling 10s linear infinite;
+	gap:5px;
 }
 @keyframes scrolling{
     0% {transform : translate(0);}
