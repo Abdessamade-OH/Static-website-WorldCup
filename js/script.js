@@ -371,19 +371,22 @@ function formTab(event){
 	const x= parseInt(a.getAttribute('value'));
 	console.log("Form: done");
 	document.getElementById("newName").value=Teams[teamshowed][x].Nom;
-	document.getElementById("newNum").value=Teams[teamshowed][x].Numero;
+	document.getElementById("newNumero").value=Teams[teamshowed][x].Numero;
 	document.getElementById("newAge").value=Teams[teamshowed][x].Age;
 	document.getElementById("newDesc").value=Teams[teamshowed][x].Description;
 	document.getElementById("newPoste").value=Teams[teamshowed][x].Poste;
+	document.getElementById("newPic").value=Teams[teamshowed][x].pic;
 	document.getElementById("form-tab").style.display="flex";
 	document.getElementById("div-tab").style.display="none";
 	let xd=0;
 	document.getElementById("editer").addEventListener("click",() => {
 		if(!xd){
 		console.log(x);
+		console.log(document.getElementById("newNum").value);
 		Teams[teamshowed][x].Nom=document.getElementById("newName").value;
-		Teams[teamshowed][x].Numero=document.getElementById("newNum").value;
+		Teams[teamshowed][x].Numero=document.getElementById("newNumero").value;
 		Teams[teamshowed][x].Poste=document.getElementById("newPoste").value;
+		
 		Teams[teamshowed][x].pic=document.getElementById("newPic").value;
 		Teams[teamshowed][x].Age=document.getElementById("newAge").value;
 		Teams[teamshowed][x].Description=document.getElementById("newDesc").value;

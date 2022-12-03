@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="stylesheet" href="./css/volet3.css" />
-        <link rel="stylesheet" href="./css/volet4.css" />
-        
-        <link rel="stylesheet" href="./css/classement.css" />
-        <link rel="stylesheet" href="./css/home.css" />
-        <link rel="stylesheet" href="./css/match.css" />
-        
-        <link rel="stylesheet" href="./css/tab.css" />
-		<link rel="stylesheet" href="./css/form.css" />
-		<link rel="stylesheet" href="./css/form2.css" />
-		<link rel="stylesheet" href="./css/FT.css" />
-		
-        <script src="./js/script.js"></script>
-        <script src="./js/ysf.js"></script>
-        
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Ajouté ce stylesheet pour l'icon de sous bar-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" /> <!--Ajouté ce stylesheet pour les icones de footer-->
-        
-        
-        
-        
-    </head>
-    <body>
-	
-		<div id="modify">
-			<div class="fermer" >
-				<i id="fermer" onclick="fermer()" class='fas fa-window-close'></i>
-			</div>	
-			
-			<div class="contain">
 
-			
+<head>
+	<title>Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="./css/styles.css" />
+	<link rel="stylesheet" href="./css/volet3.css" />
+	<link rel="stylesheet" href="./css/volet4.css" />
+
+	<link rel="stylesheet" href="./css/classement.css" />
+	<link rel="stylesheet" href="./css/home.css" />
+	<link rel="stylesheet" href="./css/match.css" />
+
+	<link rel="stylesheet" href="./css/tab.css" />
+	<link rel="stylesheet" href="./css/form.css" />
+	<link rel="stylesheet" href="./css/form2.css" />
+	<link rel="stylesheet" href="./css/FT.css" />
+
+	<script src="./js/script.js"></script>
+	<script src="./js/ysf.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--Ajouté ce stylesheet pour l'icon de sous bar-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+	<!--Ajouté ce stylesheet pour les icones de footer-->
 
 
-				<label for="">Nation :</label>
+
+
+</head>
+
+<body>
+
+	<div id="modify">
+		<div class="fermer">
+			<i id="fermer" onclick="fermer()" class='fas fa-window-close'></i>
+		</div>
+
+		<div class="contain">
+
+
+
+
+			<label for="">Nation :</label>
 
 			<select name="country" id="nationSelector">
 				<option value="🇦🇫 Afghanistan           ">Afghanistan 🇦🇫</option>
@@ -238,578 +242,587 @@
 				<option value="🇿🇼 Zimbabwe              ">Zimbabwe 🇿🇼</option>
 			</select>
 			<label for="">Description Nation :</label>
-			<textarea id ="desc" name="textarea" rows="5" cols="30" minlength="10" maxlength="20" placeholder="Description"></textarea>
-			<button id ="mod" type="submit" > Modifier </button>
+			<textarea id="desc" name="textarea" rows="5" cols="30" minlength="10" maxlength="20"
+				placeholder="Description"></textarea>
+			<button id="mod" type="submit"> Modifier </button>
 
-			
-			
-			
 
-				
-			</div>	
+
+
+
+
 		</div>
-	
-	
-			<div id="modifyPlayer">
-				<div class="fermer" >
-					<i id="fermer" onclick="fermer()" class='fas fa-window-close'></i>
-				</div>	
-			
-				<div class="contain">
-					<h3> Modification : </h3>
-					
-					<label for="newNum" class="PlayerNumLabel">Numero du joueur avec qui sera modifier : </label>
-						<input type="number" placeholder="Player Number" id="newNum">
-						<button id ="modPlayer" type="submit" > Modifier </button>
-				
-				</div>	
+	</div>
+
+
+	<div id="modifyPlayer">
+		<div class="fermer">
+			<i id="fermer" onclick="fermer()" class='fas fa-window-close'></i>
+		</div>
+
+		<div class="contain">
+			<h3> Modification : </h3>
+
+			<label for="newNum" class="PlayerNumLabel">Numero du joueur avec qui sera modifier : </label>
+			<input type="number" placeholder="Player Number" id="newNum">
+			<button id="modPlayer" type="submit"> Modifier </button>
+
+		</div>
+	</div>
+
+	<main>
+
+		<div class="volet2" id="volet2">
+			<a onclick="openVol2()">
+				<div class="open2" id="openButton2">
+					<i class='fas fa-plus-square'></i>
+				</div>
+			</a>
+			<div class="volet-header teams">
+				<a onclick="closeVol2()">
+					<div class="close">
+						<i class='fas fa-window-close'></i>
+					</div>
+				</a>
+				<h1>Les Equipes</h1>
 			</div>
-        
-        <main>
-      
-            <div class="volet2" id="volet2">
-            	<a onclick="openVol2()">
-        			<div class="open2" id="openButton2">
-        				<i class='fas fa-plus-square'></i>
-        			</div>
-        		</a>
-        		<div class="volet-header teams">
-        			<a onclick="closeVol2()">
-        				<div class="close">
-        					<i class='fas fa-window-close'></i>
-        				</div>
-        			</a>
-        			<h1>Les Equipes</h1>
-        		</div>
-                <ul type="none" class = "TeamsGrp" id="Groupe1">
-                	<h3 class="grp-title">Groupe 1</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<!--<li onclick="showTeam(event)" value="1">&#127463&#127466 Belgique</li>-->
-                    <!--<li onclick="showTeam(event)"value="2" >&#127469&#127479 Croitie</li>-->
-                    
-					<li onclick="showTeam(event); openVol3();" value="0">&#127474&#127462 Maroc <br>
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
-					
-                    <!--<li onclick="showTeam(event)" value="3">&#127464&#127462 Canada</li>-->
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe2">
-                	<h3 class="grp-title">Groupe 2</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe3">
-                	<h3 class="grp-title">Groupe 3</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe4">
-                    <h3 class="grp-title">Groupe 4</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe5">
-                	<h3 class="grp-title">Groupe 5</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe6">
-                	<h3 class="grp-title">Groupe 6</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe7">
-                	<h3 class="grp-title">Groupe 7</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                <ul type="none" class = "TeamsGrp" id="Groupe8">
-                	<h3 class="grp-title">Groupe 8</h3>
-					<button onclick="createTeam(event)">Cree une Equipes</button>
-					
-                </ul>
-                
-            </div>
-            
-            
-            <div class="volet3" id="volet3">
-            
-            	<div class="left">
-            		<div class="left-card" id="left-card">
-            			<img src="./data/user.png" alt="Manager image">
-            			<h3>name LASTNAME</h3>
-            			<h4>Age: XX</h4>
-            		</div>
-            	</div>
-            	
-            	<div class="image">
-            		<div class="image-card">
-            			<div class="team-title" id="team-title">
-            				<span class="flag"></span>
-            			</div>
-            		
+			<ul type="none" class="TeamsGrp" id="Groupe1">
+				<h3 class="grp-title">Groupe 1</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+				<!--<li onclick="showTeam(event)" value="1">&#127463&#127466 Belgique</li>-->
+				<!--<li onclick="showTeam(event)"value="2" >&#127469&#127479 Croitie</li>-->
 
-            			<div class="image-container" id="field">
-            			
-            				<img src="./data/terrain2.png" alt="terrain" usemap="#terrain" />
-								<map name="terrain">
-									<area shape="circle" coords="28,104,10" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="153,173,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="117,126,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="117,75,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="153,32,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="205,144,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="204,69,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="250,104,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="310,163,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="344,105,9" title="Circle" onclick="playerCard()">
-									<area shape="circle" coords="310,42,11" title="Circle" onclick="playerCard()"> 
-								</map>
-            				
-            				<a onclick="playerCard()" class="player" id="player-1">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-2">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-3">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-4">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-5">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-6">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-7">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-8">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-9">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-10">
-            					
-            				</a>
-            				<a onclick="playerCard()" class="player" id="player-11">
-            					
-            					
-            				</a>
-            			</div>
-            			<div class="team-info">
-            				<p id="team-info"></p>
-            			</div>	 
-            					
-            			<a onclick="openVol3()" id="openButton3" class="openVol3">
-            				<i class='fas fa-plus-square'></i>
-            			</a>
-        				<a onclick="closeVol3()" id="closeButton3" class="closeVol3">
-        					<i class='fas fa-window-close'></i>
-        				</a>
-        			</div>	
-            	</div>
-            	
-            	<div class="right">
-            		<div class="right-card">
-            			<h2>Main players</h2>
-            			<ul id="Main_players">
-            				<li><span class="role">MGK</span><span>Lorem Ipsum dolor</span></span><span>11</span></li>
-            				<li><span class="role">TNT</span><span>Lorem Ipsum</span><span>11</span></li>
-            				<li><span class="role">FBI</span><span>Lorem Ipsum dolor</span><span>11</span></li>
-            				<li><span class="role">420</span><span>Lorem Ipsum</span><span>11</span></li>
-            				<li><span class="role">70</span><span>Lorem Ipsum</span><span>11</span></li>
-            				<li><span class="role">cat</span><span>Lorem Ipsum</span><span>11</span></li>
-            			</ul>
-            			<h2>Substitute players</h2>
-            			<ul id="Sub_players">
-            				<li><span class="role">MVP</span><span>Lorem Ipsum dolor</span><span>11</span></li>
-            				<li><span class="role">RP</span><span>Lorem Ipsum</span><span>11</span></li>
-            				<li><span class="role">BD</span><span>Lorem Ipsum dolor</span><span>11</span></li>
-            				<li><span class="role">SM</span><span>Lorem Ipsum</span><span>11</span></li>
-            				<li><span class="role">P&L</span><span>Lorem Ipsum dolor</span><span>11</span></li>
-            				<li><span class="role">ART</span><span>Lorem Ipsum</span><span>11</span></li>
-            			</ul>
-            		</div>
-            	</div>
-            	
-           	 </div>
-            
-            <div class="volet4" id="volet4">
-            	<!-- Acceuil -->
-				<div class="landingPage" id="acceuil">
-					<div class="content">
-						<div class="info">
-							<h2>FIFA World Cup Qatar 2022™</h2>
+				<li onclick="showTeam(event); openVol3();" value="0">&#127474&#127462 Maroc <br>
+					<button class="modify" onclick="modifyTeam(event)">Modifier</button>
+					<button class="modify" onclick="del(event)">supprimé</button>
+				</li>
+
+				<!--<li onclick="showTeam(event)" value="3">&#127464&#127462 Canada</li>-->
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe2">
+				<h3 class="grp-title">Groupe 2</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe3">
+				<h3 class="grp-title">Groupe 3</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe4">
+				<h3 class="grp-title">Groupe 4</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe5">
+				<h3 class="grp-title">Groupe 5</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe6">
+				<h3 class="grp-title">Groupe 6</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe7">
+				<h3 class="grp-title">Groupe 7</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+			<ul type="none" class="TeamsGrp" id="Groupe8">
+				<h3 class="grp-title">Groupe 8</h3>
+				<button onclick="createTeam(event)">Cree une Equipes</button>
+
+			</ul>
+
+		</div>
+
+
+		<div class="volet3" id="volet3">
+
+			<div class="left">
+				<div class="left-card" id="left-card">
+					<img src="./data/user.png" alt="Manager image">
+					<h3>name LASTNAME</h3>
+					<h4>Age: XX</h4>
+				</div>
+			</div>
+
+			<div class="image">
+				<div class="image-card">
+					<div class="team-title" id="team-title">
+						<span class="flag"></span>
+					</div>
+
+
+					<div class="image-container" id="field">
+
+						<img src="./data/terrain2.png" alt="terrain" usemap="#terrain" />
+						<map name="terrain">
+							<area shape="circle" coords="28,104,10" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="153,173,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="117,126,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="117,75,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="153,32,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="205,144,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="204,69,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="250,104,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="310,163,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="344,105,9" title="Circle" onclick="playerCard()">
+							<area shape="circle" coords="310,42,11" title="Circle" onclick="playerCard()">
+						</map>
+
+						<a onclick="playerCard()" class="player" id="player-1">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-2">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-3">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-4">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-5">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-6">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-7">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-8">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-9">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-10">
+
+						</a>
+						<a onclick="playerCard()" class="player" id="player-11">
+
+
+						</a>
+					</div>
+					<div class="team-info">
+						<p id="team-info"></p>
+					</div>
+
+					<a onclick="openVol3()" id="openButton3" class="openVol3">
+						<i class='fas fa-plus-square'></i>
+					</a>
+					<a onclick="closeVol3()" id="closeButton3" class="closeVol3">
+						<i class='fas fa-window-close'></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="right">
+				<div class="right-card">
+					<h2>Main players</h2>
+					<ul id="Main_players">
+						<li><span class="role">MGK</span><span>Lorem Ipsum dolor</span></span><span>11</span></li>
+						<li><span class="role">TNT</span><span>Lorem Ipsum</span><span>11</span></li>
+						<li><span class="role">FBI</span><span>Lorem Ipsum dolor</span><span>11</span></li>
+						<li><span class="role">420</span><span>Lorem Ipsum</span><span>11</span></li>
+						<li><span class="role">70</span><span>Lorem Ipsum</span><span>11</span></li>
+						<li><span class="role">cat</span><span>Lorem Ipsum</span><span>11</span></li>
+					</ul>
+					<h2>Substitute players</h2>
+					<ul id="Sub_players">
+						<li><span class="role">MVP</span><span>Lorem Ipsum dolor</span><span>11</span></li>
+						<li><span class="role">RP</span><span>Lorem Ipsum</span><span>11</span></li>
+						<li><span class="role">BD</span><span>Lorem Ipsum dolor</span><span>11</span></li>
+						<li><span class="role">SM</span><span>Lorem Ipsum</span><span>11</span></li>
+						<li><span class="role">P&L</span><span>Lorem Ipsum dolor</span><span>11</span></li>
+						<li><span class="role">ART</span><span>Lorem Ipsum</span><span>11</span></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="volet4" id="volet4">
+			<!-- Acceuil -->
+			<div class="landingPage" id="acceuil">
+				<div class="content">
+					<div class="info">
+						<h2>FIFA World Cup Qatar 2022™</h2>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ----------------------Matches schedule----------------- -->
+			<div class="mainContainer" id="match">
+
+				<!-- ---------------------------GRPA--------------------- -->
+				<div class="group">
+					<h2 class="title">Group A</h2>
+					<!-- -------- matches partie 1------------ -->
+					<div class="container0">
+
+						<!-- -------carte des matches------- -->
+						<div class="card">
+							<span class="match">&#127482&#127480 VS &#127474&#127462</span>
+							<span class="dateHeure">Jeu. 01/12 | 16:00</span>
 						</div>
+
+						<!-- -------carte des matches------- -->
+						<div class="card">
+							<p class="match">&#127482&#127480 VS &#127474&#127462</p>
+							<span class="dateHeure">Sam. 03/12 | 18:00</span>
+						</div>
+
+						<!-- -------carte des matches------- -->
+						<div class="card">
+							<span class="match">&#127482&#127480 VS &#127474&#127462</span>
+							<span class="dateHeure">Jeu. 08/12 | 10:00</span>
+						</div>
+
+					</div>
+					<!-- ------- matches partie2------------ -->
+					<div class="container0">
+
+						<!-- -------carte des matches------- -->
+						<div class="card">
+							<span class="match">&#127482&#127480 VS &#127474&#127462</span>
+							<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+						</div>
+
+						<!-- -------carte des matches------- -->
+						<div class="card">
+							<span class="match">&#127482&#127480 VS &#127474&#127462</span>
+							<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+						</div>
+
+						<!-- -------carte des matches------- -->
+						<div class="card">
+							<span class="match">&#127482&#127480 VS &#127474&#127462</span>
+							<span class="dateHeure">Jeu. 01/12 | 16:00</span>
+						</div>
+
 					</div>
 				</div>
-		
-		
-				<!-- ----------------------Matches schedule----------------- -->
-				<div class="mainContainer" id="match">
-				
-					<!-- ---------------------------GRPA--------------------- -->
-					<div class="group">
-						 <h2 class="title">Group A</h2>
-						 <!-- -------- matches partie 1------------ -->
-							<div class="container0">
-							
-								<!-- -------carte des matches------- -->
-								<div class="card">
-									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
-									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
-								</div>
-								
-								<!-- -------carte des matches------- -->
-								<div class="card">
-									<p class="match">&#127482&#127480 VS &#127474&#127462</p>
-									<span class="dateHeure">Sam. 03/12 | 18:00</span>
-								</div>
-								
-								<!-- -------carte des matches------- -->
-								<div class="card">
-									<span class="match">&#127482&#127480 VS  &#127474&#127462</span>
-									<span class="dateHeure">Jeu. 08/12 | 10:00</span>
-								</div>
-								
-							</div>
-							<!-- ------- matches partie2------------ -->
-							<div class="container0">
-							
-								<!-- -------carte des matches------- -->
-								<div class="card">
-									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
-									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
-								</div>
-								
-								<!-- -------carte des matches------- -->
-								<div class="card">
-									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
-									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
-								</div>
-								
-								<!-- -------carte des matches------- -->
-								<div class="card">
-									<span class="match">&#127482&#127480 VS  &#127474&#127462</span> 
-									<span class="dateHeure">Jeu. 01/12 | 16:00</span>
-								</div>
-								
-							</div>
-					</div>
-					
-				</div>
-		
-				<!-- classement -->
-				<div class="classement" id="classement">
-					<table class="styled-table">
-						<thead>
-							<tr>
-								
-								<th class="team-num"></th>
-								<th>Équipes</th>
-								<th>MJ</th>
-								<th>G</th>
-								<th>N</th>
-								<th>P</th>
-								<th>PTS</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="team-num">1</td>
-								<td>&#127474&#127462 Maroc</td>
-								<td>3</td>
-								<td>3</td>
-								<td>0</td>
-								<td>0</td>
-								<td>9</td>
-							</tr>
-							<tr>
-								<td class="team-num">2</td>
-								<td>&#127466&#127480 Espagne</td>
-								<td>3</td>
-								<td>2</td>
-								<td>0</td>
-								<td>1</td>
-								<td>6</td>
-							</tr>
-							<tr>
-								<td class="team-num">3</td>
-								<td>&#127482&#127480 USA</td>
-								<td>3</td>
-								<td>0</td>
-								<td>1</td>
-								<td>0</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="team-num">4</td>
-								<td>&#127478&#127462 Qatar</td>
-								<td>3</td>
-								<td>0</td>
-								<td>1</td>
-								<td>0</td>
-								<td>1</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>	
-				
+
+			</div>
+
+			<!-- classement -->
+			<div class="classement" id="classement">
+				<table class="styled-table">
+					<thead>
+						<tr>
+
+							<th class="team-num"></th>
+							<th>Équipes</th>
+							<th>MJ</th>
+							<th>G</th>
+							<th>N</th>
+							<th>P</th>
+							<th>PTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="team-num">1</td>
+							<td>&#127474&#127462 Maroc</td>
+							<td>3</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>9</td>
+						</tr>
+						<tr>
+							<td class="team-num">2</td>
+							<td>&#127466&#127480 Espagne</td>
+							<td>3</td>
+							<td>2</td>
+							<td>0</td>
+							<td>1</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td class="team-num">3</td>
+							<td>&#127482&#127480 USA</td>
+							<td>3</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td class="team-num">4</td>
+							<td>&#127478&#127462 Qatar</td>
+							<td>3</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 
 
 
-				<div id="CONTAIN">
+
+			<div id="CONTAIN">
 				<!--Tableau-->
 				<div class="div-tab" id="div-tab">
-            		<table id="table" >
-        	
-               			 <tr>	
-                    		<th>picture</th>
-                    		<th>#</th>
-                    		<th>Nom</th>
-                    		<th>Gestion</th>
-				        </tr>
-				        <!--1-->
-				        
-            		</table>
-        		</div>	
-            
-            
-            <!--Form-->
-                <div class="grl" id="form-tab">
-                 	
-				  <div class="container2">
-					<div class="title">Editer joueur
-						<!-- close button -->
-						<a >
-							<div class="close">
-        						<i class='fas fa-window-close' onclick="table()" id="form-close"></i>
-        					</div>
-								
-							
-						</a>
-						<!-- ------------ -->
-					</div>
-					
-					<div class="content">
-					  <form action="#">
-						<div class="user-details">
-							
-							<div class="input-box">
-							  <input id ="newName" type="text" placeholder="Prenom & Nom" required>
-							</div>
-							<div class="input-box">
-							  <input id="newDesc" type="text" placeholder="Description" required>
-							</div>
-							<div class="input-box">
-								<input id ="newNum" type="number" placeholder="#Numero" required>
-							  </div>
-							  <div class="input-box">
-								<input id="newPoste" type="text" placeholder="Poste" required>
-							  </div>
-							  <div class="input-box">
-								<input id="newAge" type="number" placeholder="Age" required>
-							  </div>
-							
-							<div class="upload">
-							  <button type = "button" class = "btn">
-								<i class = "P-upload">Photo de joueur :</i>
-								<input id="newPic" type="file" placeholder="choisir photo">
-							  </button>
-							</div>
-						  </div>
+					<table id="table">
+
+						<tr>
+							<th>picture</th>
+							<th>#</th>
+							<th>Nom</th>
+							<th>Gestion</th>
+						</tr>
+						<!--1-->
+
+					</table>
+				</div>
 
 
-						  <div class="foot-details">
-							<input type="checkbox" name="foot" id="dot-1">
-							<input type="checkbox" name="foot" id="dot-2">
-							
-							<span class="foot-title">Foot</span>
-							<div class="category">
-							  <label for="dot-1">
-							  <span class="dot one"></span>
-							  <span class="foot-used">Right</span>
-							  </label>
-							  <label for="dot-2">
-								<span class="dot two"></span>
-								<span class="foot-used">Left</span>
-							  </label>
-							  
-							</div>
-						  </div>
+				<!--Form-->
+				<div class="grl" id="form-tab">
 
-						
-						<div class="button">
-							<button id="editer" onclick="table();"> Editer </button>
+					<div class="container2">
+						<div class="title">Editer joueur
+							<!-- close button -->
+							<a>
+								<div class="close">
+									<i class='fas fa-window-close' onclick="table()" id="form-close"></i>
+								</div>
+
+
+							</a>
+							<!-- ------------ -->
 						</div>
-					  </form>
+
+						<div class="content">
+							<form action="#">
+								<div class="user-details">
+
+									<div class="input-box">
+										<input id="newName" type="text" placeholder="Prenom & Nom" required>
+									</div>
+									<div class="input-box">
+										<input id="newNumero" type="number" placeholder="Numero" required>
+									</div>
+									<div class="input-box">
+										<input id="newDesc" type="text" placeholder="Description" required>
+									</div>
+									<div class="input-box">
+										<input id="newPoste" type="text" placeholder="Poste" required>
+									</div>
+									<div class="input-box">
+										<input id="newAge" type="number" placeholder="Age" required>
+									</div>
+									<div class="input-box">
+										<input id="newPic" type="text" placeholder="URL Image" required>
+									</div>
+
+								</div>
+
+
+								<div class="foot-details">
+									<input type="checkbox" name="foot" id="dot-1">
+									<input type="checkbox" name="foot" id="dot-2">
+
+									<span class="foot-title">Foot</span>
+									<div class="category">
+										<label for="dot-1">
+											<span class="dot one"></span>
+											<span class="foot-used">Right</span>
+										</label>
+										<label for="dot-2">
+											<span class="dot two"></span>
+											<span class="foot-used">Left</span>
+										</label>
+
+									</div>
+								</div>
+
+
+								<div class="button">
+									<button id="editer" onclick="table();"> Editer </button>
+								</div>
+							</form>
+						</div>
 					</div>
-				  </div>
-				  
+
 				</div>
-				
-				</div>
-				
+
+			</div>
 
 
-				<!--Fiche Technique-->
-				<div class="FT" id="FT">
+
+			<!--Fiche Technique-->
+			<div class="FT" id="FT">
 				<i class='fas fa-window-close' onclick="closePlayerCard()" id="card-close"></i>
-					<div class="player-card" id="FT-card">
-						<img src="./data/user.png" alt="Player image" id="card-img">
-						<div class="TF-info">
-            				<h3>name LASTNAME</h3>
-            				<h4>Age: XX</h4>
-            				<h4>Numero: YY</h4>
-            			</div>
+				<div class="player-card" id="FT-card">
+					<img src="./data/user.png" alt="Player image" id="card-img">
+					<div class="TF-info">
+						<h3>name LASTNAME</h3>
+						<h4>Age: XX</h4>
+						<h4>Numero: YY</h4>
 					</div>
 				</div>
-				
 			</div>
-            
-            
-            <!--Volet5-->
-            <aside class="volet5" id="volet5">
-        		<a onclick="openVol5()">
-        			<div class="open" id="openButton">
-        				<i class='fas fa-plus-square'></i>
-        			</div>
-        		</a>
-        		<div class="volet-header">
-        			<a onclick="closeVol5()">
-        				<div class="close">
-        					<i class='fas fa-window-close'></i>
-        				</div>
-        			</a>
-        			<h1>Les Actualités</h1>
-        		</div>
-        		<div class="sidebar">
-					<a href="">
-						<div class="actualite">
-                       		<img id="NEWSimg" src="./data/référence/LGBTQ.jpeg" alt="">
-                       		<figcaption>Germany’s protest will reverberate down the years and generations</figcaption> 
-						</div>
-                    </a>
-                       
-					<a href="">
-						<div class="actualite">
-                        	<img id="NEWSimg" src="./data/référence/KSA.jpeg" alt="">
-                        	<figcaption>Another shocking World Cup story unfolded in Qatar but this one was about the football</figcaption>
-                        </div>
-                    </a>
-                   
-               		<a href="">
-               			<div class="actualite">
-                    		<img id="NEWSimg" src="./data/référence/BELG.jpeg" alt="">
-                    		<figcaption>Belgium run ragged by Canada but Michy Batshuayi strikes to grab victory</figcaption>
-                    	</div>
-                    </a>
-                    
-               		<a href="">
-               			<div class="actualite" id="last">
-                			<img id="NEWSimg" src="./data/référence/DANIALVES.jpeg" alt="">
-                			<figcaption>ADani Alves: I love this game. I loved football when they didn’t pay me’</figcaption> 
-                		</div>
-            		</a>
-			</div>
-            </aside>
-            
-        </main>
-        <header id="volet1">
-			<div class="logo">
-			
-			<!-- <i class='fas fa-adjust'></i> -->
-			
-			
-				<a href="https://www.theguardian.com/international"><img class ="logo_img" src="./data/logo.png" alt="WC QATAR 2022"></a>
-			</div>
-			<div class="Pages"></div>
-			<nav>
-				<ul>	<!-- ajouter une liste pour les elements de navigation. -->
-					<li id="acceuil-li" onclick="acceuil()"><a>Acceuil</a></li>
-					<li class="menu">
-						<a class="groupes" id="groupes">Groupes <i class="fa fa-caret-down"></i></a>
-						<nav class="sous-menu">
-							<ul>
-								<li onclick="group('Groupe1')"><a>Groupe 1</a></li>
-								<li onclick="group('Groupe2')"><a>Groupe 2</a></li>
-								<li onclick="group('Groupe3')"><a>Groupe 3</a></li>
-								<li onclick="group('Groupe4')"><a>Groupe 4</a></li>
-								<li onclick="group('Groupe5')"><a>Groupe 5</a></li>
-								<li onclick="group('Groupe6')"><a>Groupe 6</a></li>
-								<li onclick="group('Groupe7')"><a>Groupe 7</a></li>
-								<li onclick="group('Groupe8')"><a>Groupe 8</a></li>
-							</ul>
-						</nav>
-					</li>
-					<li id="match-li" onclick="match()"><a>Matchs</a></li>
-					<li id="classement-li" onclick="classement()"><a>Classment</a></li>
-				</ul>
-			</nav>
-			<!-- page defilante -->
-			<div class="marquee">  <!--static part-->
-                <ul class="marquee-cntent"> <!--moving part-->
-					<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100" ></li>
-					<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100" ></li>
-					 <li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/castrol.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/QAir.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/QNB.jpeg" width="78.5833" height="100"></li>
-                    <li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100"></li>
-					<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100"></li>
-                </ul>
 
-        </header>
-        <footer>
-        	<img src="./data/touche.png" />
-			<div class="container">
-        		<div class="col" id="contact">
-        			<h1>Contacts <i class='fas fa-address-book'></i></h1>
-        			<ul>
-						<li><b>Email:</b> <i>Email@corp.com</i></li>
-        				<li><b>Numero:</b> <i>+212732938982</i></li>
-        			</ul>
-        		</div>
-        		
-        		<div class="border"></div>
-        		
-        		<div class="col" id="liens">
-        			<h1>Réseaux  <i class='fas fa-comments'></i></h1>
-        			<ul>
-        				<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-        				<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-        				<li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            			<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
-        			</ul>
-        		</div>
-        		
-        		<div class="border"></div>
-        			
-        		<div class="col" id="admins">
-        			<h1>Admins  <i class='fas fa-users'></i></h1>
-        			<ul> <!-- ordre alphabétique ^^ -->
-        				<li>Abdessamade OHMAD</li>
-        				<li>Amin IZOUGAGHEN</li>
-        				<li>Nouha SAMADI</li>
-        				<li>Youssef CHAABI</li>
-        			</ul>
-        		</div>
-        		
-        		<div class="border"></div>
-        		
-        		<div class="col" id="version">
-        			<h1>Version  <i class='fas fa-save'></i></h1>
-        				<ul><li>Development</li></ul>
-        		</div>
-        	
-        </footer>
-    </body>
+		</div>
+
+
+		<!--Volet5-->
+		<aside class="volet5" id="volet5">
+			<a onclick="openVol5()">
+				<div class="open" id="openButton">
+					<i class='fas fa-plus-square'></i>
+				</div>
+			</a>
+			<div class="volet-header">
+				<a onclick="closeVol5()">
+					<div class="close">
+						<i class='fas fa-window-close'></i>
+					</div>
+				</a>
+				<h1>Les Actualités</h1>
+			</div>
+			<div class="sidebar">
+				<a href="">
+					<div class="actualite">
+						<img id="NEWSimg" src="./data/référence/LGBTQ.jpeg" alt="">
+						<figcaption>Germany’s protest will reverberate down the years and generations</figcaption>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="actualite">
+						<img id="NEWSimg" src="./data/référence/KSA.jpeg" alt="">
+						<figcaption>Another shocking World Cup story unfolded in Qatar but this one was about the
+							football</figcaption>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="actualite">
+						<img id="NEWSimg" src="./data/référence/BELG.jpeg" alt="">
+						<figcaption>Belgium run ragged by Canada but Michy Batshuayi strikes to grab victory
+						</figcaption>
+					</div>
+				</a>
+
+				<a href="">
+					<div class="actualite" id="last">
+						<img id="NEWSimg" src="./data/référence/DANIALVES.jpeg" alt="">
+						<figcaption>ADani Alves: I love this game. I loved football when they didn’t pay me’
+						</figcaption>
+					</div>
+				</a>
+			</div>
+		</aside>
+
+	</main>
+	<header id="volet1">
+		<div class="logo">
+
+			<!-- <i class='fas fa-adjust'></i> -->
+
+
+			<a href="https://www.theguardian.com/international"><img class="logo_img" src="./data/logo.png"
+					alt="WC QATAR 2022"></a>
+		</div>
+		<div class="Pages"></div>
+		<nav>
+			<ul>
+				<!-- ajouter une liste pour les elements de navigation. -->
+				<li id="acceuil-li" onclick="acceuil()"><a>Acceuil</a></li>
+				<li class="menu">
+					<a class="groupes" id="groupes">Groupes <i class="fa fa-caret-down"></i></a>
+					<nav class="sous-menu">
+						<ul>
+							<li onclick="group('Groupe1')"><a>Groupe 1</a></li>
+							<li onclick="group('Groupe2')"><a>Groupe 2</a></li>
+							<li onclick="group('Groupe3')"><a>Groupe 3</a></li>
+							<li onclick="group('Groupe4')"><a>Groupe 4</a></li>
+							<li onclick="group('Groupe5')"><a>Groupe 5</a></li>
+							<li onclick="group('Groupe6')"><a>Groupe 6</a></li>
+							<li onclick="group('Groupe7')"><a>Groupe 7</a></li>
+							<li onclick="group('Groupe8')"><a>Groupe 8</a></li>
+						</ul>
+					</nav>
+				</li>
+				<li id="match-li" onclick="match()"><a>Matchs</a></li>
+				<li id="classement-li" onclick="classement()"><a>Classment</a></li>
+			</ul>
+		</nav>
+		<!-- page defilante -->
+		<div class="marquee">
+			<!--static part-->
+			<ul class="marquee-cntent">
+				<!--moving part-->
+				<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/castrol.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/QAir.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/QNB.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100"></li>
+				<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100"></li>
+			</ul>
+
+	</header>
+	<footer>
+		<img src="./data/touche.png" />
+		<div class="container">
+			<div class="col" id="contact">
+				<h1>Contacts <i class='fas fa-address-book'></i></h1>
+				<ul>
+					<li><b>Email:</b> <i>Email@corp.com</i></li>
+					<li><b>Numero:</b> <i>+212732938982</i></li>
+				</ul>
+			</div>
+
+			<div class="border"></div>
+
+			<div class="col" id="liens">
+				<h1>Réseaux <i class='fas fa-comments'></i></h1>
+				<ul>
+					<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="border"></div>
+
+			<div class="col" id="admins">
+				<h1>Admins <i class='fas fa-users'></i></h1>
+				<ul>
+					<!-- ordre alphabétique ^^ -->
+					<li>Abdessamade OHMAD</li>
+					<li>Amin IZOUGAGHEN</li>
+					<li>Nouha SAMADI</li>
+					<li>Youssef CHAABI</li>
+				</ul>
+			</div>
+
+			<div class="border"></div>
+
+			<div class="col" id="version">
+				<h1>Version <i class='fas fa-save'></i></h1>
+				<ul>
+					<li>Development</li>
+				</ul>
+			</div>
+
+	</footer>
+</body>
+
 </html>
