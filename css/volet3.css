@@ -9,7 +9,9 @@
 	background-color: var(--color-gray);
 	z-index:2;
 }
-
+.volet3 i{
+	cursor: pointer;
+}
 .left{
 	position: absolute;
 	left: 0;
@@ -85,6 +87,10 @@
 	font-size: 12px;
 	font-family: sans-serif;
 	color: var(--color-black);
+	cursor: pointer;
+}
+area{
+	cursor: pointer;
 }
 .min-card{
 	margin-top: 3px;

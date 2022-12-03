@@ -6,6 +6,9 @@ var lessThan600 = false;
 var lessThan750 = false;
 var auto2 = false;
 var auto5 = false;
+var over860 = true;
+var openCard = false;
+
 window.onload = () => {
 	console.log("Hello world!");
 	
@@ -19,9 +22,9 @@ window.onload = () => {
 	checkMedia600(Media600);
 	Media600.addListener(checkMedia600);
 	
-	const over750 = window.matchMedia('(min-width: 750px)');
-	resetOpacity(over750);
-	over750.addListener(resetOpacity);
+	const media860 = window.matchMedia('(min-width: 860px)');
+	checkMedia860(media860);
+	media860.addListener(checkMedia860);
 	
 	document.getElementById("field").addEventListener("click", ()=>{
 		if(window.matchMedia("(max-width: 750px)").matches && Open2){
@@ -63,6 +66,7 @@ function checkMedia750(Media750){
 		}
 		auto2=false;
 		lessThan750 = false;
+		document.getElementById("field").style.opacity="1";
 	}
 	
 }
@@ -89,16 +93,54 @@ function checkMedia600(Media600){
 		}
 	}
 }
-function resetOpacity(over750){
-	if(over750.matches){
-		document.getElementById("field").style.opacity="1";
+
+function checkMedia860(media860){
+	if(media860.matches){
+		console.log("over 860px");
+		over860 = true;
+		if(openCard){
+			document.getElementById("FT").style.width="35%";
+			document.getElementById("CONTAIN").style.width="65%";
+			document.getElementById("CONTAIN").style.width="65%";
+			document.getElementById("CONTAIN").style.top="0";
+			document.getElementById("FT").style.position="sticky";
+			document.getElementById("FT").style.left="65%";
+			document.getElementById("FT").style.height="95%";
+			document.getElementById("FT").style.top="5%";
+			document.getElementById("card-close").style.left="3%";
+			
+			/*if(Open5){
+				document.getElementById("card-img").style.height="60%";
+			}*/
+		}
+	}
+	else{
+		document.getElementById("CONTAIN").style.width="100%";
+		document.getElementById("CONTAIN").style.width="100%";
+		console.log("under 860px");
+		over860 = false;
+		if(openCard){
+			document.getElementById("CONTAIN").style.top="200px";
+			document.getElementById("FT").style.width="100%";
+			document.getElementById("FT").style.left="0%";
+			document.getElementById("FT").style.position="absolute";
+			document.getElementById("FT").style.height="200px";
+			document.getElementById("FT").style.top="0%";
+			if(Open2 && Open5)
+				document.getElementById("card-close").style.left="10%";
+				
+			//document.getElementById("card-img").style.height="90%";
+		}
 	}
 }
+
+
 
 function closeVol5(){
 	let vol5= document.getElementById("volet5");
 	//vol5.style.width=0;
 	vol5.style.right= "-25%";
+	//vol5.style.boxShadow="0";
 	//vol5.style.visibility="hidden";
 	let openButton = document.getElementById("openButton");
 	openButton.style.visibility="visible";
@@ -114,6 +156,12 @@ function closeVol5(){
 	}
 	else
 		document.getElementById("volet4").style.width="100%";
+		
+	/*if(!over860){
+		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 2 )";
+	}*/
+	
+	document.getElementById("card-close").style.left="10%";
 }
 function openVol5(){
 	let vol5= document.getElementById("volet5");
@@ -134,6 +182,10 @@ function openVol5(){
 	}
 	else
 		document.getElementById("volet4").style.width="75%";
+		
+	/*if(!over860){
+		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 4 )";
+	}*/
 }
 
 function closeVol2(){
@@ -159,6 +211,7 @@ function closeVol2(){
 	}
 	else
 	document.getElementById("volet4").style.width="100%";
+	document.getElementById("card-close").style.left="5%";
 }
 function openVol2(){
 	let vol2= document.getElementById("volet2");
@@ -179,6 +232,8 @@ function openVol2(){
 	}
 	else
 	document.getElementById("volet4").style.width="85%";
+	
+	closePlayerCard();
 }
 
 function closeVol3(){
@@ -216,7 +271,8 @@ function openVol3(){
 		if(Open5)
 			closeVol5();
 	}
-	table();	
+	table();
+	
 }
 
 function classement(){
@@ -230,6 +286,9 @@ function classement(){
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
 	
+	//document.getElementById("FT").style.display="none";
+	closePlayerCard();
+	
 	document.getElementById("classement").style.display='block';
 }
 function acceuil(){
@@ -237,12 +296,20 @@ function acceuil(){
 	closeVol2();
 	closeVol3();
 	document.getElementById("classement").style.display='none';
+/*<<<<<<< HEAD
 	document.getElementById("div-tab").style.display='none';
 	document.getElementById("form-tab").style.display="none";
 	
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
+=======*/
+	document.getElementById("CONTAIN").style.display='none';
+
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+	//document.getElementById("FT").style.display="none";
+	closePlayerCard();
 	
 	document.getElementById("acceuil").style.display='flex';
 }
@@ -250,8 +317,23 @@ function table(){
 	console.log("Table: done.");
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
-	document.getElementById("div-tab").style.display='flex';
 	document.getElementById("form-tab").style.display="none";
+	//document.getElementById("FT").style.display="none";
+	
+	document.getElementById("div-tab").style.display="flex";
+	
+	document.getElementById("CONTAIN").style.display='block';
+	
+	if(over860){
+		if(openCard){
+			document.getElementById("CONTAIN").style.width="65%";
+		}
+		else{
+			document.getElementById("CONTAIN").style.width="100%";
+		}
+	}
+	else
+		document.getElementById("CONTAIN").style.width="100%";
 }
 function group(grp){
 	openVol2();
@@ -269,3 +351,36 @@ function formTab(){
 	document.getElementById("form-tab").style.display="flex";
 	document.getElementById("div-tab").style.display="none";
 }
+
+function playerCard(){
+	console.log("player card: done");
+	document.getElementById("FT").style.display="block";
+	openCard = true;
+	
+	if(over860){
+		document.getElementById("CONTAIN").style.width="65%";
+		document.getElementById("FT").style.height="95%";
+		document.getElementById("FT").style.width="35%";
+		document.getElementById("FT").style.top="5%";
+	}
+	else{
+		document.getElementById("CONTAIN").style.top="200px";
+		document.getElementById("FT").style.width="100%";
+		document.getElementById("FT").style.height="200px";
+		document.getElementById("FT").style.top="0%";
+		document.getElementById("FT").style.left="0%";
+	}	
+	
+	//closeVol3();
+	
+	closeVol2();
+}
+
+function closePlayerCard(){
+	document.getElementById("FT").style.display="none";
+	document.getElementById("CONTAIN").style.top="0%";
+	document.getElementById("CONTAIN").style.width="100%";
+	openCard = false;
+}
+
+
