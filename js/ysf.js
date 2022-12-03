@@ -134,7 +134,7 @@ function createTeam(event){
 	let li = document.createElement("li");
 	li.setAttribute("onclick","showTeam(event); openVol3();");
 	li.setAttribute("value",parseInt(Teams.length-1));
-	li.innerHTML='🇸🇦Equipe<button class="modify" onclick="modifyTeam(event)">Modifier</button><button class="modify" onclick="del(event)">supprimé</button>'
+	li.innerHTML='🇸🇦Equipe<br> <button class="modify" onclick="modifyTeam(event)">Modifier</button> <button class="modify" onclick="del(event)">supprimé</button>'
 	Team2[0].Nation="🇸🇦Equipe";
 	x.appendChild(li)
 }
@@ -145,7 +145,7 @@ function modifyTeam(event){
 	let x=0;
 	document.getElementById("mod").addEventListener("click",function add32(){
 		if(!x){
-		a.innerHTML= document.getElementById("nationSelector").value+' <button class="modify" onclick="modifyTeam(event); openVol3();">Modifier</button> <button class="modify" onclick="del(event)">supprimé</button>';
+		a.innerHTML= document.getElementById("nationSelector").value+' <br><button class="modify" onclick="modifyTeam(event); openVol3();">Modifier</button> <button class="modify" onclick="del(event)">supprimé</button>';
 		Teams[a.value][0].Nation=document.getElementById("nationSelector").value;
 		Teams[a.value][0].caption=document.getElementById("desc").value;
 		document.getElementById("modify").style.display="none";
