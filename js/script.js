@@ -290,6 +290,8 @@ function classement(){
 	closePlayerCard();
 	
 	document.getElementById("classement").style.display='block';
+	
+	document.getElementById("volet4").style.backgroundColor="#cecece";
 }
 function acceuil(){
 	console.log("Acceuil: done.");
@@ -333,6 +335,7 @@ function table(){
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("form-tab").style.display="none";
 	//document.getElementById("FT").style.display="none";
+	document.getElementById("match").style.display='none';
 	
 	document.getElementById("div-tab").style.display="flex";
 	
@@ -351,6 +354,7 @@ function table(){
 		
 	document.getElementById("volet4").style.backgroundColor="#cecece";
 }
+
 function group(grp){
 	openVol2();
 	let teams = document.getElementsByClassName("TeamsGrp");
