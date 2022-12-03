@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./css/tab.css">
 		<link rel="stylesheet" href="./css/form.css" />
 		<link rel="stylesheet" href="./css/form2.css" />
+		<link rel="stylesheet" href="./css/FT.css">
         <script src="./js/script.js"></script>
         <script src="./js/ysf.js"></script>
         
@@ -33,7 +34,11 @@
 			</div>	
 			
 			<div class="contain">
+
 			
+
+
+				<label for="">Nation :</label>
 
 			<select name="country" id="nationSelector">
 				<option value="🇦🇫 Afghanistan           ">Afghanistan 🇦🇫</option>
@@ -228,8 +233,15 @@
 				<option value="🇿🇲 Zambia                ">Zambia 🇿🇲</option>
 				<option value="🇿🇼 Zimbabwe              ">Zimbabwe 🇿🇼</option>
 			</select>
+			<label for="">Description Nation :</label>
+			<textarea id ="desc" name="textarea" rows="5" cols="30" minlength="10" maxlength="20" placeholder="Description"></textarea>
 			<button id ="mod" type="submit" > Modifier </button>
+
 			<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20" placeholder="Description...."></textarea>
+
+			
+			
+
 				
 			</div>	
 		</div>
@@ -257,7 +269,7 @@
 					<!--<li onclick="showTeam(event)" value="1">&#127463&#127466 Belgique</li>-->
                     <!--<li onclick="showTeam(event)"value="2" >&#127469&#127479 Croitie</li>-->
                     
-					<li onclick="showTeam(event); openVol3();" value="0">&#127474&#127462 Maroc 
+					<li onclick="showTeam(event); openVol3();" value="0">&#127474&#127462 Maroc <br>
 						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
 						<button class="modify" onclick="del(event)">supprimé</button>
 					</li>
@@ -267,58 +279,37 @@
                 <ul type="none" class = "TeamsGrp" id="Groupe2">
                 	<h3 class="grp-title">Groupe 2</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe3">
                 	<h3 class="grp-title">Groupe 3</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe4">
                     <h3 class="grp-title">Groupe 4</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe5">
                 	<h3 class="grp-title">Groupe 5</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe6">
                 	<h3 class="grp-title">Groupe 6</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe7">
                 	<h3 class="grp-title">Groupe 7</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe8">
                 	<h3 class="grp-title">Groupe 8</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 
             </div>
@@ -345,50 +336,50 @@
             			
             				<img src="./data/terrain2.png" alt="terrain" usemap="#terrain" />
 								<map name="terrain">
-									<area shape="circle" coords="28,104,10" title="Circle" href="">
-									<area shape="circle" coords="153,173,9" title="Circle" href="">
-									<area shape="circle" coords="117,126,9" title="Circle" href="">
-									<area shape="circle" coords="117,75,9" title="Circle" href="">
-									<area shape="circle" coords="153,32,9" title="Circle" href="">
-									<area shape="circle" coords="205,144,9" title="Circle" href="">
-									<area shape="circle" coords="204,69,9" title="Circle" href="">
-									<area shape="circle" coords="250,104,9" title="Circle" href="">
-									<area shape="circle" coords="310,163,9" title="Circle" href="">
-									<area shape="circle" coords="344,105,9" title="Circle" href="">
-									<area shape="circle" coords="310,42,11" title="Circle" href=""> 
+									<area shape="circle" coords="28,104,10" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="153,173,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="117,126,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="117,75,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="153,32,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="205,144,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="204,69,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="250,104,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="310,163,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="344,105,9" title="Circle" onclick="playerCard()">
+									<area shape="circle" coords="310,42,11" title="Circle" onclick="playerCard()"> 
 								</map>
             				
-            				<a href="" class="player" id="player-1">
+            				<a onclick="playerCard()" class="player" id="player-1">
             					
             				</a>
-            				<a href="" class="player" id="player-2">
+            				<a onclick="playerCard()" class="player" id="player-2">
             					
             				</a>
-            				<a href="" class="player" id="player-3">
+            				<a onclick="playerCard()" class="player" id="player-3">
             					
             				</a>
-            				<a href="" class="player" id="player-4">
+            				<a onclick="playerCard()" class="player" id="player-4">
             					
             				</a>
-            				<a href="" class="player" id="player-5">
+            				<a onclick="playerCard()" class="player" id="player-5">
             					
             				</a>
-            				<a href="" class="player" id="player-6">
+            				<a onclick="playerCard()" class="player" id="player-6">
             					
             				</a>
-            				<a href="" class="player" id="player-7">
+            				<a onclick="playerCard()" class="player" id="player-7">
             					
             				</a>
-            				<a href="" class="player" id="player-8">
+            				<a onclick="playerCard()" class="player" id="player-8">
             					
             				</a>
-            				<a href="" class="player" id="player-9">
+            				<a onclick="playerCard()" class="player" id="player-9">
             					
             				</a>
-            				<a href="" class="player" id="player-10">
+            				<a onclick="playerCard()" class="player" id="player-10">
             					
             				</a>
-            				<a href="" class="player" id="player-11">
+            				<a onclick="playerCard()" class="player" id="player-11">
             					
             					
             				</a>
@@ -497,6 +488,8 @@
 					</table>
 				</div>	
 				
+				
+				<div id="CONTAIN">
 				<!--Tableau-->
 				<div class="div-tab" id="div-tab">
             		<table id="table" >
@@ -515,13 +508,13 @@
             
             <!--Form-->
                 <div class="grl" id="form-tab">
-                 	<i class='fas fa-window-close' onclick="table()" id="form-close"></i>
+                 	
 				  <div class="container2">
 					<div class="title">Editer joueur
 						<!-- close button -->
 						<a >
 							<div class="close">
-        						<i class='fas fa-window-close'></i>
+        						<i class='fas fa-window-close' onclick="table()" id="form-close"></i>
         					</div>
 								
 							
@@ -532,21 +525,29 @@
 					<div class="content">
 					  <form action="#">
 						<div class="user-details">
+							
 							<div class="input-box">
-							  <input type="text" placeholder="Nom" required>
+							  <input id ="newName" type="text" placeholder="Prenom" required>
 							</div>
 							<div class="input-box">
-							  <input type="text" placeholder="Prenom" required>
+							  <input id="newDesc" type="text" placeholder="Description" required>
 							</div>
 							<div class="input-box">
-							  <input type="text" placeholder="#Numero" required>
-							</div>
+								<input id ="newNum" type="number" placeholder="#Numero" required>
+							  </div>
+							  <div class="input-box">
+								<input id="newPoste" type="text" placeholder="Poste" required>
+							  </div>
+							  <div class="input-box">
+								<input id="newAge" type="number" placeholder="Poste" required>
+							  </div>
 							
 							<div class="upload">
 							  <button type = "button" class = "btn">
 								<i class = "P-upload">Photo de joueur :</i>
-								<input type="file" placeholder="choisir photo">
+								<input id="newPic" type="file" placeholder="choisir photo">
 							  </button>
+							  <button id="editer" onclick="table();"> Editer </button>
 							</div>
 						  </div>
 
@@ -571,7 +572,7 @@
 
 						
 						<div class="button">
-						  <input type="submit" value="Register">
+						  
 						</div>
 					  </form>
 					</div>
@@ -579,8 +580,25 @@
 				  
 				</div>
 				
+				</div>
+				
+				<!--Fiche Technique-->
+				<div class="FT" id="FT">
+				<i class='fas fa-window-close' onclick="closePlayerCard()" id="card-close"></i>
+					<div class="player-card" id="FT-card">
+						<img src="./data/user.png" alt="Player image" id="card-img">
+						<div class="TF-info">
+            				<h3>name LASTNAME</h3>
+            				<h4>Age: XX</h4>
+            				<h4>Numero: YY</h4>
+            			</div>
+					</div>
+				</div>
+				
 			</div>
             
+            
+            <!--Volet5-->
             <aside class="volet5" id="volet5">
         		<a onclick="openVol5()">
         			<div class="open" id="openButton">
