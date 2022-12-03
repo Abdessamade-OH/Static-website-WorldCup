@@ -269,3 +269,11 @@ function formTab(){
 	document.getElementById("form-tab").style.display="flex";
 	document.getElementById("div-tab").style.display="none";
 }
+
+
+function fermer(){
+	let fermer=document.getElementById('modify');
+	fermer.style.display='none';
+
+}
+
