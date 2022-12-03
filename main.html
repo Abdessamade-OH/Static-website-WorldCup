@@ -31,6 +31,7 @@
 			
 			
 			<div class="contain">
+				<label for="">Nation :</label>
 			<select name="country" id="nationSelector">
 				<option value="🇦🇫 Afghanistan           ">Afghanistan 🇦🇫</option>
 				<option value="🇦🇴 Angola                ">Angola 🇦🇴</option>
@@ -224,8 +225,11 @@
 				<option value="🇿🇲 Zambia                ">Zambia 🇿🇲</option>
 				<option value="🇿🇼 Zimbabwe              ">Zimbabwe 🇿🇼</option>
 			</select>
+			<label for="">Description Nation :</label>
+			<textarea id ="desc" name="textarea" rows="5" cols="30" minlength="10" maxlength="20" placeholder="Description"></textarea>
 			<button id ="mod" type="submit" > Modifier </button>
-			<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">Description....</textarea>
+			
+			
 				
 			</div>	
 		</div>
@@ -263,58 +267,37 @@
                 <ul type="none" class = "TeamsGrp" id="Groupe2">
                 	<h3 class="grp-title">Groupe 2</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe3">
                 	<h3 class="grp-title">Groupe 3</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe4">
                     <h3 class="grp-title">Groupe 4</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe5">
                 	<h3 class="grp-title">Groupe 5</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe6">
                 	<h3 class="grp-title">Groupe 6</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe7">
                 	<h3 class="grp-title">Groupe 7</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 <ul type="none" class = "TeamsGrp" id="Groupe8">
                 	<h3 class="grp-title">Groupe 8</h3>
 					<button onclick="createTeam(event)">Cree une Equipes</button>
-					<li onclick="showTeam(event); openVol3();" value="0">
-						<button class="modify" onclick="modifyTeam(event)">Modifier</button>
-						<button class="modify" onclick="del(event)">supprimé</button>
-					</li>
+					
                 </ul>
                 
             </div>
@@ -517,21 +500,29 @@
 					<div class="content">
 					  <form action="#">
 						<div class="user-details">
+							
 							<div class="input-box">
-							  <input type="text" placeholder="Nom" required>
+							  <input id ="newName" type="text" placeholder="Prenom" required>
 							</div>
 							<div class="input-box">
-							  <input type="text" placeholder="Prenom" required>
+							  <input id="newDesc" type="text" placeholder="Description" required>
 							</div>
 							<div class="input-box">
-							  <input type="text" placeholder="#Numero" required>
-							</div>
+								<input id ="newNum" type="number" placeholder="#Numero" required>
+							  </div>
+							  <div class="input-box">
+								<input id="newPoste" type="text" placeholder="Poste" required>
+							  </div>
+							  <div class="input-box">
+								<input id="newAge" type="number" placeholder="Poste" required>
+							  </div>
 							
 							<div class="upload">
 							  <button type = "button" class = "btn">
 								<i class = "P-upload">Photo de joueur :</i>
-								<input type="file" placeholder="choisir photo">
+								<input id="newPic" type="file" placeholder="choisir photo">
 							  </button>
+							  <button id="editer" onclick="table();"> Editer </button>
 							</div>
 						  </div>
 
@@ -556,7 +547,7 @@
 
 						
 						<div class="button">
-						  <input type="submit" value="Register">
+						  
 						</div>
 					  </form>
 					</div>
