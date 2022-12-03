@@ -232,6 +232,8 @@ function openVol2(){
 	}
 	else
 	document.getElementById("volet4").style.width="85%";
+	
+	closePlayerCard();
 }
 
 function closeVol3(){
@@ -360,6 +362,8 @@ function playerCard(){
 	}	
 	
 	//closeVol3();
+	
+	closeVol2();
 }
 
 function closePlayerCard(){

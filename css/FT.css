@@ -18,10 +18,12 @@
 	top: 2.5%;
 	left: 2.5%;
 	
-	display: grid;
+	display: flex;
 	
-	grid-template-columns: 1fr 2fr;
-	grid-auto-rows: auto;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 	
 	gap: 5px;
 	
@@ -44,6 +46,7 @@ i{
 	max-height: 70%;
 	max-width: 70%;
 	border-radius: 8px;
+	flex-shrink: 1;
 }
 .TF-info{
 	display: flex;
