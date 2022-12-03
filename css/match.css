@@ -12,7 +12,7 @@
 	width: 80px;
 }
 .NewMatchForm{
-	display: flex;
+	display: none;
 	position: fixed;
 	width: 250px;
 	height: 300px;
@@ -32,14 +32,16 @@
 	align-items: center;
 }
 .matchFormBackground{
+	display:none;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	height: 100%;
 	width: 100%;
 	background-color: rgba(255,255,255, 0.5);
+	z-index: 4;
 }
-.matchFormBackground i{
+.NewMatchForm i{
 	position: fixed;
 	top: calc(((100% - 250px) / 2 ) + 20px);
 	left: calc(((100% - 300px) / 2 ) + 20px);

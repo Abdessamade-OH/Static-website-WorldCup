@@ -435,9 +435,11 @@ function closePlayerCard(){
 
 function closeMatchForm(){
 	document.getElementById("matchForm").style.display="none";
+	document.getElementById("matchFormBackground").style.display="none";
 }
 function openMatchForm(){
-	document.getElementById("matchForm").style.display="block";
+	document.getElementById("matchForm").style.display="flex";
+	document.getElementById("matchFormBackground").style.display="block";
 }
 
 function addMatch(){
