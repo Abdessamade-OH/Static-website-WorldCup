@@ -223,11 +223,14 @@ function classement(){
 	console.log("Classment: done.");
 	closeVol2();
 	closeVol3();
-	document.getElementById("classement").style.display='block';
+
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("div-tab").style.display='none';
+	document.getElementById("form-tab").style.display="none";
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
+	
+	document.getElementById("classement").style.display='block';
 }
 function acceuil(){
 	console.log("Acceuil: done.");
@@ -235,9 +238,13 @@ function acceuil(){
 	closeVol3();
 	document.getElementById("classement").style.display='none';
 	document.getElementById("div-tab").style.display='none';
-	document.getElementById("acceuil").style.display='flex';
+	document.getElementById("form-tab").style.display="none";
+	
+
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
+	
+	document.getElementById("acceuil").style.display='flex';
 }
 function table(){
 	console.log("Table: done.");
