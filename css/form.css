@@ -17,7 +17,7 @@ textarea{
     z-index: 5;
 }
 #modifyPlayer{
-    display: flex;
+    display: none;
     justify-content: flex-start;
     position: absolute;
     height: 100%;
