@@ -1,4 +1,4 @@
-
+/* ----------------heading style----------------- */
 .heading-1{
     font-size: 40px;
     text-transform: uppercase;
@@ -30,19 +30,47 @@
     text-transform: uppercase;
     font-weight: 300;
 }
-
-.news{
+/* ------------------------- */
+/* --------div container-------- */
+.news1{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-} 
+    display: none;
+    width: 98%;
+}
+.news2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+    width: 98%;
+    
+}
+.news3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+    width: 98%;
+    
+}
+.news4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* display: none; */
+    width: 98%;
+    
+}
 
 
-
+/* ---------------News content style------------- */
 
 .img {
 float: left;
 margin: 5px;
+margin-bottom: 0px;
 width: 30%;
 }
 
