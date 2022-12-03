@@ -433,5 +433,61 @@ function closePlayerCard(){
 	openCard = false;
 }
 
+function closeMatchForm(){
+	document.getElementById("matchForm").style.display="none";
+}
+function openMatchForm(){
+	document.getElementById("matchForm").style.display="block";
+}
 
-
+function addMatch(){
+	let grp = document.getElementById("selectGroup").value;
+	let team1 = document.getElementById("firstTeam").value;
+	let team2 = document.getElementById("secondTeam").value;
+	let date = document.getElementById("matchDate").value;
+	let time = document.getElementById("matchTime").value;
+	
+	console.log("Match form: done");
+	
+	let group=document.createElement("div");
+	group.classList.add("group");
+	
+	let container = document.createElement("div");
+	container.classList.add("container0");
+	
+	let card = document.createElement("div");
+	card.classList.add("card");
+	
+	let vs = document.createElement("span");
+	vs.classList.add("match");
+	vs.innerHTML=team1 + "VS" + team2;
+	
+	let dateSpan = document.createElement("span");
+	dateSpan.classList.add("dateHeure");
+	dateSpan.innerHTML= date + " | " + time;
+	
+	card.appendChild(vs);
+	card.appendChild(dateSpan);
+	
+	container.appendChild(card);
+	
+	let title = document.createElement("h2");
+	title.classList.add("title");
+	title.innerHTML= grp;
+	
+	
+	let id = grp.replace(/ /g, "");
+	let check = document.getElementById(id);
+	if(check){
+		console.log("exists");
+		check.appendChild(container);
+	}
+	else{
+		group.setAttribute("id", id);
+		group.appendChild(title);
+		group.appendChild(container);
+		let mainContainer = document.getElementById("match");
+		mainContainer.appendChild(group);
+	}
+	
+}
