@@ -484,8 +484,10 @@ function playerCard(event){
 		document.getElementById("FT").style.top="0%";
 		document.getElementById("FT").style.left="0%";
 	}
-	x.innerHTML='<img src="'+ Teams[teamshowed][a].pic+'" alt="Player image" id="card-img"><div class="TF-info"><h2>'+Teams[teamshowed][a].Nom+'</h2>	<h3>Age: '+Teams[teamshowed][a].Age+'</h3><h3>Numero: '+Teams[teamshowed][a].Numero+'</h4>	<h3>Poste: '+Teams[teamshowed][a].Poste+'</h4><p>'+Teams[teamshowed][a].Description+'</p></div>'
+	x.innerHTML='<img style="max-width:100px; max-height:130px;" src="'+ Teams[teamshowed][a].pic+'" alt="Player image" id="card-img"><div class="TF-info"><h2>'+Teams[teamshowed][a].Nom+'</h2>	<h3>Age: '+Teams[teamshowed][a].Age+' ans</h3><h3>Numero: '+Teams[teamshowed][a].Numero+'	<h3>Poste: '+Teams[teamshowed][a].Poste+'</h3><h3>Taille: '+Teams[teamshowed][a].Taille+' cm</h3><p>'+Teams[teamshowed][a].Description+'</p></div>'
 	x.style.overflow="scroll";
+	document.querySelector("#FT-card img").style.position="relative"
+	document.querySelector("#FT-card img").style.left="38%"
 
 	
 	//closeVol3();

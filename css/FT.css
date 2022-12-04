@@ -14,7 +14,7 @@
 	width: 95%;
 	height: 95%;
 	max-width: 500px;
-	//margin: 0 auto;
+	margin: 0 auto;
 	position: absolute;
 	top: 2.5%;
 	left: 2.5%;
@@ -32,7 +32,7 @@
 	
 	border-radius: 8px;
 	
-	background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fseamless-pattern-of-soccer-football-traditional-sport-texture-of-ball-vector-id924473182%3Fk%3D6%26m%3D924473182%26s%3D612x612%26w%3D0%26h%3DFIaXKgE0zIjuHS8pxXlLJEWf3zo4llQyQZ4ZrS_ROzc%3D&f=1&nofb=1&ipt=bdc818c07a85ffe2b8e92031d65eef76d4fc5ce98599c73e6c9927fd703c9512&ipo=images");
+	background-image: url("https://img.freepik.com/premium-vector/world-cup-2022-qatar-background_342897-24.jpg?w=2000");
 	background-attachment: fixed;
 	
 	border: 1px solid black;
@@ -64,11 +64,12 @@ i{
 	flex-wrap: nowrap;
 	min-height: 30%;
 	min-width: 35%;
+	color: rgb(213, 93, 161);
 	justify-content: space-evenly;
 	align-items: center;
-	border: 1.5px solid rgba(0,0,0, 0.5);
+	border: 1.5px solid rgba(169, 10, 10, 0.5);
 	border-radius: 3.5px;
-	background-color: var(--color-white);
+	background-image:url("https://www.pesmaster.com/efootball-2022/graphics/players/0000_b01_0_.webp") ;
 	box-shadow: 0 0 8px 5px;
 	font-weight: bold;
 }
