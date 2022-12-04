@@ -301,7 +301,7 @@ function classement(){
 	document.getElementById("classement").style.display='block';
 	document.getElementById("volet4").style.display="block";
 	
-	document.getElementById("volet4").style.backgroundColor="#cecece";
+	//document.getElementById("volet4").style.backgroundColor="#cecece";
 	
 	let defMod = document.getElementById("defaultClassModify");
 	if (defMod){
@@ -389,7 +389,7 @@ function match(){
 	document.getElementById("match").style.display='block';
 	document.getElementById("volet4").style.display="block";
 	
-	document.getElementById("volet4").style.backgroundColor="brown";
+	//document.getElementById("volet4").style.backgroundColor="brown";
 	
 	let defMod = document.getElementById("defaultModify");
 	if (defMod){
@@ -459,7 +459,7 @@ function table(){
 	else
 		document.getElementById("CONTAIN").style.width="100%";
 		
-	document.getElementById("volet4").style.backgroundColor="#cecece";
+	//document.getElementById("volet4").style.backgroundColor="#cecece";
 }
 
 function group(grp){
