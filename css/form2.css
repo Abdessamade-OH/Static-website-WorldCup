@@ -8,7 +8,11 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: rgb(53, 11, 53);
+  background: linear-gradient(
+					45deg,
+					var(--color-purple),
+					var(--color-black)
+				);
 }
 
 .container2 {
@@ -56,7 +60,7 @@ form .user-details .input-box {
 
 .user-details .input-box input:focus,
 .user-details .input-box input:valid {
-  border-color: rgb(184, 97, 97);
+  border-color: rgb(121, 121, 121);
 }
 
 
@@ -165,8 +169,8 @@ form .button #editer {
   
 #form-close{
 	position: absolute;
-	top: 30px;
-	left: 30px;
+	
+	left: 70%;
 	font-size: 2rem;
 }
 

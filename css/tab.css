@@ -12,8 +12,8 @@
  
    }
 .div-tab th{
-    background-color: #41436A;
-    color: #fafafa;
+   
+    color: black;
     font-family: 'Open Sans',Sans-serif;
     font-weight: 200;
     text-transform: uppercase;
@@ -63,12 +63,13 @@
 .div-tab{
 	display: none;
     width: 100%;
-    //margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     align-items: center;
+    background-color: rgb(15, 15, 100);
 }
 .div-tab img{
 	border-radius: 8px;
