@@ -38,6 +38,7 @@
 	border: 1px solid black;
 	
 	box-shadow: 0 0 8px 8px;
+	overflow-y: auto;
 }
 i{
 	cursor: pointer;
@@ -52,8 +53,8 @@ i{
 
 .player-card img{
 	object-fit: cover;
-	max-height: 60%;
-	max-width: 60%;
+	max-height: 50%;
+	max-width: 50%;
 	border-radius: 8px;
 	flex-shrink: 1;
 	box-shadow: 0 0 10px 2px;
@@ -64,6 +65,8 @@ i{
 	flex-wrap: nowrap;
 	min-height: 30%;
 	min-width: 35%;
+	max-height: 30%;
+	max-width: 70%;
 	justify-content: space-evenly;
 	align-items: center;
 	border: 1.5px solid rgba(0,0,0, 0.5);
@@ -71,6 +74,7 @@ i{
 	background-color: var(--color-white);
 	box-shadow: 0 0 8px 5px;
 	font-weight: bold;
+	overflow: hidden;
 }
 .player-card h3,h4{
 	margin: 0;
