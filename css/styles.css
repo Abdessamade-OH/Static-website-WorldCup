@@ -32,7 +32,7 @@ main{
 }
 header {
     position: fixed;
-    /* height:110px; */
+    height:110px;
     width:100%;
     top:0px;
     background-color: var(--color-red);
@@ -49,8 +49,6 @@ header {
     color: #eee;
     overflow: hidden;
     position: absolute;
-	top: 46px;
-	left: 341.5px;
 	margin-top: -140px;
 	padding-top: 18px;
 }
@@ -75,7 +73,6 @@ header {
 .marquee-cntent{
     list-style: none;
     height: 100%;
-	margin-top: 41px;
     display: flex;
     justify-content: flex-start;
     animation: scrolling 10s linear infinite;
@@ -104,12 +101,12 @@ header {
     width: 100%;
     border: 2px solid #eee;
 }
-@media only screen and (max-width: 600px)  {
+/* @media only screen and (max-width: 600px)  {
 	.marquee{
-		width: 100vw;
-		left: 191px;
+		//width: 100vw;
+		//left: -225px;
 	}
-} 
+}  */
 
 
 	/*abdou*/
@@ -533,12 +530,7 @@ footer img {
 	z-index: 1;
 	border-right: 1px blue solid;
 	padding: 0;
-	background: repeating-linear-gradient(
-					180deg,
-					var(--color-lime) 0%,
-					var(--color-green) 5%,
-					var(--color-lime) 10%
-				);
+	background-color: #F4B29E;
 	overflow-x: hidden;
 	overflow-y: auto;
 	transition: left 0.45s  ease-in-out;
