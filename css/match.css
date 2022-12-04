@@ -31,11 +31,8 @@
 	height: 350px;
 	top: calc((100% - 300px) / 2 );
 }
-.classForm i{
-	position: fixed;
-	top: calc(((100% - 280px) / 2 ) + 20px);
-	left: calc(((100% - 300px) / 2 ) + 20px);
-	z-index: 7;
+#modifyClass{
+	display: none;
 }
 .NewMatchForm label, .modifyForm label, .ClassForm label{
 	display: flex;

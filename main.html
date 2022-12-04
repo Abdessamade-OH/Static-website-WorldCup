@@ -1323,7 +1323,7 @@
 				<div class="matchFormBackground" id="matchFormBackground"></div>
 				
 				<div class="ClassForm" id="ClassForm">
-					<i class='fas fa-window-close' onclick="closeClassForm()"></i>
+					<i class="fas fa-window-close" onclick="closeClassForm()"></i>
 					<label for="CountrySelect">Select a country
 						<select id="selectClassTeam">
 							 <option disabled>Selectionner une Equipe</option>
@@ -1543,8 +1543,10 @@
 					</label>
 					
 						<input type="submit" id="submitClass" value="Ajouter l'équipe" onclick="newClassForm(); closeClassForm();"/>
+						<input type="submit" id="modifyClass" value="Modifer l'équipe" onclick="closeClassForm();"">
 					
 				</div>
+				
 				
 				<table class="styled-table">
 					
@@ -1562,7 +1564,7 @@
 					
 					<tbody id="ClassBody">
 						<tr>
-							<td>&#127474&#127462 Maroc <i class="fas fa-pen-square"></i> <i class="fas fa-trash"></i></td>
+							<td><span>&#127474&#127462 Maroc</span> <i class="fas fa-pen-square"></i> <i class="fas fa-trash"></i></td>
 							<td>3</td>
 							<td>3</td>
 							<td>0</td>

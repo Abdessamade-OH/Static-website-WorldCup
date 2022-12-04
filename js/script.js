@@ -619,6 +619,100 @@ function addMatch(){
 	}
 }
 
+
+
+function openClassForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	document.getElementById("ClassForm").style.display="flex";
+}
+
+function newClassForm(){
+	
+	let team = document.getElementById("selectClassTeam").value;
+	let MJClass = document.getElementById("MJClass").value;
+	let GClass = document.getElementById("GClass").value;
+	let NClass = document.getElementById("NClass").value;
+	let PClass = document.getElementById("PClass").value;
+	let PTSClass = document.getElementById("PTSClass").value;
+	
+	let row = document.createElement("tr");
+	
+	let data1 = document.createElement("td");
+	let data2 = document.createElement("td");
+	let data3 = document.createElement("td");
+	let data4 = document.createElement("td");
+	let data5 = document.createElement("td");
+	let data6 = document.createElement("td");
+	
+	let modifyButton = document.createElement("i");
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash');
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square');
+	
+	deleteButton.addEventListener("click", function deleteClass(event){
+		this.parentElement.parentElement.remove();
+	});
+		
+	modifyButton.addEventListener("click", function modifyClass(event){
+		document.getElementById("selectClassTeam").style.display="flex";
+		let button = document.getElementById("modifyClass");
+		button.style.display="block";
+		let rowData = this.parentElement.parentElement.children;
+		//let	firstData = this.parentElement.children;
+		
+		button.addEventListener("click", (event)=>{
+			let Mteam = document.getElementById("selectClassTeam").value;
+			let MMJClass = document.getElementById("MJClass").value;
+			let MGClass = document.getElementById("GClass").value;
+			let MNClass = document.getElementById("NClass").value;
+			let MPClass = document.getElementById("PClass").value;
+			let MPTSClass = document.getElementById("PTSClass").value;
+			
+			rowData[0][0].innerHTML = Mteam;
+			rowData[1].innerHTML =  MMJClass;
+			rowData[2].innerHTML =  MGClass;
+			rowData[3].innerHTML =  MNClass;
+			rowData[4].innerHTML =  MPClass;
+			rowData[5].innerHTML =  MPTSClass;
+		});
+		
+		button.style.display="none";
+	});
+	
+	let TeamData = document.createElement("span");
+	TeamData.innerHTML = team + " ";
+	
+	data1.appendChild(TeamData);
+	data1.appendChild(modifyButton);
+	data1.innerHTML += " ";
+	data1.appendChild(deleteButton);
+	data2.innerHTML = MJClass;
+	data3.innerHTML = GClass;
+	data4.innerHTML = NClass;
+	data5.innerHTML = PClass;
+	data6.innerHTML = PTSClass;
+	
+	row.appendChild(data1);
+	row.appendChild(data2);
+	row.appendChild(data3);
+	row.appendChild(data4);
+	row.appendChild(data5);
+	row.appendChild(data6);
+	
+	let body = document.getElementById("ClassBody");
+	
+	body.appendChild(row);
+	
+}
+
+function closeClassForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("ClassForm").style.display="none";
+}
+
+
 function openNews(index){
 	closeVol2();
 	closeVol3();
@@ -712,62 +806,3 @@ function openAds(index){
 	}
 	
 }
-
-function openClassForm(){
-	document.getElementById("matchFormBackground").style.display="block";
-	document.getElementById("ClassForm").style.display="flex";
-}
-
-function newClassForm(){
-	
-	let team = document.getElementById("selectClassTeam").value;
-	let MJClass = document.getElementById("MJClass").value;
-	let GClass = document.getElementById("GClass").value;
-	let NClass = document.getElementById("NClass").value;
-	let PClass = document.getElementById("PClass").value;
-	let PTSClass = document.getElementById("PTSClass").value;
-	
-	let row = document.createElement("tr");
-	
-	let data1 = document.createElement("td");
-	let data2 = document.createElement("td");
-	let data3 = document.createElement("td");
-	let data4 = document.createElement("td");
-	let data5 = document.createElement("td");
-	let data6 = document.createElement("td");
-	
-	let modifyButton = document.createElement("i");
-	let deleteButton = document.createElement("i");
-	deleteButton.classList.add('fas');
-	deleteButton.classList.add('fa-trash');
-	modifyButton.classList.add('fas');
-	modifyButton.classList.add('fa-pen-square');
-	
-	data1.innerHTML = team;
-	data1.appendChild(modifyButton);
-	data1.innerHTML += " ";
-	data1.appendChild(deleteButton);
-	data2.innerHTML = MJClass;
-	data3.innerHTML = GClass;
-	data4.innerHTML = NClass;
-	data5.innerHTML = PClass;
-	data6.innerHTML = PTSClass;
-	
-	row.appendChild(data1);
-	row.appendChild(data2);
-	row.appendChild(data3);
-	row.appendChild(data4);
-	row.appendChild(data5);
-	row.appendChild(data6);
-	
-	let body = document.getElementById("ClassBody");
-	
-	body.appendChild(row);
-	
-}
-
-function closeClassForm(){
-	document.getElementById("matchFormBackground").style.display="none";
-	document.getElementById("ClassForm").style.display="none";
-}
-
