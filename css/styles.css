@@ -1,10 +1,10 @@
 :root{
-	--color-red: rgb(226, 43, 73);
+	--color-red: #984063;
 	--color-white: white;
 	--color-purple: rgb(74, 12, 168);
 	--color-black: black;
-	--color-green: green;
-	--color-lime: lime;
+	--color-green: #984063;
+	--color-lime: #41436A;
 	--color-gray: #cecece;
 	--color-darkGreen: #263421;
 } /*root pour avoir les variable accessible aux tous les classes.*/
@@ -104,12 +104,12 @@ header {
     width: 100%;
     border: 2px solid #eee;
 }
-@media only screen and (max-width: 600px)  {
+/* @media only screen and (max-width: 600px)  {
 	.marquee{
 		//width: 100vw;
 		//left: -225px;
 	}
-} 
+}  */
 
 
 	/*abdou*/
@@ -448,8 +448,11 @@ footer:hover{
 	transition-timing-function: ease-in;
 	height: calc(8vh + 10vh);
 	min-height: 50px;
-	
 }
+
+/*.thingy{
+	transform: rotate(180deg);
+}*/
 .container{
 	width: 100%;
 	height: 100%;
@@ -516,12 +519,7 @@ footer:hover{
 	margin-top: 8vh;
 	background-color: var(--color-white);
 }
-footer img {
-	position: absolute;
-	top: -25px;
-	left: 2.5%;
-	transform: scale(0.8);
-}
+
 /* volet 2 */
 .volet2{
 	position: relative;
@@ -533,12 +531,7 @@ footer img {
 	z-index: 1;
 	border-right: 1px blue solid;
 	padding: 0;
-	background: repeating-linear-gradient(
-					180deg,
-					var(--color-lime) 0%,
-					var(--color-green) 5%,
-					var(--color-lime) 10%
-				);
+	background-color: #F4B29E;
 	overflow-x: hidden;
 	overflow-y: auto;
 	transition: left 0.45s  ease-in-out;

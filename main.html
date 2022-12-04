@@ -290,6 +290,7 @@
 				</a>
 				<h1>Les Equipes</h1>
 			</div>
+			
 			<ul type="none" class="TeamsGrp" id="Groupe1">
 				<h3 class="grp-title">Groupe 1</h3>
 				<button onclick="createTeam(event)">Cree une Equipes</button>
@@ -357,7 +358,7 @@
 					<div class="team-title" id="team-title">
 						<span class="flag"></span>
 					</div>
-
+				
 
 					<div class="image-container" id="field">
 
@@ -401,19 +402,18 @@
 
 						</a>
 						<a onclick="playerCard()" class="player" id="player-9">
-
 						</a>
 						<a onclick="playerCard()" class="player" id="player-10">
-
 						</a>
 						<a onclick="playerCard()" class="player" id="player-11">
-
-
 						</a>
 					</div>
+				
+
 					<div class="team-info">
 						<p id="team-info"></p>
 					</div>
+				</div>
 
 					<a onclick="openVol3()" id="openButton3" class="openVol3">
 						<i class='fas fa-plus-square'></i>
@@ -421,8 +421,6 @@
 					<a onclick="closeVol3()" id="closeButton3" class="closeVol3">
 						<i class='fas fa-window-close'></i>
 					</a>
-				</div>
-
 			</div>
 
 			<div class="right">
@@ -448,17 +446,19 @@
 				</div>
 			</div>
 
+			
 		</div>
-
+			
 		<div class="volet4" id="volet4">
-			<!-- Acceuil -->
-			<div class="landingPage" id="acceuil">
-				<div class="content">
-					<div class="info">
-						<h2>FIFA World Cup Qatar 2022™</h2>
-					</div>
+            	<!-- Acceuil -->
+				<div class="landingPage" id="acceuil">
+					<video autoplay loop muted plays-inline class="back-video">
+						<source src="data/vid.mp4" type="video/mp4">
+					</video>	
+					
 				</div>
-			</div>
+
+			
 
 		
 				<div class="matchFormBackground" id="matchFormBackground">
@@ -1618,6 +1618,7 @@
 				</div>
 					<!-- ------------------------------------------- -->
 		</div>
+
 		<!--Volet5-->
 		<aside class="volet5" id="volet5">
 			<a onclick="openVol5()">
@@ -1700,13 +1701,13 @@
 				<li id="match-li" onclick="match()"><a>Matchs</a></li>
 				<li id="classement-li" onclick="classement()"><a>Classment</a></li>
 			</ul>
+		
+			
 		</nav>
-		<!-- page defilante -->
-		<div class="marquee">
-			<!--static part-->
-			<ul class="marquee-cntent">
-				<!--moving part-->
-				<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100" onclick="openAds(1)"></li>
+			<!-- page defilante -->
+			<div class="marquee">  <!--static part-->
+                <ul class="marquee-cntent"> <!--moving part-->
+					<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100" onclick="openAds(1)"></li>
 				<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100" onclick="openAds(2)"></li>
 				<li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100" onclick="openAds(3)"></li>
 				<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100" onclick="openAds(4)"></li>
@@ -1716,55 +1717,57 @@
 				<li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100" onclick="openAds(8)"></li>
 				<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100" onclick="openAds(9)"></li>
 				<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100" onclick="openAds(10)"></li>
-			</ul>
-
-	</header>
+                </ul>
+			</div>
+    </header>
+	
 	<footer>
-		<img src="./data/touche.png" />
-		<div class="container">
-			<div class="col" id="contact">
-				<h1>Contacts <i class='fas fa-address-book'></i></h1>
-				<ul>
-					<li><b>Email:</b> <i>Email@corp.com</i></li>
-					<li><b>Numero:</b> <i>+212732938982</i></li>
-				</ul>
+			<div class="container">
+				<!-- <i class='fas fa-angle-down thingy'></i> -->
+				
+        		<div class="col" id="contact">
+        			<h1>Contacts <i class='fas fa-address-book'></i></h1>
+        			<ul>
+						<li><b>Email:</b> <i>Email@corp.com</i></li>
+        				<li><b>Numero:</b> <i>+212732938982</i></li>
+        			</ul>
+        		</div>
+        		
+        		<div class="border"></div>
+        		
+        		<div class="col" id="liens">
+        			<h1>Réseaux  <i class='fas fa-comments'></i></h1>
+        			<ul>
+        				<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        				<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        				<li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            			<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        			</ul>
+        		</div>
+        		
+        		<div class="border"></div>
+        			
+        		<div class="col" id="admins">
+        			<h1>Admins  <i class='fas fa-users'></i></h1>
+        			<ul> <!-- ordre alphabétique ^^ -->
+        				<li>Abdessamade OHMAD</li>
+        				<li>Amin IZOUGAGHEN</li>
+        				<li>Nouha SAMADI</li>
+        				<li>Youssef CHAABI</li>
+        			</ul>
+        		</div>
+        		
+        		<div class="border"></div>
+        		
+        		<div class="col" id="version">
+        			<h1>Version  <i class='fas fa-save'></i></h1>
+        				<ul><li>Development</li></ul>
+        		</div>
 			</div>
-
-			<div class="border"></div>
-
-			<div class="col" id="liens">
-				<h1>Réseaux <i class='fas fa-comments'></i></h1>
-				<ul>
-					<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-					<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-					<li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-					<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
-				</ul>
-			</div>
-
-			<div class="border"></div>
-
-			<div class="col" id="admins">
-				<h1>Admins <i class='fas fa-users'></i></h1>
-				<ul>
-					<!-- ordre alphabétique ^^ -->
-					<li>Abdessamade OHMAD</li>
-					<li>Amin IZOUGAGHEN</li>
-					<li>Nouha SAMADI</li>
-					<li>Youssef CHAABI</li>
-				</ul>
-			</div>
-
-			<div class="border"></div>
-
-			<div class="col" id="version">
-				<h1>Version <i class='fas fa-save'></i></h1>
-				<ul>
-					<li>Development</li>
-				</ul>
-			</div>
-
-	</footer>
+        	
+    </footer>
+	
+	
 </body>
 
 </html>
