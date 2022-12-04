@@ -65,15 +65,15 @@ var Teams = [];
 	Team3.push(new Manager("Roberto Martinez", 49, "./IMG/ETR-BLG.jpg", "Les Diables rouges, fearless and victorious !", 0, "titulaire de Champion d Angleterre de League One avec Swansea City , Vainqueur de la Coupe d Angleterre avec  Wigan, Troisième de la Coupe du monde 2018 avec Belgique ", "🇧🇪 Belgique"));
 	Team3.push(new Joueur("Thibaut Courtois", "GK", 30, 200, 1, "./IMG/COURTOIS.webp"));
 	Team3.push(new Joueur("Toby Alderweirled", "DD", 33, 187, 2, "./IMG/TONY.webp"));
-	Team3.push(new Joueur("Wout Faes", "DC", 24, 187, 4 ,"./IMG/WOUT.webp"));
+	Team3.push(new Joueur("Wout Faes", "DC", 24, 187, 4, "./IMG/WOUT.webp"));
 	Team3.push(new Joueur("Zeno Debast", "DC", 19, 189, 26, "./IMG/ZENO.webp"));
-	Team3.push(new Joueur("Jan Vertonghen", "DG", 35, 189, 5,"./IMG/JAN.webp"));
-	Team3.push(new Joueur("Youri Tielemans ", "MDC", 25, 176, 8,"./IMG/YOURI.webp"));
+	Team3.push(new Joueur("Jan Vertonghen", "DG", 35, 189, 5, "./IMG/JAN.webp"));
+	Team3.push(new Joueur("Youri Tielemans ", "MDC", 25, 176, 8, "./IMG/YOURI.webp"));
 	Team3.push(new Joueur("Charles De Ketelaere", "MOC", 21, 192, 22, "./IMG/CHARLES.webp"));
 	Team3.push(new Joueur("Kevin DE Bruyne ", "MOC", 31, 181, 7, "./IMG/DEBRY.webp"));
 	Team3.push(new Joueur("Eden Hazard", "AG", 312, 175, 10, "./IMG/EDEN.webp"));
 	Team3.push(new Joueur("Romelu Lokaku", "AT", 29, 191, 9, "./IMG/LUKA.webp"));
-	Team3.push(new Joueur("Jeremy Doku ", "AD",8 , 173.4, 25,"./IMG/DOKU.webp"));
+	Team3.push(new Joueur("Jeremy Doku ", "AD", 8, 173.4, 25, "./IMG/DOKU.webp"));
 	Team3.push(new Joueur("Koen Casteels", "GK", 30, 197, 13, "./IMG/KEN.webp"));
 	Team3.push(new Joueur("Loïs Openda", "AT", 22, 177, 24, "./IMG/LOIS.webp"));
 	Team3.push(new Joueur("Arthur Theate", "DD", 27, 185, 3, "./IMG/ART.webp"));
@@ -112,12 +112,14 @@ function showTeam(event, c) {
 	let age = document.createElement("h4");
 	let pic = document.createElement("img");
 	let btn = document.createElement("button");
-	btn.setAttribute("onclick","modifyManager()");
-	btn.innerHTML="Modifier"
+	btn.setAttribute("onclick", "modifyPlayer(event)");
+	btn.setAttribute("value", 0);
+	btn.innerHTML = "Modifier"
 	let title = document.querySelector("#team-title .flag");
 	let tableau = document.getElementById("table");
 	name.innerHTML = arr[0].Nom;
 	pic.src = arr[0].pic;
+	pic.setAttribute("style", "max-width:130px; max-height:145px;");
 	age.innerHTML = "Age :" + arr[0].Age;
 	z.appendChild(pic);
 	z.appendChild(name);
@@ -133,15 +135,15 @@ function showTeam(event, c) {
 			tc.setAttribute("value", index);
 			let pic = document.createElement("img");
 			pic.src = arr[index].pic;
-			tc.innerHTML = '<th><img src="' + arr[index].pic + '" alt="player image" style ="width:100px; height:130px;"></th><th>' + arr[index].Numero + '</th><th>' + arr[index].Nom + '</th><th><button onclick="formTab(event)">Editer</button><button onclick="modifyPlayer(event)">Modifier</button><button onclick="delPlayer(event)">Supprimer</button></th> '
+			tc.innerHTML = '<th><img src="' + arr[index].pic + '" alt="player image" style ="width:100px; height:130px;"></th><th>' + arr[index].Numero + '</th><th>' + arr[index].Nom + '</th><th><button onclick="formTab(event)">Editer</button><button value=1 onclick="modifyPlayer(event)">Modifier</button><button onclick="delPlayer(event)">Supprimer</button></th> '
 			tableau.appendChild(tc);
 		}
 	}
 	let play = document.getElementsByClassName("player");
 	for (let index = 1; index < 12; index++) {
 		if (arr[index] != null) {
-			play[index - 1].innerHTML = '<span value='+index+'>' + arr[index].Nom + '</span> <div class="min-card"><img src="' + arr[index].pic + '" alt="player image" /> <h3>' + arr[index].Nom + '</h3><h4>Age: ' + arr[index].Age + '</h4> </div>';
-			play[index - 1].setAttribute("value",index);
+			play[index - 1].innerHTML = '<span value=' + index + '>' + arr[index].Nom + '</span> <div class="min-card"><img src="' + arr[index].pic + '" alt="player image" /> <h3>' + arr[index].Nom + '</h3><h4>Age: ' + arr[index].Age + '</h4> </div>';
+			play[index - 1].setAttribute("value", index);
 		} else {
 			play[index - 1].innerHTML = "<span>Joueur manquant !!!!</span>";
 		}
@@ -238,46 +240,77 @@ function addPlayer(event) {
 }
 
 function modifyPlayer(event) {
+	const manager = parseInt(event.target.value);
 	document.getElementById("modifyPlayer").style.display = "flex";
-	let x = parseInt(event.target.parentElement.parentElement.getAttribute('value'));
-	let rr = 0;
-	document.getElementById("modPlayer").addEventListener("click", () => {
-		console.log("m in1");
-		let rem;
-		let temp;
-		if (!rr) {
-			let a = parseInt(document.getElementById("newNum").value);
-			for (let index = 1; index < Teams[teamshowed].length; index++) {
-				if (Teams[teamshowed][index].Numero == a) {
-					console.log(Teams[teamshowed][index].Nom)
-					rem=index;
-					break;
-				}
-			}
-			const k = document.getElementsByTagName("area");
-			temp = Teams[teamshowed][x];
-			Teams[teamshowed][x] = Teams[teamshowed][rem];
-			Teams[teamshowed][rem]=temp;
-			for (let index = 1; index < k.length; index++) {
-				if(k[index].value==x){
-					k[index].value==rem;
-					break;
-				}
-				
-			}
-			
+	console.log(manager);
+	if (manager) {
+		document.getElementById("contain").innerHTML = '<h3> Modification : </h3> <label for="newNum" class="PlayerNumLabel">Numero du joueur avec qui sera modifier : </label> <input type="number" placeholder="Player Number" id="newNum" min="1" max="30"> <button id="modPlayer" type="submit"> Modifier </button>';
 
-			rr++;
-			showTeam(event, teamshowed);
-			document.getElementById("modifyPlayer").style.display = "none";
-			fermer();
-		}
-	})
+		document.getElementById("modifyPlayer").style.display = "flex";
+		let x = parseInt(event.target.parentElement.parentElement.getAttribute('value'));
+		let rr = 0;
+		document.getElementById("modPlayer").addEventListener("click", () => {
+			console.log("m in1");
+			let rem;
+			let temp;
+			if (!rr) {
+				let a = parseInt(document.getElementById("newNum").value);
+				for (let index = 1; index < Teams[teamshowed].length; index++) {
+					if (Teams[teamshowed][index].Numero == a) {
+						console.log(Teams[teamshowed][index].Nom)
+						rem = index;
+						break;
+					}
+				}
+				const k = document.getElementsByTagName("area");
+				temp = Teams[teamshowed][x];
+				Teams[teamshowed][x] = Teams[teamshowed][rem];
+				Teams[teamshowed][rem] = temp;
+				for (let index = 1; index < k.length; index++) {
+					if (k[index].value == x) {
+						k[index].value == rem;
+						break;
+					}
+
+				}
+
+
+				rr++;
+				showTeam(event, teamshowed);
+				document.getElementById("modifyPlayer").style.display = "none";
+				fermer();
+			}
+		})
+	}
+	else {
+		console.log("modarib");
+		let xp = 0;
+
+		document.getElementById("contain").innerHTML = '<h3> Modification : </h3> <label for="newNum" class="PlayerNumLabel">Nouveau Nom : </label> <input type="text" placeholder="Nom" id="newNomM" min="1" max="30"> <label for="newNum" class="PlayerNumLabel">Age : </label> <input type="number" placeholder="Age" id="newAgeM" min="1" max="30"> <label for="newNum" class="PlayerNumLabel">Nouvelle Photo : </label> <input type="text" placeholder="URL" id="newPicM" min="1" max="30"> <button id="modManager" type="submit"> Modifier </button>';
+		document.getElementById("modManager").addEventListener("click", () => {
+			if (!xp) {
+				Teams[teamshowed][0].Age = document.getElementById("newAgeM").value;
+				Teams[teamshowed][0].Nom = document.getElementById("newNomM").value;
+				Teams[teamshowed][0].pic = document.getElementById("newPicM").value;
+				console.log(Teams[teamshowed][0].Age);
+				console.log(Teams[teamshowed][0].Nom);
+				console.log(Teams[teamshowed][0].Age);
+				xp++;
+				document.getElementById("contain").innerHTML='<h3> Modification : </h3> <label for="newNum" class="PlayerNumLabel">Numero du joueur avec qui sera modifier : </label> <input type="number" placeholder="Player Number" id="newNum" min="1" max="30"> <button id="modPlayer" type="submit"> Modifier </button>';
+
+				showTeam(event, teamshowed);
+				document.getElementById("modifyPlayer").style.display = "none";
+				document.getElementById("contain").innerHTML = '<h3> Modification : </h3> <label for="newNum" class="PlayerNumLabel">Numero du joueur avec qui sera modifier : </label> <input type="number" placeholder="Player Number" id="newNum" min="1" max="30"> <button id="modPlayer" type="submit"> Modifier </button>';
+			}
+		})
+
+	}
+
 
 }
-function modifyManager(){
+function modifyManager() {
 	console.log("in")
-	document.getElementById("modifyManager").style.display="flex";
+	document.getElementById("modifyManager").style.display = "flex";
 	console.log(document.getElementById("modifyManager").style.display);
 
 }

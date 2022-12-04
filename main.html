@@ -39,8 +39,7 @@
 </head>
 
 <body>
-	
-	</div>
+
 	<div id="modify">
 		<div class="fermer">
 			<i id="fermer" onclick="fermer()" class='fas fa-window-close'></i>
@@ -265,7 +264,7 @@
 			<i id="fermer" onclick="fermer()" class='fas fa-window-close'></i>
 		</div>
 
-		<div class="contain">
+		<div class="contain" id="contain">
 			<h3> Modification : </h3>
 
 			<label for="newNum" class="PlayerNumLabel">Numero du joueur avec qui sera modifier : </label>
@@ -369,17 +368,17 @@
 
 						<img src="./data/terrain2.png" alt="terrain" usemap="#terrain" />
 						<map name="terrain">
-							<area shape="circle" coords="28,104,10" title="Circle" value="1" onclick="playerCard(event)">
-							<area shape="circle" coords="153,173,9" title="Circle" value="2" onclick="playerCard(event)">
-							<area shape="circle" coords="117,126,9" title="Circle" value="3" onclick="playerCard(event)">
-							<area shape="circle" coords="117,75,9" title="Circle" value="4" onclick="playerCard(event)">
-							<area shape="circle" coords="153,32,9" title="Circle" value="5" onclick="playerCard(event)">
-							<area shape="circle" coords="205,144,9" title="Circle" value="6" onclick="playerCard(event)">
-							<area shape="circle" coords="204,69,9" title="Circle" value="7" onclick="playerCard(event)">
-							<area shape="circle" coords="250,104,9" title="Circle" value="8" onclick="playerCard(event)">
-							<area shape="circle" coords="310,163,9" title="Circle" value="9" onclick="playerCard(event)">
-							<area shape="circle" coords="344,105,9" title="Circle" value="10" onclick="playerCard(event)">
-							<area shape="circle" coords="310,42,11" title="Circle" value="11" onclick="playerCard(event)">
+							<area shape="circle" coords="28,104,10" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="153,173,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="117,126,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="117,75,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="153,32,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="205,144,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="204,69,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="250,104,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="310,163,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="344,105,9" title="Circle" onclick="playerCard(event)">
+							<area shape="circle" coords="310,42,11" title="Circle" onclick="playerCard(event)">
 						</map>
 
 						<a onclick="playerCard(event)" class="player" id="player-1">
@@ -464,7 +463,7 @@
             	<!-- Acceuil -->
 				<div class="landingPage" id="acceuil">
 					<video autoplay loop muted plays-inline class="back-video">
-						<source src="data/vid.mp4" type="video/mp4">
+						<source src="data/Fifa ‐ Réalisée avec Clipchamp.mp4" type="video/mp4">
 					</video>	
 					
 				</div>
@@ -1776,7 +1775,6 @@
 			</div>
         	
     </footer>
-	
 	
 	
 </body>
