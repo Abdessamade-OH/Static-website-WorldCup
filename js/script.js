@@ -442,6 +442,17 @@ function openMatchForm(){
 	document.getElementById("matchFormBackground").style.display="block";
 }
 
+function openMatchModifyForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	let form = document.getElementById("modifyForm")
+	form.style.display="flex";
+	
+}
+function closeModifyForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("modifyForm").style.display="none";
+}
+
 function addMatch(){
 	let grp = document.getElementById("selectGroup").value;
 	let team1 = document.getElementById("firstTeam").value;
@@ -462,10 +473,12 @@ function addMatch(){
 	
 	let vs = document.createElement("span");
 	vs.classList.add("match");
+	vs.setAttribute("id", "vs");
 	vs.innerHTML=team1 + "VS" + team2;
 	
 	let dateSpan = document.createElement("span");
 	dateSpan.classList.add("dateHeure");
+	dateSpan.setAttribute("id", "dateNtime");
 	dateSpan.innerHTML= date + " | " + time;
 	
 	let deleteButton = document.createElement("i");
@@ -478,7 +491,42 @@ function addMatch(){
   		this.parentElement.parentElement.remove();
 	});
 	
+	let modifyButton = document.createElement("i");
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square')
+	modifyButton.classList.add('modifyButton'); 
+	modifyButton.addEventListener('click', function modifyMatch(event) {
+  		console.log('Match: Modifed');
+  		
+  		let matchData = this.parentElement.children;
+  		console.log(matchData[2]);
+  		
+  		openMatchModifyForm();
+  		let firstTeamM = document.getElementById("ModifedfirstTeam").value;
+  		let secondTeamM = document.getElementById("ModifedsecondTeam").value;
+  		let matchDateM = document.getElementById("ModifedmatchDate").value;
+   		let matchTimeM = document.getElementById("ModifedmatchTime").value;
+  		
+  		this.parentElement.removeChild(this.parentElement.lastChild);
+  		this.parentElement.removeChild(this.parentElement.lastChild);
+  		
+  		let vs1 = document.createElement("span");
+		vs1.classList.add("match");
+		vs1.setAttribute("id", "vs");
+		
+		let dateSpan1 = document.createElement("span");
+		dateSpan1.classList.add("dateHeure");
+		dateSpan1.setAttribute("id", "dateNtime");
+  		
+  		vs1.innerHTML=firstTeamM + " VS " + secondTeamM;
+  		dateSpan1.innerHTML=matchDateM + " | " + matchTimeM;
+  		
+  		this.parentElement.appendChild(vs1);
+  		this.parentElement.appendChild(dateSpan1);
+	});
+	
 	card.appendChild(deleteButton);
+	card.appendChild(modifyButton);
 	
 	card.appendChild(vs);
 	card.appendChild(dateSpan);
