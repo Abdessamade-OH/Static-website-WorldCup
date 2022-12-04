@@ -445,8 +445,11 @@ footer:hover{
 	transition-timing-function: ease-in;
 	height: calc(8vh + 10vh);
 	min-height: 50px;
-	
 }
+
+/*.thingy{
+	transform: rotate(180deg);
+}*/
 .container{
 	width: 100%;
 	height: 100%;
@@ -513,12 +516,7 @@ footer:hover{
 	margin-top: 8vh;
 	background-color: var(--color-white);
 }
-footer img {
-	position: absolute;
-	top: -25px;
-	left: 2.5%;
-	transform: scale(0.8);
-}
+
 /* volet 2 */
 .volet2{
 	position: relative;
