@@ -135,32 +135,38 @@
 
 /* ------------------Ajuster la taille des cartes au fur et à mesure la taille de la fenêtre---------------- */
 
-
+@media  only screen and (min-width: 981px) {
+    .match{
+        font-size: 423%;
+        position: relative;
+        top: 13px;
+        left: 104px;
+    }
+    .card{
+        width: 66%;
+    }
+}
 @media  only screen and (max-width: 980px) {
     .match{
-        font-size: 383%;
+        font-size: 399%;
         position: relative;
         top: 13px;
-        left: 1px;
+        left: 116px;
+    }
+    .card{
+        width: 74%;
     }
 }
-@media  only screen and (max-width: 911px) {
-    .match{
-        font-size: 359%;
-        position: relative;
-        top: 13px;
-        left: 1px;
-    }
-}
+
 @media  only screen and (max-width: 867px) {
     .match{
-        font-size: 334%;
+        font-size: 385%;
         position: relative;
         top: 13px;
-        left: 1px;
+        left: 60px;
     }
 }
-@media  only screen and (max-width: 814px) {
+/* @media  only screen and (max-width: 814px) {
     .match{
         font-size: 308%;
         position: relative;
@@ -176,16 +182,16 @@
         top: 8px;
         left: 1px;
     }
-}
-@media  only screen and (max-width: 700px) {
+} */
+@media  only screen and (max-width: 690px) {
     .match{
-        font-size: 183%;
+        font-size: 279%;
         position: relative;
-        top: 31px;
-        left: 1px;
+        top: 12px;
+        left: 12px;
     }
     .dateHeure{
-        margin-top: 20%;
+        margin-top: 7%;
         margin-left: 10%;
     }
 
