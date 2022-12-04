@@ -447,9 +447,11 @@ function fermer(){
 }
 
 
-function playerCard(){
-	console.log("player card: done");
-	document.getElementById("FT").style.display="block";
+function playerCard(event){
+	let a = parseInt(event.target.getAttribute("value"));
+	console.log("player card: done "+ a);
+	const x = document.getElementById("FT");
+	x.style.display="block";
 	openCard = true;
 	
 	if(over860){
@@ -464,7 +466,10 @@ function playerCard(){
 		document.getElementById("FT").style.height="200px";
 		document.getElementById("FT").style.top="0%";
 		document.getElementById("FT").style.left="0%";
-	}	
+	}
+	x.innerHTML='<img src="'+ Teams[teamshowed][a].pic+'" alt="Player image" id="card-img"><div class="TF-info"><h3>'+Teams[teamshowed][a].Nom+'</h3>	<h3>Age: '+Teams[teamshowed][a].Age+'</h3><h3>Numero: '+Teams[teamshowed][a].Numero+'</h4>	<h3>Poste: '+Teams[teamshowed][a].Poste+'</h4><p>'+Teams[teamshowed][a].Description+'</p></div>'
+	
+
 	
 	//closeVol3();
 	

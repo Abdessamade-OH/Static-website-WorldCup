@@ -116,7 +116,8 @@ function showTeam(event, c) {
 	let play = document.getElementsByClassName("player");
 	for (let index = 1; index < 12; index++) {
 		if (arr[index] != null) {
-			play[index - 1].innerHTML = '<span>' + arr[index].Nom + '</span> <div class="min-card"><img src="' + arr[index].pic + '" alt="player image" /> <h3>' + arr[index].Nom + '</h3><h4>Age: ' + arr[index].Age + '</h4> </div>';
+			play[index - 1].innerHTML = '<span value='+index+'>' + arr[index].Nom + '</span> <div class="min-card"><img src="' + arr[index].pic + '" alt="player image" /> <h3>' + arr[index].Nom + '</h3><h4>Age: ' + arr[index].Age + '</h4> </div>';
+			play[index - 1].setAttribute("value",index);
 		} else {
 			play[index - 1].innerHTML = "<span>Joueur manquant !!!!</span>";
 		}
