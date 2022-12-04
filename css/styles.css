@@ -1,10 +1,10 @@
 :root{
-	--color-red: rgb(226, 43, 73);
+	--color-red: #984063;
 	--color-white: white;
 	--color-purple: rgb(74, 12, 168);
 	--color-black: black;
-	--color-green: green;
-	--color-lime: lime;
+	--color-green: #984063;
+	--color-lime: #41436A;
 	--color-gray: #cecece;
 	--color-darkGreen: #263421;
 } /*root pour avoir les variable accessible aux tous les classes.*/
@@ -78,6 +78,9 @@ header {
     animation: scrolling 10s linear infinite;
 	gap:5px;
 }
+.marquee img:hover{
+	cursor: pointer;
+}
 @keyframes scrolling{
     0% {transform : translate(0);}
     100%{transform: translate(calc(-2*7vw*10));}
@@ -101,12 +104,12 @@ header {
     width: 100%;
     border: 2px solid #eee;
 }
-@media only screen and (max-width: 600px)  {
+/* @media only screen and (max-width: 600px)  {
 	.marquee{
 		//width: 100vw;
 		//left: -225px;
 	}
-} 
+}  */
 
 
 	/*abdou*/
@@ -144,7 +147,7 @@ nav ul, .sous-menu ul{
 		margin-top: -2px;
 	}
 	.actualite{
-		font-size: 2.2vw;
+		font-size: 2.45vw;
 	}
 	.volet-header{
 		font-size: 0.6rem;
@@ -184,6 +187,12 @@ nav ul, .sous-menu ul{
 	.volet-header.teams {
 	font-size: 0.5rem;
 	}
+	.logo_img{
+    	height:50px;
+    	width: 100px;
+    	margin-left: -30px;
+	}
+
 }
 @media only screen and (min-width: 750px){
 	.sous-menu a{
@@ -193,7 +202,7 @@ nav ul, .sous-menu ul{
 		font-size: 2.3vw;
 	}
 	.actualite{
-		font-size: 1.5vw;
+		font-size: 1.7vw;
 	}
 	.volet-header{
 		font-size: 1rem;
@@ -236,6 +245,11 @@ nav ul, .sous-menu ul{
 	.volet-header.teams {
 		font-size: 0.7rem;
 	}
+	.logo_img{
+    height: 70px;
+    width: 154px;
+}
+
 }
 @media only screen and (min-width: 1200px){
 	.volet2 li{
@@ -321,13 +335,9 @@ nav li:hover{
 /*youssef*/
 .logo{
     position: relative;
-    left: 8%;
-    top: 34%;
+    left: 30px;
+    top: 30px;
     
-}
-.logo_img{
-    height: 70px;
-    width: 154px;
 }
 
 
@@ -445,8 +455,11 @@ footer:hover{
 	transition-timing-function: ease-in;
 	height: calc(8vh + 10vh);
 	min-height: 50px;
-	
 }
+
+/*.thingy{
+	transform: rotate(180deg);
+}*/
 .container{
 	width: 100%;
 	height: 100%;
@@ -513,12 +526,7 @@ footer:hover{
 	margin-top: 8vh;
 	background-color: var(--color-white);
 }
-footer img {
-	position: absolute;
-	top: -25px;
-	left: 2.5%;
-	transform: scale(0.8);
-}
+
 /* volet 2 */
 .volet2{
 	position: relative;
@@ -528,14 +536,10 @@ footer img {
 	width: 15%;
 	height: calc(100vh - 150px);
 	z-index: 1;
-	border-right: 1px blue solid;
+	border-right: 1px  solid;
 	padding: 0;
-	background: repeating-linear-gradient(
-					180deg,
-					var(--color-lime) 0%,
-					var(--color-green) 5%,
-					var(--color-lime) 10%
-				);
+	box-shadow: 0 0 10px 3px;
+	background-color: #F4B29E;
 	overflow-x: hidden;
 	overflow-y: auto;
 	transition: left 0.45s  ease-in-out;
@@ -555,6 +559,9 @@ footer img {
 #openButton2{
 	visibility: hidden;
 	left:0;
+}
+#openButton{
+	color: #1A2421;
 }
 .volet2 li{
 	position: relative;
