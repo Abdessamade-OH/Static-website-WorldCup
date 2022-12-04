@@ -538,7 +538,7 @@ footer:hover{
 	z-index: 1;
 	border-right: 1px  solid;
 	padding: 0;
-	box-shadow: 0 0 10px 3px;
+	box-shadow: 0 0 10px 4px;
 	background-color: #F4B29E;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -566,7 +566,7 @@ footer:hover{
 .volet2 li{
 	position: relative;
 	text-align: left;
-	border: 1px blue solid;
+	box-shadow: 0 0 10px 3px;
 	background-color: var(--color-red);
  }
 .volet2 li:last-of-type{
