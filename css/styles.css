@@ -1,10 +1,10 @@
 :root{
-	--color-red: rgb(226, 43, 73);
+	--color-red: #984063;
 	--color-white: white;
 	--color-purple: rgb(74, 12, 168);
 	--color-black: black;
-	--color-green: green;
-	--color-lime: lime;
+	--color-green: #984063;
+	--color-lime: #41436A;
 	--color-gray: #cecece;
 	--color-darkGreen: #263421;
 } /*root pour avoir les variable accessible aux tous les classes.*/
