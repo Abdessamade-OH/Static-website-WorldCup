@@ -7,6 +7,8 @@
     align-items: last baseline;
     display: none;
 }
+
+
 .styled-table{
     border-collapse: collapse;
     font-size: 0.9em;
@@ -38,8 +40,4 @@
 .styled-table tbody tr:last-of-type{
     border-bottom: 2px solid #FE9677;
 }
-@media only screen and (max-width: 600px){
-	.team-num{
-		display: none;
-	}
-}
+

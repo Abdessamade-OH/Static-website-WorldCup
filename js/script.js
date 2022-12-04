@@ -714,9 +714,12 @@ function openAds(index){
 }
 
 
-function classmentForm(){
+function newClassForm(){
+	document.getElementById("matchFormBackground").style.display="block";
 	
 }
 
-
+function CloseClassForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+}
 

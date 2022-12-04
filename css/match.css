@@ -12,7 +12,7 @@
 	width: 80px;
 	z-index: 3;
 }
-.NewMatchForm, .modifyForm{
+.NewMatchForm, .modifyForm, .ClassForm{
 	display: none;
 	position: fixed;
 	width: 250px;
@@ -27,7 +27,7 @@
 	justify-content: space-evenly;
 	align-items: center;
 }
-.NewMatchForm label, .modifyForm label{
+.NewMatchForm label, .modifyForm label, .ClassForm label{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -47,6 +47,12 @@
 	position: fixed;
 	top: calc(((100% - 250px) / 2 ) + 20px);
 	left: calc(((100% - 300px) / 2 ) + 20px);
+	z-index: 7;
+}
+.modifyForm i{
+	position: fixed;
+	top: calc(((100% - 270px) / 2 ) + 20px);
+	left: calc(((100% - 320px) / 2 ) + 20px);
 	z-index: 7;
 }
 .modifyForm i{
