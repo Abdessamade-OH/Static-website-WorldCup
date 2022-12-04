@@ -254,10 +254,17 @@ function modifyPlayer(event) {
 					break;
 				}
 			}
-			
+			const k = document.getElementsByTagName("area");
 			temp = Teams[teamshowed][x];
 			Teams[teamshowed][x] = Teams[teamshowed][rem];
 			Teams[teamshowed][rem]=temp;
+			for (let index = 1; index < k.length; index++) {
+				if(k[index].value==x){
+					k[index].value==rem;
+					break;
+				}
+				
+			}
 			
 
 			rr++;

@@ -465,8 +465,10 @@ function fermer(){
 function playerCard(event){
 	let a = parseInt(event.target.getAttribute("value"));
 	console.log("player card: done "+ a);
-	const x = document.getElementById("FT");
+	const x = document.getElementById("FT-card");
+	const y = document.getElementById("FT")
 	x.style.display="block";
+	y.style.display="block";
 	openCard = true;
 	
 	if(over860){
@@ -482,14 +484,18 @@ function playerCard(event){
 		document.getElementById("FT").style.top="0%";
 		document.getElementById("FT").style.left="0%";
 	}
-	x.innerHTML='<img src="'+ Teams[teamshowed][a].pic+'" alt="Player image" id="card-img"><div class="TF-info"><h3>'+Teams[teamshowed][a].Nom+'</h3>	<h3>Age: '+Teams[teamshowed][a].Age+'</h3><h3>Numero: '+Teams[teamshowed][a].Numero+'</h4>	<h3>Poste: '+Teams[teamshowed][a].Poste+'</h4><p>'+Teams[teamshowed][a].Description+'</p></div>'
-	
+	x.innerHTML='<img src="'+ Teams[teamshowed][a].pic+'" alt="Player image" id="card-img"><div class="TF-info"><h2>'+Teams[teamshowed][a].Nom+'</h2>	<h3>Age: '+Teams[teamshowed][a].Age+'</h3><h3>Numero: '+Teams[teamshowed][a].Numero+'</h4>	<h3>Poste: '+Teams[teamshowed][a].Poste+'</h4><p>'+Teams[teamshowed][a].Description+'</p></div>'
+	x.style.overflow="scroll";
 
 	
 	//closeVol3();
 	
 	closeVol2();
 }
+document.getElementsByTagName("area").addEventListener("click",(event)=>{
+	console.log(parseInt(event.target.value));
+	playerCard(event);
+})
 
 function closePlayerCard(){
 	document.getElementById("FT").style.display="none";
