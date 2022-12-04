@@ -1,0 +1,96 @@
+.home{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.logo{
+    width: 15%;
+    min-width: 150px;
+    margin: 30px;
+}
+.home > .box{
+    display: flex;
+}
+.sec1 > h3{
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: system-ui;
+    margin: 0;
+}
+.sec1 > p{
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.sec1{
+    margin: 4rem 2rem;
+}
+.sec2{
+    margin: 0 3rem;
+}
+.sec2 img{
+    width: 100%;
+    min-width: 300px;
+}
+.button{
+    margin-top: 3rem;
+}
+.button > a{
+    border: 1px solid white;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.7rem 2rem;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+.drinks{
+    display: flex;
+    justify-content: center;
+}
+.drinks a {
+    margin: 7px;
+}
+.drinks a > img{
+    width: 22%;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+.drinks a > img:hover{
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
+
+.q-fly{
+    width: 70%;
+    min-width: 350px;
+    margin-bottom: 10%;
+}
+.MC{
+    width: 10%;
+    min-width: 270px;
+    margin-bottom: 10px;
+    margin-right: 80px;
+}
+.qnblogo{
+    width: 100px;
+    height: 20%;
+}
+.ARG{
+    width:  50%;
+}
+.morroco{
+    background-color: #132531;
+}
+.mor{
+    width: 1000px
+}
+.visa{
+    background-color: #2c2c2c;
+}
+.H-MC{
+    background-color: #fe0002;
+}
