@@ -626,12 +626,16 @@ function openNews(index){
 	document.getElementById("openButton3").style.visibility="hidden";
 	document.getElementById("volet4").style.display="none";
 	
-	document.getElementById("News-Ads").style.display="block";
-	
 	let news = document.getElementsByClassName("news");
 	for(let i = 0; i<news.length; i++){
 		news[i].style.display = "none";
 	}
+	let ads = document.getElementsByClassName("ads");
+	for(let i = 0; i<ads.length; i++){
+		ads[i].style.display = "none";
+	}
+	
+	document.getElementById("News-Ads").style.display="block";
 	
 	switch(index){
 		case 1:
@@ -661,6 +665,16 @@ function openAds(index){
 	document.getElementById("openButton3").style.visibility="hidden";
 	document.getElementById("volet4").style.display="none";
 	
+	let news = document.getElementsByClassName("news");
+	for(let i = 0; i<news.length; i++){
+		news[i].style.display = "none";
+	}
+	
+	let ads = document.getElementsByClassName("ads");
+	for(let i = 0; i<ads.length; i++){
+		ads[i].style.display = "none";
+	}
+	
 	document.getElementById("News-Ads").style.display="block";
 	
 	switch(index){
@@ -668,6 +682,7 @@ function openAds(index){
 			console.log("Ad " + index + "launched");
 			break;
 		case 2:
+			document.getElementById("ads2").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 3:

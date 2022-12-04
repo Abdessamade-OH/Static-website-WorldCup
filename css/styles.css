@@ -559,6 +559,9 @@ footer img {
 	visibility: hidden;
 	left:0;
 }
+#openButton{
+	color: #1A2421;
+}
 .volet2 li{
 	position: relative;
 	text-align: left;

@@ -33,11 +33,10 @@
 /* ------------------------- */
 /* --------div container-------- */
 .news{
-    //display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    //display: none;
     width: 98%;
+    padding: 15px;
 }
 
 /* ---------------News content style------------- */
