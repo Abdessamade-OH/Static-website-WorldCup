@@ -27,6 +27,17 @@ textarea{
     background-color: rgba(240, 248, 255, 0.457);  
     z-index: 5;
 }
+#modifyManger{
+    display: none;
+    justify-content: flex-start;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px; 
+    background-color: rgba(240, 248, 255, 0.457);  
+    z-index: 5;
+}
 
 #modify select{
     background-color: rgba(240, 248, 255, 0.552);
@@ -46,7 +57,21 @@ textarea{
     position: relative;
     gap: 20px;
     top: 30%;
-    
+    background-color: rgb(172, 160, 147);
+    width: fit-content;
+    height: 50%;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+.contain2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    top: 30%;
     background-color: rgb(172, 160, 147);
     width: fit-content;
     height: 50%;
@@ -54,6 +79,12 @@ textarea{
     padding: 0px 20px;
 }
 .fermer{
+    position: absolute;
+    left:36%;
+    top: 31%;
+    z-index: 6;
+}
+.fermer2{
     position: absolute;
     left:36%;
     top: 31%;

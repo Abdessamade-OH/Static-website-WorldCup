@@ -58,6 +58,26 @@ var Teams = [];
 	Teams[0].push(new Joueur("Zakaria ABOUKHLAL", "AD", 24, 179, null));
 	Teams[0].push(new Joueur("EZ ABDE", "AG", 21, 175, null));
 }
+// blg national team player
+{
+
+	Teams.push(Team3 = [])
+	Team3.push(new Manager("Roberto Martinez", 49, "./IMG/ETR-BLG.jpg", "Les Diables rouges, fearless and victorious !", 0, "titulaire de Champion d Angleterre de League One avec Swansea City , Vainqueur de la Coupe d Angleterre avec  Wigan, Troisième de la Coupe du monde 2018 avec Belgique ", "🇧🇪 Belgique"));
+	Team3.push(new Joueur("Thibaut Courtois", "GK", 30, 200, 1, "./IMG/COURTOIS.webp"));
+	Team3.push(new Joueur("Toby Alderweirled", "DD", 33, 187, 2, "./IMG/TONY.webp"));
+	Team3.push(new Joueur("Wout Faes", "DC", 24, 187, 4 ,"./IMG/WOUT.webp"));
+	Team3.push(new Joueur("Zeno Debast", "DC", 19, 189, 26, "./IMG/ZENO.webp"));
+	Team3.push(new Joueur("Jan Vertonghen", "DG", 35, 189, 5,"./IMG/JAN.webp"));
+	Team3.push(new Joueur("Youri Tielemans ", "MDC", 25, 176, 8,"./IMG/YOURI.webp"));
+	Team3.push(new Joueur("Charles De Ketelaere", "MOC", 21, 192, 22, "./IMG/CHARLES.webp"));
+	Team3.push(new Joueur("Kevin DE Bruyne ", "MOC", 31, 181, 7, "./IMG/DEBRY.webp"));
+	Team3.push(new Joueur("Eden Hazard", "AG", 312, 175, 10, "./IMG/EDEN.webp"));
+	Team3.push(new Joueur("Romelu Lokaku", "AT", 29, 191, 9, "./IMG/LUKA.webp"));
+	Team3.push(new Joueur("Jeremy Doku ", "AD",8 , 173.4, 25,"./IMG/DOKU.webp"));
+	Team3.push(new Joueur("Koen Casteels", "GK", 30, 197, 13, "./IMG/KEN.webp"));
+	Team3.push(new Joueur("Loïs Openda", "AT", 22, 177, 24, "./IMG/LOIS.webp"));
+	Team3.push(new Joueur("Arthur Theate", "DD", 27, 185, 3, "./IMG/ART.webp"));
+}
 
 function showTeam(event, c) {
 
@@ -91,6 +111,9 @@ function showTeam(event, c) {
 	let name = document.createElement("h3");
 	let age = document.createElement("h4");
 	let pic = document.createElement("img");
+	let btn = document.createElement("button");
+	btn.setAttribute("onclick","modifyManager()");
+	btn.innerHTML="Modifier"
 	let title = document.querySelector("#team-title .flag");
 	let tableau = document.getElementById("table");
 	name.innerHTML = arr[0].Nom;
@@ -99,6 +122,7 @@ function showTeam(event, c) {
 	z.appendChild(pic);
 	z.appendChild(name);
 	z.appendChild(age);
+	z.appendChild(btn)
 	let addPbotn = document.createElement("button");
 	addPbotn.setAttribute("onclick", "addPlayer(event)");
 
@@ -242,6 +266,12 @@ function modifyPlayer(event) {
 			fermer();
 		}
 	})
+
+}
+function modifyManager(){
+	console.log("in")
+	document.getElementById("modifyManager").style.display="flex";
+	console.log(document.getElementById("modifyManager").style.display);
 
 }
 
