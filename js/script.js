@@ -713,3 +713,10 @@ function openAds(index){
 	
 }
 
+
+function classmentForm(){
+	
+}
+
+
+
