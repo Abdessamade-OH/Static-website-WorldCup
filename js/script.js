@@ -795,7 +795,7 @@ function openNews(index){
 	for(let i = 0; i<news.length; i++){
 		news[i].style.display = "none";
 	}
-	let ads = document.getElementsByClassName("ads");
+	let ads = document.getElementsByClassName("home");
 	for(let i = 0; i<ads.length; i++){
 		ads[i].style.display = "none";
 	}
@@ -835,7 +835,7 @@ function openAds(index){
 		news[i].style.display = "none";
 	}
 	
-	let ads = document.getElementsByClassName("ads");
+	let ads = document.getElementsByClassName("home");
 	for(let i = 0; i<ads.length; i++){
 		ads[i].style.display = "none";
 	}
@@ -844,6 +844,7 @@ function openAds(index){
 	
 	switch(index){
 		case 1:
+			document.getElementById("ads1").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 2:
@@ -851,27 +852,35 @@ function openAds(index){
 			console.log("Ad " + index + "launched");
 			break;
 		case 3:
+			document.getElementById("ads3").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 4:
+			document.getElementById("ads4").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 5:
+			document.getElementById("ads5").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 6:
+			document.getElementById("ads6").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 7:
+			document.getElementById("ads7").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 8:
+			document.getElementById("ads8").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 9:
+			document.getElementById("ads9").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 		case 10:
+			document.getElementById("ads10").style.display = "flex";
 			console.log("Ad " + index + "launched");
 			break;
 	}
