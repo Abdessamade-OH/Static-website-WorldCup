@@ -32,38 +32,13 @@
 }
 /* ------------------------- */
 /* --------div container-------- */
-.news1{
-    display: flex;
+.news{
+    //display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    display: none;
+    //display: none;
     width: 98%;
 }
-.news2{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    display: none;
-    width: 98%;
-    
-}
-.news3{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    display: none;
-    width: 98%;
-    
-}
-.news4{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    /* display: none; */
-    width: 98%;
-    
-}
-
 
 /* ---------------News content style------------- */
 
