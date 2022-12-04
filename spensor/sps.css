@@ -1,0 +1,124 @@
+.card img{
+    height: 30vw;
+    width: 80%;
+    border-radius: 5px;
+}
+.quatar{
+    object-fit: scale-down;
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    background-color: #5d0631;
+    
+}
+.qnb{
+    object-fit:scale-down;
+}
+.MAR{
+    object-fit:scale-down;
+    background-color: #142333 ;
+}
+.visa{
+    object-fit:scale-down;
+    background-color: white;
+}
+.tt{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.div-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    width: 70%;
+    background-color: rgb(39, 26, 59);
+}
+.container-sps{
+    display: flex;
+    
+    
+}
+.card{
+    height: 20vw;
+    width: 80%;
+    margin: 17px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    border-radius: 9px;
+    flex: 1;
+}
+.cardV2{
+    height: 20vw;
+    width: 80%;
+    margin: 17px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    border-radius: 9px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardV2 img{
+    height: 7vw;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .intro{
+    height: 75%;
+    
+    background-color: black 0.5;
+}
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.card:hover img{
+    transform: translateY(-10px);
+    -webkit-transform: translateX(-10px);
+}
+.intro{
+    height: 15%;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(27, 27, 27,.5);
+    color: white;
+    bottom: 10%;
+}
+.intro > h1{
+margin: 10px;
+font-size: 2vw;
+}
+
+.intro > p{
+    font-size: max(8px,1vw) ;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+span{
+    font-size: 1.5vw;
+    color: rgb(226, 48, 48);
+    display: block;
+    text-align: center;
+}
+
+@media (max-width:750px) {
+    .container-sps{
+        flex: 100%;
+        flex-direction: column;
+    }
+}
