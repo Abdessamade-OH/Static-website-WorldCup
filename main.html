@@ -12,11 +12,15 @@
 	<link rel="stylesheet" href="./css/classement.css" />
 	<link rel="stylesheet" href="./css/home.css" />
 	<link rel="stylesheet" href="./css/match.css" />
+	<link rel="stylesheet" href="./css/news.css" />
+	<link rel="stylesheet" href="./css/Ads.css">
 
 	<link rel="stylesheet" href="./css/tab.css" />
 	<link rel="stylesheet" href="./css/form.css" />
 	<link rel="stylesheet" href="./css/form2.css" />
 	<link rel="stylesheet" href="./css/FT.css" />
+	
+	<link rel="stylesheet" href="./css/News-Ads.css">
 
 	<script src="./js/script.js"></script>
 	<script src="./js/ysf.js"></script>
@@ -286,6 +290,7 @@
 				</a>
 				<h1>Les Equipes</h1>
 			</div>
+			
 			<ul type="none" class="TeamsGrp" id="Groupe1">
 				<h3 class="grp-title">Groupe 1</h3>
 				<button onclick="createTeam(event)">Cree une Equipes</button>
@@ -357,7 +362,7 @@
 					<div class="team-title" id="team-title">
 						<span class="flag"></span>
 					</div>
-
+				
 
 					<div class="image-container" id="field">
 
@@ -400,6 +405,7 @@
 						<a onclick="playerCard(event)" class="player" id="player-8">
 
 						</a>
+
 						<a onclick="playerCard(event)" class="player" id="player-9">
 
 						</a>
@@ -409,11 +415,15 @@
 						<a onclick="playerCard(event)" class="player" id="player-11">
 
 
+
 						</a>
 					</div>
+				
+
 					<div class="team-info">
 						<p id="team-info"></p>
 					</div>
+				</div>
 
 					<a onclick="openVol3()" id="openButton3" class="openVol3">
 						<i class='fas fa-plus-square'></i>
@@ -421,8 +431,6 @@
 					<a onclick="closeVol3()" id="closeButton3" class="closeVol3">
 						<i class='fas fa-window-close'></i>
 					</a>
-				</div>
-
 			</div>
 
 			<div class="right">
@@ -448,17 +456,19 @@
 				</div>
 			</div>
 
+			
 		</div>
-
+			
 		<div class="volet4" id="volet4">
-			<!-- Acceuil -->
-			<div class="landingPage" id="acceuil">
-				<div class="content">
-					<div class="info">
-						<h2>FIFA World Cup Qatar 2022™</h2>
-					</div>
+            	<!-- Acceuil -->
+				<div class="landingPage" id="acceuil">
+					<video autoplay loop muted plays-inline class="back-video">
+						<source src="data/vid.mp4" type="video/mp4">
+					</video>	
+					
 				</div>
-			</div>
+
+			
 
 		
 				<div class="matchFormBackground" id="matchFormBackground">
@@ -469,7 +479,6 @@
 				<!-- ----------------------Matches schedule----------------- -->
 				<div class="mainContainer" id="match">
 					<input type="submit" value="New Match" class="newMatchButton" onclick="openMatchForm()">
-					
 					<!-- ---------------------------GRPA--------------------- -->
 							<div class="group">
 								<h2 class="title">Group A</h2>
@@ -894,17 +903,16 @@
 							</label>
 							
 							<label for="matchDate" id="formDate">Entrer le date du match
-								<input type="date" id="matchDate" required></input>
+								<input type="date" id="matchDate" required>
 							</label>
 							
 							<label for="matchTime" id="formTime">Entrer l'horaire du match
-								<input type="time" id="matchTime" required></input>
+								<input type="time" id="matchTime" required>
 							</label>
 							
 							<input  type="submit" id="addNewMatch" 
 									value="Ajouter le match" 
 									onclick="addMatch(); closeMatchForm();">
-							</input>
 						
 						</div>
 						
@@ -1306,14 +1314,13 @@
 							</label>
 							
 							<label for="ModifedmatchDate">Entrer le date du match
-								<input type="date" id="ModifedmatchDate" required></input>
+								<input type="date" id="ModifedmatchDate" required>
 							</label>
 							
 							<label for="ModifedmatchTime">Entrer l'horaire du match
-								<input type="time" id="ModifedmatchTime" required></input>
+								<input type="time" id="ModifedmatchTime" required>
 							</label>
 							<input type="submit" value="Modifier" id="modifyButton" onclick="closeModifyForm()">
-							</input>
 						</div>
 					
 				</div>
@@ -1488,6 +1495,138 @@
 
 		</div>
 
+		<!--News & Ads-->
+		<div class="News-Ads" id="News-Ads">
+			<!-- ---------------------ADS------------------- -->
+			<div class="ads" id="ads2">
+				<img src="data/Ad-logo.png" class="Ad-logo">
+				<div class="Ad-box">
+				    <div class="sec1">
+				        <h3>Savoure le moment</h3>
+				        
+				        <p>
+				            Coca‑Cola, et c’est ainsi qu’est née la boisson la plus populaire et la plus célèbre de la planète. Et depuis plus de 130 ans, Coca‑Cola rafraichit le monde et accompagne toutes les générations dans leurs moments de joie<br>
+				            <br>Qu’y a t-il dans sa formule secrète ? Sans doute une source infinie de bonheur à partager.
+				        </p>
+				        <div class="Ad-button">
+				            <a href="https://www.coca-colamaroc.ma/nos-marques">
+				                View all products
+				            </a>
+				        </div>
+				    </div>
+				    <div class="sec2">
+				        <img src="./data/coke-zero-can-png-6-Transparent-Images.png">
+				    </div>
+				</div>
+				<div class="drinks">
+				    <a href="https://www.coca-colamaroc.ma/nos-marques/fanta" target="_blank"><img src="data/drink/img1.png"></a>
+				    <a href="https://www.coca-cola-france.fr/nos-marques/coca-cola-sans-sucres" target="_blank"><img src="data/drink/img2.png"></a>
+				    <a href="https://www.coca-colamaroc.ma/nos-marques/sprite" target="_blank"><img src="data/drink/img3.png"></a>
+				    <a href="https://www.coca-colamaroc.ma/nos-marques/coca-cola" target="_blank"><img src="data/drink/img4.png"></a>  
+				</div>
+    	</div>
+			<!-- --------------------News------------------- -->
+						<!-- -----------FIRST----------- -->
+				<div class="news" id="news1">
+					<!-- -------------heading------------- -->
+					<h1 class="heading-1">Germany players cover mouths in protest against FIFA clampdown on free speech in 'OneLove' armband row </h1>
+						<div class="sub-heading">
+							<p>saturday <span> december 03,2022</span></p>
+							<p class="importent">your right to know</p>
+						</div>
+					<!-- --------------------------------------------------	 -->
+					<!-- --------------------News content-------------------------- -->
+						<div class="square">
+							<div>
+								<img class="img" src="./data/référence/LGBTQ.jpeg">
+							</div>
+
+								<p class="text">
+										It was a moment so brief that the thousands of fans inside the Khalifa International Stadium on Wednesday could easily have missed it.
+										But a moment, the time it took for the photographers amassed in front of Germany's World Cup team to snap a picture, was all it needed for the four-time winners to send a message to soccer's world governing body. 
+										On Wednesday, the German Football Federation (DFB) released a series of tweets shortly after the game had kicked off indicating that FIFA had prevented them from using their voices to speak up at the World Cup for issues they felt passionate about, hence the protest.
+										“We wanted to use our captain's armband to take a stand for values that we hold in the Germany national team: diversity and mutual respect,” the DFB said. “Together with other nations, we wanted our voice to be heard.
+										“It wasn't about making a political statement human rights are non-negotiable. That should be taken for granted, but it still isn't the case. That's why this message is so important to us
+								</p>
+						</div>
+				</div>
+									<!-- ------------------------------------------- -->
+							<!-- -----------SECOND----------- -->
+				<div class="news" id="news2">
+					<!-- -------------heading------------- -->
+					<h1 class="heading-1">Saudi Arabia stun Argentina with inspired second-half performance</h1>
+						<div class="sub-heading">
+							<p>Monday <span> november 21,2022</span></p>
+							<p class="importent">your right to know</p>
+						</div>
+					<!-- --------------------------------------------------	 -->
+					<!-- --------------------News content-------------------------- -->
+						<div class="square">
+							<div>
+								<img class="img" src="./data/référence/KSA.jpeg">
+							</div>
+
+								<p class="text">
+									Saudi Arabia have shocked Argentina with two second-half goals to beat one of the pre-tournament favourites in their opening World Cup match, marking the first upset of the 2022 edition of the sports' biggest event.
+									It all seemed to be going to plan for the Argentines on Tuesday after their captain and talisman Lionel Messi slotted in a penalty 10 minutes after Saud Abdulhamid hauled down Leandro Paredes in the box.
+									Argentina then attacked with ferocity as Saudi Arabia struggled to contain them. Messi had the ball in the back of the net not long after his first, only for the goal to be ruled offside.
+									Another offside goal followed after Lautaro Martinez dinked the ball over Saudi keeper Mohammed Al-Owais with a cool finish. He reeled away towards the Argentina fans, who had been in fine voice, only for VAR to turn down the goal because of a marginal offside.
+									In a thoroughly dominant first-half display, Argentina held nearly two-thirds possession but failed to capitalise, straying offside seven times in total.
+
+																				
+								</p>
+						</div>
+				</div>
+									<!-- ------------------------------------------- -->
+				<!-- -----------THIRD----------- -->
+				<div class="news" id="news3">
+					<!-- -------------heading------------- -->
+					<h1 class="heading-1">Belgium run ragged by Canada but Michy Batshuayi strikes to grab victory</h1>
+						<div class="sub-heading">
+							<p>Sunday <span> november 27,2022</span></p>
+							<p class="importent">your right to know</p>
+						</div>
+					<!-- ---------------------------------------->
+					<!-- --------------------News content-------------------------- -->
+						<div class="square">
+							<div>
+								<img class="img" src="./data/référence/BELG.jpeg">
+							</div>
+
+								<p class="text">
+									John Herdman was leaving the stage when it was announced the player of the match would be next up to face the media. The recipient of Fifa’s award left the Canada head coach stunned. “Kevin De Bruyne is player of the match? Wow,” he said. If there was an insult, it was only to Canada.
+									The Belgium playmaker was embarrassed to be singled out for praise after Canada brought everything to their first World Cup appearance for 36 years except a clinical touch. His honesty, and Michy Batshuayi’s ruthless finish, were the only highlights of a worrying night for Roberto Martínez’s team. “I don’t think I had a great game. I don’t know why I have the award, maybe it’s the name,” admitted De Bruyne. “We didn’t play a good game, me included, but the good thing was we found a way to win.”
+									Martínez claimed Belgium deserved victory – he was in a company of one – despite conceding a journalist had a point when they asked whether this was his team’s worst performance in a tournament fixture. “It depends what you mean by worst game,” replied Belgium’s head coach. “Technically, yes. But worst performance? No. We won, and you don’t win by accident.” Belgium won thanks to Canada’s profligacy, chiefly, and Thibaut Courtois’ commanding goalkeeping.
+																				
+								</p>
+						</div>
+				</div>
+									<!-- ------------------------------------------- -->
+
+				<!-- -----------FOURTH----------- -->
+				<div class="news" id="news4">
+					<!-- -------------heading------------- -->
+					<h1 class="heading-1">Dani Alves: ‘I love this game. I loved football when they didn’t pay me’</h1>
+						<div class="sub-heading">
+							<p>Sunday <span> november 27,2022</span></p>
+							<p class="importent">your right to know</p>
+						</div>
+					<!-- ---------------------------------------->
+					<!-- --------------------News content-------------------------- -->
+						<div class="square">
+							<div>
+								<img class="img" src="./data/référence/DANIALVES.jpeg">
+							</div>
+
+								<p class="text">
+									It doesn’t take much to get Dani Alves going. It doesn’t take anything in fact: sometimes just a hello will do. The Brazilian is falling about laughing before he’s even asked the first question. Laughing? He’s cackling.
+									“Let’s go!” he says and immediately he’s off, charging all over the place, a little like he plays. Like he used to, at least. There is a moment somewhere in the middle of a conversation that crashes by, virtually every word an excuse to crack up, grin never wiped from his face, when he says: “I think people are confused: people think football’s played inside those four white lines and it’s not; football’s played in the dressing room.”
+									Hearing him say it, the way he says it, enthusiasm overflowing, taking him to Qatar makes perfect sense.
+								</p>
+						</div>
+				</div>
+					<!-- ------------------------------------------- -->
+		</div>
 
 		<!--Volet5-->
 		<aside class="volet5" id="volet5">
@@ -1505,32 +1644,32 @@
 				<h1>Les Actualités</h1>
 			</div>
 			<div class="sidebar">
-				<a href="">
-					<div class="actualite">
-						<img id="NEWSimg" src="./data/référence/LGBTQ.jpeg" alt="">
+				<a onclick="openNews(1)">
+					<div class="actualite" >
+						<img id="NEWSimg" src="./data/référence/LGBTQ.jpeg" alt="News Image 1">
 						<figcaption>Germany’s protest will reverberate down the years and generations</figcaption>
 					</div>
 				</a>
 
-				<a href="">
-					<div class="actualite">
-						<img id="NEWSimg" src="./data/référence/KSA.jpeg" alt="">
+				<a onclick="openNews(2)">
+					<div class="actualite" >
+						<img id="NEWSimg" src="./data/référence/KSA.jpeg" alt="News Image 2">
 						<figcaption>Another shocking World Cup story unfolded in Qatar but this one was about the
 							football</figcaption>
 					</div>
 				</a>
 
-				<a href="">
-					<div class="actualite">
-						<img id="NEWSimg" src="./data/référence/BELG.jpeg" alt="">
+				<a onclick="openNews(3)">
+					<div class="actualite" >
+						<img id="NEWSimg" src="./data/référence/BELG.jpeg" alt="News Image 3">
 						<figcaption>Belgium run ragged by Canada but Michy Batshuayi strikes to grab victory
 						</figcaption>
 					</div>
 				</a>
 
-				<a href="">
-					<div class="actualite" id="last">
-						<img id="NEWSimg" src="./data/référence/DANIALVES.jpeg" alt="">
+				<a onclick="openNews(4)">
+					<div class="actualite" id="last" >
+						<img id="NEWSimg" src="./data/référence/DANIALVES.jpeg" alt="News Image 4">
 						<figcaption>ADani Alves: I love this game. I loved football when they didn’t pay me’
 						</figcaption>
 					</div>
@@ -1571,71 +1710,73 @@
 				<li id="match-li" onclick="match()"><a>Matchs</a></li>
 				<li id="classement-li" onclick="classement()"><a>Classment</a></li>
 			</ul>
+		
+			
 		</nav>
-		<!-- page defilante -->
-		<div class="marquee">
-			<!--static part-->
-			<ul class="marquee-cntent">
-				<!--moving part-->
-				<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/castrol.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/QAir.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/QNB.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100"></li>
-				<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100"></li>
-			</ul>
-
-	</header>
+			<!-- page defilante -->
+			<div class="marquee">  <!--static part-->
+                <ul class="marquee-cntent"> <!--moving part-->
+					<li><img class="imgSize" src="data/mac.jpeg" width="78.5833" height="100" onclick="openAds(1)"></li>
+				<li><img class="imgSize" src="data/coca.jpeg" width="78.5833" height="100" onclick="openAds(2)"></li>
+				<li><img class="imgSize" src="data/budweins.jpeg" width="78.5833" height="100" onclick="openAds(3)"></li>
+				<li><img class="imgSize" src="data/hisense.jpeg" width="78.5833" height="100" onclick="openAds(4)"></li>
+				<li><img class="imgSize" src="data/castrol.jpeg" width="78.5833" height="100" onclick="openAds(5)"></li>
+				<li><img class="imgSize" src="data/QAir.jpeg" width="78.5833" height="100" onclick="openAds(6)"></li>
+				<li><img class="imgSize" src="data/QNB.jpeg" width="78.5833" height="100" onclick="openAds(7)"></li>
+				<li><img class="imgSize" src="data/kia.jpeg" width="78.5833" height="100" onclick="openAds(8)"></li>
+				<li><img class="imgSize" src="data/MoroccoNow.jpeg" width="78.5833" height="100" onclick="openAds(9)"></li>
+				<li><img class="imgSize" src="data/visa.jpeg" width="78.5833" height="100" onclick="openAds(10)"></li>
+                </ul>
+			</div>
+    </header>
+	
 	<footer>
-		<img src="./data/touche.png" />
-		<div class="container">
-			<div class="col" id="contact">
-				<h1>Contacts <i class='fas fa-address-book'></i></h1>
-				<ul>
-					<li><b>Email:</b> <i>Email@corp.com</i></li>
-					<li><b>Numero:</b> <i>+212732938982</i></li>
-				</ul>
+			<div class="container">
+				<!-- <i class='fas fa-angle-down thingy'></i> -->
+				
+        		<div class="col" id="contact">
+        			<h1>Contacts <i class='fas fa-address-book'></i></h1>
+        			<ul>
+						<li><b>Email:</b> <i>Email@corp.com</i></li>
+        				<li><b>Numero:</b> <i>+212732938982</i></li>
+        			</ul>
+        		</div>
+        		
+        		<div class="border"></div>
+        		
+        		<div class="col" id="liens">
+        			<h1>Réseaux  <i class='fas fa-comments'></i></h1>
+        			<ul>
+        				<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        				<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        				<li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            			<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        			</ul>
+        		</div>
+        		
+        		<div class="border"></div>
+        			
+        		<div class="col" id="admins">
+        			<h1>Admins  <i class='fas fa-users'></i></h1>
+        			<ul> <!-- ordre alphabétique ^^ -->
+        				<li>Abdessamade OHMAD</li>
+        				<li>Amin IZOUGAGHEN</li>
+        				<li>Nouha SAMADI</li>
+        				<li>Youssef CHAABI</li>
+        			</ul>
+        		</div>
+        		
+        		<div class="border"></div>
+        		
+        		<div class="col" id="version">
+        			<h1>Version  <i class='fas fa-save'></i></h1>
+        				<ul><li>Development</li></ul>
+        		</div>
 			</div>
-
-			<div class="border"></div>
-
-			<div class="col" id="liens">
-				<h1>Réseaux <i class='fas fa-comments'></i></h1>
-				<ul>
-					<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-					<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-					<li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-					<li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
-				</ul>
-			</div>
-
-			<div class="border"></div>
-
-			<div class="col" id="admins">
-				<h1>Admins <i class='fas fa-users'></i></h1>
-				<ul>
-					<!-- ordre alphabétique ^^ -->
-					<li>Abdessamade OHMAD</li>
-					<li>Amin IZOUGAGHEN</li>
-					<li>Nouha SAMADI</li>
-					<li>Youssef CHAABI</li>
-				</ul>
-			</div>
-
-			<div class="border"></div>
-
-			<div class="col" id="version">
-				<h1>Version <i class='fas fa-save'></i></h1>
-				<ul>
-					<li>Development</li>
-				</ul>
-			</div>
-
-	</footer>
+        	
+    </footer>
+	
+	
 </body>
 
 </html>

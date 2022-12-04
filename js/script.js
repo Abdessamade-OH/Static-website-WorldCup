@@ -162,6 +162,8 @@ function closeVol5(){
 	}*/
 	
 	document.getElementById("card-close").style.left="10%";
+	
+	document.getElementById("News-Ads").style.width="100%";
 }
 function openVol5(){
 	let vol5= document.getElementById("volet5");
@@ -186,6 +188,8 @@ function openVol5(){
 	/*if(!over860){
 		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 4 )";
 	}*/
+	
+	document.getElementById("News-Ads").style.width="75%";
 }
 
 function closeVol2(){
@@ -273,6 +277,10 @@ function openVol3(){
 	}
 	table();
 	
+	document.getElementById("News-Ads").style.display="none";
+	
+	document.getElementById("volet4").style.display="block";
+	
 }
 
 function classement(){
@@ -283,6 +291,7 @@ function classement(){
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
 	document.getElementById("match").style.display='none';
+	document.getElementById("News-Ads").style.display="none";
 	
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
@@ -290,6 +299,7 @@ function classement(){
 	closePlayerCard();
 	
 	document.getElementById("classement").style.display='block';
+	document.getElementById("volet4").style.display="block";
 	
 	document.getElementById("volet4").style.backgroundColor="#cecece";
 }
@@ -301,6 +311,7 @@ function acceuil(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("match").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
+	document.getElementById("News-Ads").style.display="none";
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
@@ -308,6 +319,7 @@ function acceuil(){
 	closePlayerCard();
 	
 	document.getElementById("acceuil").style.display='flex';
+	document.getElementById("volet4").style.display="block";
 }
 function match(){
 	console.log("Match: done.");
@@ -317,6 +329,7 @@ function match(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
+	document.getElementById("News-Ads").style.display="none";
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
@@ -324,6 +337,7 @@ function match(){
 	closePlayerCard();
 	
 	document.getElementById("match").style.display='block';
+	document.getElementById("volet4").style.display="block";
 	
 	document.getElementById("volet4").style.backgroundColor="brown";
 	
@@ -349,6 +363,7 @@ function match(){
 	  		});
 
 		});
+		
 	}
 	
 	let defDel = document.getElementById("defaultDelete");
@@ -607,5 +622,99 @@ function addMatch(){
 		let mainContainer = document.getElementById("match");
 		mainContainer.appendChild(group);
 	}
+}
+
+function openNews(index){
+	closeVol2();
+	closeVol3();
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+	document.getElementById("volet4").style.display="none";
+	
+	let news = document.getElementsByClassName("news");
+	for(let i = 0; i<news.length; i++){
+		news[i].style.display = "none";
+	}
+	let ads = document.getElementsByClassName("ads");
+	for(let i = 0; i<ads.length; i++){
+		ads[i].style.display = "none";
+	}
+	
+	document.getElementById("News-Ads").style.display="block";
+	
+	switch(index){
+		case 1:
+			document.getElementById("news1").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+		case 2:
+			document.getElementById("news2").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+		case 3:
+			document.getElementById("news3").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+		case 4:
+			document.getElementById("news4").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+	}
+	
+}
+
+function openAds(index){
+	closeVol2();
+	closeVol3();
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+	document.getElementById("volet4").style.display="none";
+	
+	let news = document.getElementsByClassName("news");
+	for(let i = 0; i<news.length; i++){
+		news[i].style.display = "none";
+	}
+	
+	let ads = document.getElementsByClassName("ads");
+	for(let i = 0; i<ads.length; i++){
+		ads[i].style.display = "none";
+	}
+	
+	document.getElementById("News-Ads").style.display="block";
+	
+	switch(index){
+		case 1:
+			console.log("Ad " + index + "launched");
+			break;
+		case 2:
+			document.getElementById("ads2").style.display = "flex";
+			console.log("Ad " + index + "launched");
+			break;
+		case 3:
+			console.log("Ad " + index + "launched");
+			break;
+		case 4:
+			console.log("Ad " + index + "launched");
+			break;
+		case 5:
+			console.log("Ad " + index + "launched");
+			break;
+		case 6:
+			console.log("Ad " + index + "launched");
+			break;
+		case 7:
+			console.log("Ad " + index + "launched");
+			break;
+		case 8:
+			console.log("Ad " + index + "launched");
+			break;
+		case 9:
+			console.log("Ad " + index + "launched");
+			break;
+		case 10:
+			console.log("Ad " + index + "launched");
+			break;
+	}
+	
 }
 
