@@ -1,0 +1,80 @@
+/* ----------------heading style----------------- */
+.heading-1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.sub-heading{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+
+}
+.sub-heading p{
+    font-weight: 700;
+    text-transform: capitalize;
+
+
+}
+.sub-heading span{
+    color:#555;
+    font-weight: 300;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+
+}
+.sub-heading .importent{
+    color: crimson;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+/* ------------------------- */
+/* --------div container-------- */
+.news1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+    width: 98%;
+}
+.news2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+    width: 98%;
+    
+}
+.news3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+    width: 98%;
+    
+}
+.news4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* display: none; */
+    width: 98%;
+    
+}
+
+
+/* ---------------News content style------------- */
+
+.img {
+float: left;
+margin: 5px;
+margin-bottom: 0px;
+width: 30%;
+}
+
+.text{
+text-align: justify;
+font-size: 25px;
+}

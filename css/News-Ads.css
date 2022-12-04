@@ -1,0 +1,9 @@
+.News-Ads{
+	position: absolute;
+	top: 110px;
+	left: 0;
+	height: calc(100% - 150px);
+	width: 75%;
+	border: 2px solid yellow;
+	z-index: 10;
+}
