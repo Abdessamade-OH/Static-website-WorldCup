@@ -302,7 +302,57 @@ function classement(){
 	document.getElementById("volet4").style.display="block";
 	
 	document.getElementById("volet4").style.backgroundColor="#cecece";
+	
+	let defMod = document.getElementById("defaultClassModify");
+	if (defMod){
+		defMod.addEventListener('click', function modifyMatch(event) {
+	  		console.log('Class: Modifed');
+	  		
+	  		openClassForm();
+		
+			let button = document.getElementById("modifyClass");
+			button.style.display="block";
+			let rowData = this.parentElement.parentElement.children;
+			let	firstData = this.parentElement.children;
+			let addButton = document.getElementById("submitClass");
+			addButton.style.display="none";
+			button.addEventListener("click", function wtv(event){
+			
+				let Mteam = document.getElementById("selectClassTeam").value;
+				let MMJClass = document.getElementById("MJClass").value;
+				let MGClass = document.getElementById("GClass").value;
+				let MNClass = document.getElementById("NClass").value;
+				let MPClass = document.getElementById("PClass").value;
+				let MPTSClass = document.getElementById("PTSClass").value;
+				
+				firstData[0].innerHTML = Mteam;
+				rowData[1].innerHTML =  MMJClass;
+				rowData[2].innerHTML =  MGClass;
+				rowData[3].innerHTML =  MNClass;
+				rowData[4].innerHTML =  MPClass;
+				rowData[5].innerHTML =  MPTSClass;
+				
+				button.style.display="none";
+				addButton.style.display="block";
+			});
+	  		
+	  	});
+		
+	}
+	
+	let defDel = document.getElementById("defaultClassDelete");
+	if(defDel){
+		defDel.addEventListener('click', function deleteMatch(event) {
+  			console.log('Class: Deleted');
+  		
+  			this.parentElement.parentElement.remove();
+		});
+	}
+	
+	
 }
+
+
 function acceuil(){
 	console.log("Acceuil: done.");
 	closeVol2();
@@ -644,25 +694,31 @@ function newClassForm(){
 	let data5 = document.createElement("td");
 	let data6 = document.createElement("td");
 	
-	let modifyButton = document.createElement("i");
+	
 	let deleteButton = document.createElement("i");
 	deleteButton.classList.add('fas');
 	deleteButton.classList.add('fa-trash');
+	deleteButton.addEventListener("click", function deleteClass(event){
+		this.parentElement.parentElement.remove();
+		console.log('Class: Deleted');
+	});
+	
+	let modifyButton = document.createElement("i");
 	modifyButton.classList.add('fas');
 	modifyButton.classList.add('fa-pen-square');
 	
-	deleteButton.addEventListener("click", function deleteClass(event){
-		this.parentElement.parentElement.remove();
-	});
-		
 	modifyButton.addEventListener("click", function modifyClass(event){
-		document.getElementById("selectClassTeam").style.display="flex";
+		console.log('Class: Modifed');
+		openClassForm();
+		
 		let button = document.getElementById("modifyClass");
 		button.style.display="block";
 		let rowData = this.parentElement.parentElement.children;
-		//let	firstData = this.parentElement.children;
-		
-		button.addEventListener("click", (event)=>{
+		let	firstData = this.parentElement.children;
+		let addButton = document.getElementById("submitClass");
+		addButton.style.display="none";
+		button.addEventListener("click", function wtv(event){
+			
 			let Mteam = document.getElementById("selectClassTeam").value;
 			let MMJClass = document.getElementById("MJClass").value;
 			let MGClass = document.getElementById("GClass").value;
@@ -670,15 +726,18 @@ function newClassForm(){
 			let MPClass = document.getElementById("PClass").value;
 			let MPTSClass = document.getElementById("PTSClass").value;
 			
-			rowData[0][0].innerHTML = Mteam;
+			firstData[0].innerHTML = Mteam;
 			rowData[1].innerHTML =  MMJClass;
 			rowData[2].innerHTML =  MGClass;
 			rowData[3].innerHTML =  MNClass;
 			rowData[4].innerHTML =  MPClass;
 			rowData[5].innerHTML =  MPTSClass;
+			
+			button.style.display="none";
+			addButton.style.display="block";
 		});
 		
-		button.style.display="none";
+		
 	});
 	
 	let TeamData = document.createElement("span");
@@ -686,7 +745,6 @@ function newClassForm(){
 	
 	data1.appendChild(TeamData);
 	data1.appendChild(modifyButton);
-	data1.innerHTML += " ";
 	data1.appendChild(deleteButton);
 	data2.innerHTML = MJClass;
 	data3.innerHTML = GClass;
