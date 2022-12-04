@@ -512,9 +512,13 @@ function fermer(){
 }
 
 
-function playerCard(){
-	console.log("player card: done");
-	document.getElementById("FT").style.display="block";
+function playerCard(event){
+	let a = parseInt(event.target.getAttribute("value"));
+	console.log("player card: done "+ a);
+	const x = document.getElementById("FT-card");
+	const y = document.getElementById("FT")
+	x.style.display="block";
+	y.style.display="block";
 	openCard = true;
 	
 	if(over860){
@@ -529,12 +533,21 @@ function playerCard(){
 		document.getElementById("FT").style.height="200px";
 		document.getElementById("FT").style.top="0%";
 		document.getElementById("FT").style.left="0%";
-	}	
+	}
+	x.innerHTML='<img style="max-width:100px; max-height:130px;" src="'+ Teams[teamshowed][a].pic+'" alt="Player image" id="card-img"><div class="TF-info"><h2>'+Teams[teamshowed][a].Nom+'</h2>	<h3>Age: '+Teams[teamshowed][a].Age+' ans</h3><h3>Numero: '+Teams[teamshowed][a].Numero+'	<h3>Poste: '+Teams[teamshowed][a].Poste+'</h3><h3>Taille: '+Teams[teamshowed][a].Taille+' cm</h3><p>'+Teams[teamshowed][a].Description+'</p></div>'
+	x.style.overflow="scroll";
+	document.querySelector("#FT-card img").style.position="relative"
+	document.querySelector("#FT-card img").style.left="38%"
+
 	
 	//closeVol3();
 	
 	closeVol2();
 }
+document.getElementsByTagName("area").addEventListener("click",(event)=>{
+	console.log(parseInt(event.target.value));
+	playerCard(event);
+})
 
 function closePlayerCard(){
 	document.getElementById("FT").style.display="none";
