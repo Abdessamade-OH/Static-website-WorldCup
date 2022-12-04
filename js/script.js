@@ -718,6 +718,12 @@ function newClassForm(){
 	document.getElementById("matchFormBackground").style.display="block";
 	document.getElementById("ClassForm").style.display="block";
 	
+	let team = document.getElementById("selectClassTeam").value;
+	let MJClass = document.getElementById("MJClass").value;
+	let GClass = document.getElementById("GClass").value;
+	let NClass = document.getElementById("NClass").value;
+	let PClass = document.getElementById("PClass").value;
+	let PTSClass = document.getElementById("PTSClass").value;
 	
 }
 
