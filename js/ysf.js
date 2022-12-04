@@ -53,7 +53,7 @@ var Teams = [];
 	Teams[0].push(new Joueur("Abdelhamide SABIRI", "MDC", 23, 183, 11, "/IMG/SABIRI.webp"));
 	Teams[0].push(new Joueur("Ilias CHAIR", "MOC", 23, 183, 26, "/IMG/CHAIR.webp"));
 	Teams[0].push(new Joueur("Bilal EL KHANNOUS ", "MOC", 18, 180, 10, "/IMG/KHANNOUS.webp"));
-	Teams[0].push(new Joueur("Yahya JABRANE", "MDC", 29, 187, 22, n"/IMG/JABRANE.webp"ull));
+	Teams[0].push(new Joueur("Yahya JABRANE", "MDC", 29, 187, 22, "/IMG/JABRANE.webp"));
 	Teams[0].push(new Joueur("Walid CHEDDIRA", "AT", 21, 187, "/IMG/CHEDDIRA.webp"));
 	Teams[0].push(new Joueur("Abderrazak HAMDALLAH", "AT", 32, "/IMG/HAMDALLAH.webp", null));
 	Teams[0].push(new Joueur("Zakaria ABOUKHLAL", "AD", 24, 179, "/IMG/ABOUKHLAL.webp"));
