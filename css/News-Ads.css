@@ -10,4 +10,6 @@
 	transition: width 0.5s ease-in-out;
 	overflow-y: auto;
 	overflow-x: hidden;
+	padding: 15px;
+	margin-bottom: 30px;
 }

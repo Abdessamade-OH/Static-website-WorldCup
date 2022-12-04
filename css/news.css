@@ -46,7 +46,9 @@
 float: left;
 margin: 5px;
 margin-bottom: 0px;
-width: 30%;
+width: 35%;
+min-width: 300px;
+object-fit: cover;
 }
 
 .text{
