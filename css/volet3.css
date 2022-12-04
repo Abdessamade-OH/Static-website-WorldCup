@@ -1,0 +1,400 @@
+.volet3{
+	position: absolute;
+	top: -250px;
+	visibility: hidden;
+	left: 0;
+	width: 100%;
+	height: 225px;
+	transition: all 0.4s  ease-in-out;
+	background-color: var(--color-gray);
+	z-index:2;
+}
+.volet3 i{
+	cursor: pointer;
+}
+.left{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	border: 1px solid black;
+}
+.left-card{
+	position: relative;
+	top: 11.25px;
+	height: 90%;
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	background-color: linen;
+	box-shadow: 0 0 5px 5px black;
+	border-radius: 20px;
+}
+.left-card img{
+	margin-top: 5px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.left-card *{
+	margin: 0;
+	padding: 0;
+}
+
+.image{
+	position: absolute;
+	height: 100%;
+	//border: 1px solid black;
+	background-color: inherit;
+}
+.image-card{
+	position: relative;
+	top: 5.625px;
+	height: 95%;
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	background-color: linen;
+	box-shadow: 0 0 5px 5px black;
+	border-radius: 20px;
+}
+.image img{
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 1px solid var(--color-black);
+	box-shadow: 0 0 5px 5px var(--color-darkGreen);
+}
+
+.image-container{
+	height:100%;
+	width: 429.4px;
+	position: relative;
+	border: 2 solid yellow;
+}
+.player{
+	position: absolute;
+	top :0;
+	left: 0;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: -1.5px;
+	font-size: 12px;
+	font-family: sans-serif;
+	color: var(--color-black);
+	cursor: pointer;
+}
+area{
+	cursor: pointer;
+}
+.min-card{
+	margin-top: 3px;
+	position: absolute;
+	display: none;
+	width: 80px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	background-color: linen;
+	box-shadow: 0 0 5px black;
+	border-radius: 10px;
+	font-size: 0.53rem;
+	display: none;
+	z-index:1;
+}
+.player:hover .min-card{
+	display:flex;
+}
+.min-card:hover{
+	visibility: hidden;
+}
+.min-card *{
+	margin: 0;
+	padding: 0;
+}
+.min-card img{
+	margin-top: 2.5px;
+	height: 60px;
+	box-shadow: 0 0 3px black;
+	border-radius: 7px;
+	object-fit: cover;
+}
+#player-1{
+	top: 104px;
+	left: 28px;
+	margin-top: 10px;
+	margin-left: -27px;
+}
+#player-1:hover{
+	color: var(--color-black);
+}
+#player-2{
+	top: 173px;
+	left: 153px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-3{
+	top: 126px;
+	left: 117px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-4{
+	top: 75px;
+	left: 117px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-5{
+	top: 32px;
+	left: 153px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-6{
+	top: 144px;
+	left: 205px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-7{
+	top: 69px;
+	left: 204px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-8{
+	top: 104px;
+	left: 250px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-9{
+	top: 163px;
+	left: 310px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-10{
+	top: 105px;
+	left: 344px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+#player-11{
+	top: 42px;
+	left: 310px;
+	margin-top: 10px;
+	margin-left: -30px;
+}
+
+.team-title{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-black);
+}
+.team-title h1{
+	padding: 0 0.7rem;
+}
+
+.team-info{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.team-info p{
+	font-size: 2rem;
+	margin: 0.2rem 0.2rem;
+	text-align: center;
+	font-weight: bold;
+	color: var(--color-black);
+	overflow-y: auto;
+}
+
+.right{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	border: 1px solid black;
+}
+.right-card{
+	position: relative;
+	top: 5.625px;
+	height: 95%;
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background-color: linen;
+	box-shadow: 0 0 5px 5px black;
+	border-radius: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.right-card ul{
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+	text-align: center;
+	list-style-type: none;
+}
+.right-card li{
+	text-align: left;
+	margin-bottom: 8px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 40px 1fr 1fr;
+	text-align: left;
+	column-gap: 10px;
+}
+/*.right-card li:nth-of-type(odd){
+	background-color:	gray;
+}*/
+.right-card h2{
+	margin: 0;
+	margin-left: 20px;
+}
+.right-card h2:first-of-type{
+	margin-top: 20px;
+}
+.role{
+	background-color: var(--color-gray);
+	color: var(--color-red);
+	border: 1px solid var(--color-black);
+	border-radius: 3px;
+	margin-right: 5px;
+	width: 35px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+}
+.openVol3{
+	position: fixed;
+	right: 37%;
+	visibility: hidden;
+	font-size: 25px;
+}
+.closeVol3{
+	position: absolute;
+	right: 20%;
+	bottom: -3.5px;
+	font-size: 25px;
+}
+
+
+@media only screen and (max-width: 600px){
+	.right{
+		width: 0;
+		visibility: hidden;
+	}
+	.left{
+		width: 0;
+	}
+	.image{
+		width: 100%;
+		left: 0%;
+	}
+}
+@media only screen and (min-width: 600px){
+	.right{
+		width: 25%;
+		visibility: visible;
+	}
+	.left{
+		width: 0;
+		visibility: hidden;
+	}
+	.image{
+		width: 75%;
+		left: 0%;
+	}
+}
+.image h1, p{
+		display: block;
+}
+@media only screen and (min-width: 750px){
+	.right{
+		width: 25%;
+	}
+	.left{
+		width: 15%;
+		visibility: visible;
+	}
+	.image{
+		width: 60.2%;
+		left: 15%;
+	}
+	
+}
+@media only screen and (max-width: 750px){
+	.right-card li{
+		margin-left: 8px;
+		font-size: 0.7rem;
+	}
+}
+@media only screen and (max-width: 950px){
+	.team-title{
+		display: none;
+	}
+	.left-card img{
+		height: 45%;
+	}
+	.right-card li{
+		margin-left: 15px;
+		font-size: 0.8rem;
+	}
+}
+@media only screen and (min-width: 950px){
+	.team-title{
+		display: flex;
+	}
+	.team-title h1{
+		font-size: 2rem;
+	}
+	.flag{
+		font-size: 6rem;
+	}
+	.left-card img{
+		height: 55%;
+	}
+	.right-card li{
+		margin-left: 25px;
+		font-size: 1.2rem;
+	}
+}
+@media only screen and (max-width: 1250px){
+	.team-info{
+		display: none;
+	}
+}
+@media only screen and (min-width: 1250px){
+	.team-title{
+		margin:0 1rem;
+	}
+	.team-info{
+		display: flex;
+	}
+	.team-title h1{
+		font-size: 2rem;
+	}
+	.flag{
+		font-size: 6rem;
+	}
+	.left-card img{
+		height: 70%;
+	}
+}
+
+
