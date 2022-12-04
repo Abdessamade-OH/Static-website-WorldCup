@@ -162,6 +162,8 @@ function closeVol5(){
 	}*/
 	
 	document.getElementById("card-close").style.left="10%";
+	
+	document.getElementById("News-Ads").style.width="100%";
 }
 function openVol5(){
 	let vol5= document.getElementById("volet5");
@@ -186,6 +188,8 @@ function openVol5(){
 	/*if(!over860){
 		document.getElementById("FT-card").style.left="calc( ( 100% - 500px) / 4 )";
 	}*/
+	
+	document.getElementById("News-Ads").style.width="75%";
 }
 
 function closeVol2(){
@@ -273,6 +277,10 @@ function openVol3(){
 	}
 	table();
 	
+	document.getElementById("News-Ads").style.display="none";
+	
+	document.getElementById("volet4").style.display="block";
+	
 }
 
 function classement(){
@@ -283,6 +291,7 @@ function classement(){
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
 	document.getElementById("match").style.display='none';
+	document.getElementById("News-Ads").style.display="none";
 	
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
@@ -290,9 +299,60 @@ function classement(){
 	closePlayerCard();
 	
 	document.getElementById("classement").style.display='block';
+	document.getElementById("volet4").style.display="block";
 	
 	document.getElementById("volet4").style.backgroundColor="#cecece";
+	
+	let defMod = document.getElementById("defaultClassModify");
+	if (defMod){
+		defMod.addEventListener('click', function modifyMatch(event) {
+	  		console.log('Class: Modifed');
+	  		
+	  		openClassForm();
+		
+			let button = document.getElementById("modifyClass");
+			button.style.display="block";
+			let rowData = this.parentElement.parentElement.children;
+			let	firstData = this.parentElement.children;
+			let addButton = document.getElementById("submitClass");
+			addButton.style.display="none";
+			button.addEventListener("click", function wtv(event){
+			
+				let Mteam = document.getElementById("selectClassTeam").value;
+				let MMJClass = document.getElementById("MJClass").value;
+				let MGClass = document.getElementById("GClass").value;
+				let MNClass = document.getElementById("NClass").value;
+				let MPClass = document.getElementById("PClass").value;
+				let MPTSClass = document.getElementById("PTSClass").value;
+				
+				firstData[0].innerHTML = Mteam;
+				rowData[1].innerHTML =  MMJClass;
+				rowData[2].innerHTML =  MGClass;
+				rowData[3].innerHTML =  MNClass;
+				rowData[4].innerHTML =  MPClass;
+				rowData[5].innerHTML =  MPTSClass;
+				
+				button.style.display="none";
+				addButton.style.display="block";
+			});
+	  		
+	  	});
+		
+	}
+	
+	let defDel = document.getElementById("defaultClassDelete");
+	if(defDel){
+		defDel.addEventListener('click', function deleteMatch(event) {
+  			console.log('Class: Deleted');
+  		
+  			this.parentElement.parentElement.remove();
+		});
+	}
+	
+	
 }
+
+
 function acceuil(){
 	console.log("Acceuil: done.");
 	closeVol2();
@@ -301,6 +361,7 @@ function acceuil(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("match").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
+	document.getElementById("News-Ads").style.display="none";
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
@@ -308,6 +369,7 @@ function acceuil(){
 	closePlayerCard();
 	
 	document.getElementById("acceuil").style.display='flex';
+	document.getElementById("volet4").style.display="block";
 }
 function match(){
 	console.log("Match: done.");
@@ -317,6 +379,7 @@ function match(){
 	document.getElementById("classement").style.display='none';
 	document.getElementById("acceuil").style.display='none';
 	document.getElementById("CONTAIN").style.display='none';
+	document.getElementById("News-Ads").style.display="none";
 
 	document.getElementById("openButton2").style.visibility="hidden";
 	document.getElementById("openButton3").style.visibility="hidden";
@@ -324,8 +387,52 @@ function match(){
 	closePlayerCard();
 	
 	document.getElementById("match").style.display='block';
+	document.getElementById("volet4").style.display="block";
 	
 	document.getElementById("volet4").style.backgroundColor="brown";
+	
+	let defMod = document.getElementById("defaultModify");
+	if (defMod){
+		defMod.addEventListener('click', function modifyMatch(event) {
+	  		console.log('Match: Modifed');
+	  		
+	  		let matchData = this.parentElement.children;
+	  		console.log(matchData[2]);
+	  		openMatchModifyForm();
+	  		let modButton = document.getElementById("modifyButton");
+	  		modButton.addEventListener('click', function applyValues(event){
+	  		
+		  		let firstTeamM = document.getElementById("ModifedfirstTeam").value;
+		  		let secondTeamM = document.getElementById("ModifedsecondTeam").value;
+		  		let matchDateM = document.getElementById("ModifedmatchDate").value;
+		   		let matchTimeM = document.getElementById("ModifedmatchTime").value;
+	  		
+	  		
+	  			matchData[2].innerHTML=firstTeamM + " VS " + secondTeamM;
+	  			matchData[3].innerHTML=matchDateM + " | " + matchTimeM;
+	  		});
+
+		});
+		
+	}
+	
+	let defDel = document.getElementById("defaultDelete");
+	if(defDel){
+		defDel.addEventListener('click', function deleteMatch(event) {
+  			console.log('Match: Deleted');
+  		
+  			this.parentElement.parentElement.remove();
+		});
+	}
+	
+	let defGrpDel = document.getElementById("defaultGroupDelete");
+	if(defGrpDel){
+		defGrpDel.addEventListener('click', function deleteGroup(event) {
+  			console.log('Group: Deleted');
+  		
+  			this.parentElement.remove();
+		});
+	}
 }
 
 
@@ -371,19 +478,22 @@ function formTab(event){
 	const x= parseInt(a.getAttribute('value'));
 	console.log("Form: done");
 	document.getElementById("newName").value=Teams[teamshowed][x].Nom;
-	document.getElementById("newNum").value=Teams[teamshowed][x].Numero;
+	document.getElementById("newNumero").value=Teams[teamshowed][x].Numero;
 	document.getElementById("newAge").value=Teams[teamshowed][x].Age;
 	document.getElementById("newDesc").value=Teams[teamshowed][x].Description;
 	document.getElementById("newPoste").value=Teams[teamshowed][x].Poste;
+	document.getElementById("newPic").value=Teams[teamshowed][x].pic;
 	document.getElementById("form-tab").style.display="flex";
 	document.getElementById("div-tab").style.display="none";
 	let xd=0;
 	document.getElementById("editer").addEventListener("click",() => {
 		if(!xd){
 		console.log(x);
+		console.log(document.getElementById("newNum").value);
 		Teams[teamshowed][x].Nom=document.getElementById("newName").value;
-		Teams[teamshowed][x].Numero=document.getElementById("newNum").value;
+		Teams[teamshowed][x].Numero=document.getElementById("newNumero").value;
 		Teams[teamshowed][x].Poste=document.getElementById("newPoste").value;
+		
 		Teams[teamshowed][x].pic=document.getElementById("newPic").value;
 		Teams[teamshowed][x].Age=document.getElementById("newAge").value;
 		Teams[teamshowed][x].Description=document.getElementById("newDesc").value;
@@ -433,5 +543,324 @@ function closePlayerCard(){
 	openCard = false;
 }
 
+function closeMatchForm(){
+	document.getElementById("matchForm").style.display="none";
+	document.getElementById("matchFormBackground").style.display="none";
+}
+function openMatchForm(){
+	document.getElementById("matchForm").style.display="flex";
+	document.getElementById("matchFormBackground").style.display="block";
+}
+
+function openMatchModifyForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	let form = document.getElementById("modifyForm")
+	form.style.display="flex";
+	
+}
+function closeModifyForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("modifyForm").style.display="none";
+}
+
+function addMatch(){
+	let grp = document.getElementById("selectGroup").value;
+	let team1 = document.getElementById("firstTeam").value;
+	let team2 = document.getElementById("secondTeam").value;
+	let date = document.getElementById("matchDate").value;
+	let time = document.getElementById("matchTime").value;
+	
+	console.log("Match form: done");
+	
+	let group=document.createElement("div");
+	group.classList.add("group");
+	
+	let container = document.createElement("div");
+	container.classList.add("container0");
+	
+	let card = document.createElement("div");
+	card.classList.add("card");
+	
+	let vs = document.createElement("span");
+	vs.classList.add("match");
+	vs.setAttribute("id", "vs");
+	vs.innerHTML=team1 + "VS" + team2;
+	
+	let dateSpan = document.createElement("span");
+	dateSpan.classList.add("dateHeure");
+	dateSpan.setAttribute("id", "dateNtime");
+	dateSpan.innerHTML= date + " | " + time;
+	
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash');
+	deleteButton.classList.add('deleteButton');
+	deleteButton.addEventListener('click', function deleteMatch(event) {
+  		console.log('Match: Deleted');
+  		
+  		this.parentElement.parentElement.remove();
+	});
+	
+	let modifyButton = document.createElement("i");
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square');
+	modifyButton.classList.add('modifyButton'); 
+	modifyButton.addEventListener('click', function modifyMatch(event) {
+  		console.log('Match: Modifed');
+  		
+  		let matchData = this.parentElement.children;
+  		console.log(matchData[2]);
+  		openMatchModifyForm();
+  		let modButton = document.getElementById("modifyButton");
+  		modButton.addEventListener('click', function applyValues(event){
+  		
+	  		let firstTeamM = document.getElementById("ModifedfirstTeam").value;
+	  		let secondTeamM = document.getElementById("ModifedsecondTeam").value;
+	  		let matchDateM = document.getElementById("ModifedmatchDate").value;
+	   		let matchTimeM = document.getElementById("ModifedmatchTime").value;
+  		
+  		
+  			matchData[2].innerHTML=firstTeamM + " VS " + secondTeamM;
+  			matchData[3].innerHTML=matchDateM + " | " + matchTimeM;
+  		});
+
+	});
+	
+	card.appendChild(deleteButton);
+	card.appendChild(modifyButton);
+	
+	card.appendChild(vs);
+	card.appendChild(dateSpan);
+	
+	
+	
+	
+	container.appendChild(card);
+	
+	let title = document.createElement("h2");
+	title.classList.add("title");
+	title.innerHTML= grp;
+	
+	let deleteGroupButton = document.createElement("i");
+	deleteGroupButton.classList.add('fas');
+	deleteGroupButton.classList.add('fa-trash')
+	deleteGroupButton.classList.add('deleteGroupButton');
+	deleteGroupButton.addEventListener('click', function deleteGroup(event) {
+  		console.log('Group: Deleted');
+  		
+  		this.parentElement.remove();
+	});
+	
+	group.appendChild(deleteGroupButton);
+	
+	let id = grp.replace(/ /g, "");
+	let check = document.getElementById(id);
+	
+	if(check){
+		console.log("exists");
+		check.appendChild(container);
+	}
+	else{
+		group.setAttribute("id", id);
+		group.appendChild(title);
+		group.appendChild(container);
+		let mainContainer = document.getElementById("match");
+		mainContainer.appendChild(group);
+	}
+}
 
 
+
+function openClassForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	document.getElementById("ClassForm").style.display="flex";
+}
+
+function newClassForm(){
+	
+	let team = document.getElementById("selectClassTeam").value;
+	let MJClass = document.getElementById("MJClass").value;
+	let GClass = document.getElementById("GClass").value;
+	let NClass = document.getElementById("NClass").value;
+	let PClass = document.getElementById("PClass").value;
+	let PTSClass = document.getElementById("PTSClass").value;
+	
+	let row = document.createElement("tr");
+	
+	let data1 = document.createElement("td");
+	let data2 = document.createElement("td");
+	let data3 = document.createElement("td");
+	let data4 = document.createElement("td");
+	let data5 = document.createElement("td");
+	let data6 = document.createElement("td");
+	
+	
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash');
+	deleteButton.addEventListener("click", function deleteClass(event){
+		this.parentElement.parentElement.remove();
+		console.log('Class: Deleted');
+	});
+	
+	let modifyButton = document.createElement("i");
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square');
+	
+	modifyButton.addEventListener("click", function modifyClass(event){
+		console.log('Class: Modifed');
+		openClassForm();
+		
+		let button = document.getElementById("modifyClass");
+		button.style.display="block";
+		let rowData = this.parentElement.parentElement.children;
+		let	firstData = this.parentElement.children;
+		let addButton = document.getElementById("submitClass");
+		addButton.style.display="none";
+		button.addEventListener("click", function wtv(event){
+			
+			let Mteam = document.getElementById("selectClassTeam").value;
+			let MMJClass = document.getElementById("MJClass").value;
+			let MGClass = document.getElementById("GClass").value;
+			let MNClass = document.getElementById("NClass").value;
+			let MPClass = document.getElementById("PClass").value;
+			let MPTSClass = document.getElementById("PTSClass").value;
+			
+			firstData[0].innerHTML = Mteam;
+			rowData[1].innerHTML =  MMJClass;
+			rowData[2].innerHTML =  MGClass;
+			rowData[3].innerHTML =  MNClass;
+			rowData[4].innerHTML =  MPClass;
+			rowData[5].innerHTML =  MPTSClass;
+			
+			button.style.display="none";
+			addButton.style.display="block";
+		});
+		
+		
+	});
+	
+	let TeamData = document.createElement("span");
+	TeamData.innerHTML = team + " ";
+	
+	data1.appendChild(TeamData);
+	data1.appendChild(modifyButton);
+	data1.appendChild(deleteButton);
+	data2.innerHTML = MJClass;
+	data3.innerHTML = GClass;
+	data4.innerHTML = NClass;
+	data5.innerHTML = PClass;
+	data6.innerHTML = PTSClass;
+	
+	row.appendChild(data1);
+	row.appendChild(data2);
+	row.appendChild(data3);
+	row.appendChild(data4);
+	row.appendChild(data5);
+	row.appendChild(data6);
+	
+	let body = document.getElementById("ClassBody");
+	
+	body.appendChild(row);
+	
+}
+
+function closeClassForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("ClassForm").style.display="none";
+}
+
+
+function openNews(index){
+	closeVol2();
+	closeVol3();
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+	document.getElementById("volet4").style.display="none";
+	
+	let news = document.getElementsByClassName("news");
+	for(let i = 0; i<news.length; i++){
+		news[i].style.display = "none";
+	}
+	let ads = document.getElementsByClassName("ads");
+	for(let i = 0; i<ads.length; i++){
+		ads[i].style.display = "none";
+	}
+	
+	document.getElementById("News-Ads").style.display="block";
+	
+	switch(index){
+		case 1:
+			document.getElementById("news1").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+		case 2:
+			document.getElementById("news2").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+		case 3:
+			document.getElementById("news3").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+		case 4:
+			document.getElementById("news4").style.display="flex";
+			console.log("News " + index + "launched");
+			break;
+	}
+	
+}
+
+function openAds(index){
+	closeVol2();
+	closeVol3();
+	document.getElementById("openButton2").style.visibility="hidden";
+	document.getElementById("openButton3").style.visibility="hidden";
+	document.getElementById("volet4").style.display="none";
+	
+	let news = document.getElementsByClassName("news");
+	for(let i = 0; i<news.length; i++){
+		news[i].style.display = "none";
+	}
+	
+	let ads = document.getElementsByClassName("ads");
+	for(let i = 0; i<ads.length; i++){
+		ads[i].style.display = "none";
+	}
+	
+	document.getElementById("News-Ads").style.display="block";
+	
+	switch(index){
+		case 1:
+			console.log("Ad " + index + "launched");
+			break;
+		case 2:
+			document.getElementById("ads2").style.display = "flex";
+			console.log("Ad " + index + "launched");
+			break;
+		case 3:
+			console.log("Ad " + index + "launched");
+			break;
+		case 4:
+			console.log("Ad " + index + "launched");
+			break;
+		case 5:
+			console.log("Ad " + index + "launched");
+			break;
+		case 6:
+			console.log("Ad " + index + "launched");
+			break;
+		case 7:
+			console.log("Ad " + index + "launched");
+			break;
+		case 8:
+			console.log("Ad " + index + "launched");
+			break;
+		case 9:
+			console.log("Ad " + index + "launched");
+			break;
+		case 10:
+			console.log("Ad " + index + "launched");
+			break;
+	}
+	
+}

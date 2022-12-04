@@ -1,11 +1,77 @@
 /* --------Contenaire principale------- */
 .mainContainer{
 	display: none;
-    background-color: brown;
+    background-color: var(--color-gray);
     position: relative;
     width: 100%;
 }
+.newMatchButton{
+	position: absolute;
+	top: 20px;
+	left: 40%;
+	width: 80px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    color:#984063 ;
+	z-index: 3;
+}
+.NewMatchForm, .modifyForm, .ClassForm{
+	display: none;
+	position: fixed;
+	width: 250px;
+	height: 300px;
+	top: calc((100% - 250px) / 2 );
+	left: calc((100% - 300px) / 2 );
+	border: 2px solid yellow;
+	border-radius: 8px;
+	z-index: 5;
+	background-color: white;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.ClassForm{
+	height: 350px;
+	top: calc((100% - 300px) / 2 );
+}
+#modifyClass{
+	display: none;
+}
+.NewMatchForm label, .modifyForm label, .ClassForm label{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 3px;
+}
 
+.matchFormBackground{
+	display:none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255, 0.5);
+	z-index: 4;
+}
+.NewMatchForm i{
+	position: fixed;
+	top: calc(((100% - 250px) / 2 ) + 20px);
+	left: calc(((100% - 300px) / 2 ) + 20px);
+	z-index: 7;
+}
+.modifyForm i{
+	position: fixed;
+	top: calc(((100% - 270px) / 2 ) + 20px);
+	left: calc(((100% - 320px) / 2 ) + 20px);
+	z-index: 7;
+}
+.modifyForm i{
+	position: fixed;
+	top: calc(((100% - 270px) / 2 ) + 20px);
+	left: calc(((100% - 320px) / 2 ) + 20px);
+	z-index: 7;
+}
 /* ------contenaire des cartes----- */
 .container0{
    display: flex;
@@ -23,24 +89,49 @@
     height: 100px;
    
     box-shadow: 5px 5px 20px black ;
-    color: brown;
-    background-color: wheat;
+    color: #984063;
+    background-color: antiquewhite;
     border-radius: 5px 43%;
     margin-left: -16px;
     width: 100%;
 }
+.deleteButton{
+	position: absolute;
+	top: 35%;
+	right: 25%;
+}
+.deleteButton:hover{
+	cursor: pointer;
+}
+.deleteGroupButton{
+	position: absolute;
+	top: 10%;
+	left: 15%;
+}
+.deleteGroupButton:hover{
+	cursor: pointer;
+}
+.modifyButton{
+	position: absolute;
+	top: 35%;
+	right: 35%;
+}
+.modifyButton:hover{
+	cursor: pointer;
+}
 /* ---------proprietees de temps------ */
 .dateHeure{
     font-size: large;
+    font-weight: bold;
     line-height: 20px;
     display: flex;
     justify-content: right;
 }
 
-.card:hover{
+/*.card:hover{
     cursor: pointer;
 
-}
+}*/
 /* --------proprietees des matches----- */
   .match{
     font-size: 405%;
@@ -53,6 +144,7 @@
 
 /* ------contenaire des groupes----- */
 .group{
+	position: relative;
     display: flex;
     flex-direction: column;
     gap: 26px;
@@ -61,32 +153,38 @@
 
 /* ------------------Ajuster la taille des cartes au fur et à mesure la taille de la fenêtre---------------- */
 
-
+@media  only screen and (min-width: 981px) {
+    .match{
+        font-size: 423%;
+        position: relative;
+        top: 13px;
+        left: 104px;
+    }
+    .card{
+        width: 66%;
+    }
+}
 @media  only screen and (max-width: 980px) {
     .match{
-        font-size: 383%;
+        font-size: 399%;
         position: relative;
         top: 13px;
-        left: 1px;
+        left: 116px;
+    }
+    .card{
+        width: 74%;
     }
 }
-@media  only screen and (max-width: 911px) {
-    .match{
-        font-size: 359%;
-        position: relative;
-        top: 13px;
-        left: 1px;
-    }
-}
+
 @media  only screen and (max-width: 867px) {
     .match{
-        font-size: 334%;
+        font-size: 385%;
         position: relative;
         top: 13px;
-        left: 1px;
+        left: 60px;
     }
 }
-@media  only screen and (max-width: 814px) {
+/* @media  only screen and (max-width: 814px) {
     .match{
         font-size: 308%;
         position: relative;
@@ -102,16 +200,16 @@
         top: 8px;
         left: 1px;
     }
-}
-@media  only screen and (max-width: 700px) {
+} */
+@media  only screen and (max-width: 690px) {
     .match{
-        font-size: 183%;
+        font-size: 279%;
         position: relative;
-        top: 31px;
-        left: 1px;
+        top: 12px;
+        left: 12px;
     }
     .dateHeure{
-        margin-top: 20%;
+        margin-top: 7%;
         margin-left: 10%;
     }
 

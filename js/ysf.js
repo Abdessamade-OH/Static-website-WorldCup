@@ -109,7 +109,7 @@ function showTeam(event, c) {
 			tc.setAttribute("value", index);
 			let pic = document.createElement("img");
 			pic.src = arr[index].pic;
-			tc.innerHTML = '<th><img src="' + arr[index].pic + '" alt="player image"></th><th>' + arr[index].Numero + '</th><th>' + arr[index].Nom + '</th><th><button onclick="formTab(event)">Editer</button><button onclick="modifyPlayer(event)">Modifier</button><button onclick="delPlayer(event)">Supprimer</button></th> '
+			tc.innerHTML = '<th><img src="' + arr[index].pic + '" alt="player image" style ="width:100px; height:130px;"></th><th>' + arr[index].Numero + '</th><th>' + arr[index].Nom + '</th><th><button onclick="formTab(event)">Editer</button><button onclick="modifyPlayer(event)">Modifier</button><button onclick="delPlayer(event)">Supprimer</button></th> '
 			tableau.appendChild(tc);
 		}
 	}

@@ -7,6 +7,7 @@
 	background-color: var(--color-gray);
 	//z-index: 5;
 	left: 65%;
+	
 }
 
 .player-card{
@@ -28,8 +29,16 @@
 	gap: 5px;
 	
 	
-	background-color: var(--color-white);
+	
 	border-radius: 8px;
+	
+	background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fseamless-pattern-of-soccer-football-traditional-sport-texture-of-ball-vector-id924473182%3Fk%3D6%26m%3D924473182%26s%3D612x612%26w%3D0%26h%3DFIaXKgE0zIjuHS8pxXlLJEWf3zo4llQyQZ4ZrS_ROzc%3D&f=1&nofb=1&ipt=bdc818c07a85ffe2b8e92031d65eef76d4fc5ce98599c73e6c9927fd703c9512&ipo=images");
+	background-attachment: fixed;
+	
+	border: 1px solid black;
+	
+	box-shadow: 0 0 8px 8px;
+	overflow-y: auto;
 }
 i{
 	cursor: pointer;
@@ -39,14 +48,16 @@ i{
 	top: 5%;
 	left: 3%;
 	z-index: 5;
+
 }
 
 .player-card img{
 	object-fit: cover;
-	max-height: 70%;
-	max-width: 70%;
+	max-height: 50%;
+	max-width: 50%;
 	border-radius: 8px;
 	flex-shrink: 1;
+	box-shadow: 0 0 10px 2px;
 }
 .TF-info{
 	display: flex;
@@ -54,10 +65,16 @@ i{
 	flex-wrap: nowrap;
 	min-height: 30%;
 	min-width: 35%;
-	justify-content: center;
-	align-items: space-evenly;
-	border: 2px solid black;
-	border-radius: 2px;
+	max-height: 30%;
+	max-width: 70%;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 1.5px solid rgba(0,0,0, 0.5);
+	border-radius: 3.5px;
+	background-color: var(--color-white);
+	box-shadow: 0 0 8px 5px;
+	font-weight: bold;
+	overflow: hidden;
 }
 .player-card h3,h4{
 	margin: 0;
