@@ -326,6 +326,48 @@ function match(){
 	document.getElementById("match").style.display='block';
 	
 	document.getElementById("volet4").style.backgroundColor="brown";
+	
+	let defMod = document.getElementById("defaultModify");
+	if (defMod){
+		defMod.addEventListener('click', function modifyMatch(event) {
+	  		console.log('Match: Modifed');
+	  		
+	  		let matchData = this.parentElement.children;
+	  		console.log(matchData[2]);
+	  		openMatchModifyForm();
+	  		let modButton = document.getElementById("modifyButton");
+	  		modButton.addEventListener('click', function applyValues(event){
+	  		
+		  		let firstTeamM = document.getElementById("ModifedfirstTeam").value;
+		  		let secondTeamM = document.getElementById("ModifedsecondTeam").value;
+		  		let matchDateM = document.getElementById("ModifedmatchDate").value;
+		   		let matchTimeM = document.getElementById("ModifedmatchTime").value;
+	  		
+	  		
+	  			matchData[2].innerHTML=firstTeamM + " VS " + secondTeamM;
+	  			matchData[3].innerHTML=matchDateM + " | " + matchTimeM;
+	  		});
+
+		});
+	}
+	
+	let defDel = document.getElementById("defaultDelete");
+	if(defDel){
+		defDel.addEventListener('click', function deleteMatch(event) {
+  			console.log('Match: Deleted');
+  		
+  			this.parentElement.parentElement.remove();
+		});
+	}
+	
+	let defGrpDel = document.getElementById("defaultGroupDelete");
+	if(defGrpDel){
+		defGrpDel.addEventListener('click', function deleteGroup(event) {
+  			console.log('Group: Deleted');
+  		
+  			this.parentElement.remove();
+		});
+	}
 }
 
 
@@ -436,5 +478,129 @@ function closePlayerCard(){
 	openCard = false;
 }
 
+function closeMatchForm(){
+	document.getElementById("matchForm").style.display="none";
+	document.getElementById("matchFormBackground").style.display="none";
+}
+function openMatchForm(){
+	document.getElementById("matchForm").style.display="flex";
+	document.getElementById("matchFormBackground").style.display="block";
+}
 
+function openMatchModifyForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	let form = document.getElementById("modifyForm")
+	form.style.display="flex";
+	
+}
+function closeModifyForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("modifyForm").style.display="none";
+}
+
+function addMatch(){
+	let grp = document.getElementById("selectGroup").value;
+	let team1 = document.getElementById("firstTeam").value;
+	let team2 = document.getElementById("secondTeam").value;
+	let date = document.getElementById("matchDate").value;
+	let time = document.getElementById("matchTime").value;
+	
+	console.log("Match form: done");
+	
+	let group=document.createElement("div");
+	group.classList.add("group");
+	
+	let container = document.createElement("div");
+	container.classList.add("container0");
+	
+	let card = document.createElement("div");
+	card.classList.add("card");
+	
+	let vs = document.createElement("span");
+	vs.classList.add("match");
+	vs.setAttribute("id", "vs");
+	vs.innerHTML=team1 + "VS" + team2;
+	
+	let dateSpan = document.createElement("span");
+	dateSpan.classList.add("dateHeure");
+	dateSpan.setAttribute("id", "dateNtime");
+	dateSpan.innerHTML= date + " | " + time;
+	
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash')
+	deleteButton.classList.add('deleteButton');
+	deleteButton.addEventListener('click', function deleteMatch(event) {
+  		console.log('Match: Deleted');
+  		
+  		this.parentElement.parentElement.remove();
+	});
+	
+	let modifyButton = document.createElement("i");
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square')
+	modifyButton.classList.add('modifyButton'); 
+	modifyButton.addEventListener('click', function modifyMatch(event) {
+  		console.log('Match: Modifed');
+  		
+  		let matchData = this.parentElement.children;
+  		console.log(matchData[2]);
+  		openMatchModifyForm();
+  		let modButton = document.getElementById("modifyButton");
+  		modButton.addEventListener('click', function applyValues(event){
+  		
+	  		let firstTeamM = document.getElementById("ModifedfirstTeam").value;
+	  		let secondTeamM = document.getElementById("ModifedsecondTeam").value;
+	  		let matchDateM = document.getElementById("ModifedmatchDate").value;
+	   		let matchTimeM = document.getElementById("ModifedmatchTime").value;
+  		
+  		
+  			matchData[2].innerHTML=firstTeamM + " VS " + secondTeamM;
+  			matchData[3].innerHTML=matchDateM + " | " + matchTimeM;
+  		});
+
+	});
+	
+	card.appendChild(deleteButton);
+	card.appendChild(modifyButton);
+	
+	card.appendChild(vs);
+	card.appendChild(dateSpan);
+	
+	
+	
+	
+	container.appendChild(card);
+	
+	let title = document.createElement("h2");
+	title.classList.add("title");
+	title.innerHTML= grp;
+	
+	let deleteGroupButton = document.createElement("i");
+	deleteGroupButton.classList.add('fas');
+	deleteGroupButton.classList.add('fa-trash')
+	deleteGroupButton.classList.add('deleteGroupButton');
+	deleteGroupButton.addEventListener('click', function deleteGroup(event) {
+  		console.log('Group: Deleted');
+  		
+  		this.parentElement.remove();
+	});
+	
+	group.appendChild(deleteGroupButton);
+	
+	let id = grp.replace(/ /g, "");
+	let check = document.getElementById(id);
+	
+	if(check){
+		console.log("exists");
+		check.appendChild(container);
+	}
+	else{
+		group.setAttribute("id", id);
+		group.appendChild(title);
+		group.appendChild(container);
+		let mainContainer = document.getElementById("match");
+		mainContainer.appendChild(group);
+	}
+}
 
