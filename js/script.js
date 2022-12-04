@@ -468,8 +468,23 @@ function addMatch(){
 	dateSpan.classList.add("dateHeure");
 	dateSpan.innerHTML= date + " | " + time;
 	
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash')
+	deleteButton.classList.add('deleteButton');
+	deleteButton.addEventListener('click', function deleteMatch(event) {
+  		console.log('Match: Deleted');
+  		
+  		this.parentElement.parentElement.remove();
+	});
+	
+	card.appendChild(deleteButton);
+	
 	card.appendChild(vs);
 	card.appendChild(dateSpan);
+	
+	
+	
 	
 	container.appendChild(card);
 	
@@ -477,9 +492,21 @@ function addMatch(){
 	title.classList.add("title");
 	title.innerHTML= grp;
 	
+	let deleteGroupButton = document.createElement("i");
+	deleteGroupButton.classList.add('fas');
+	deleteGroupButton.classList.add('fa-trash')
+	deleteGroupButton.classList.add('deleteGroupButton');
+	deleteGroupButton.addEventListener('click', function deleteGroup(event) {
+  		console.log('Group: Deleted');
+  		
+  		this.parentElement.remove();
+	});
+	
+	group.appendChild(deleteGroupButton);
 	
 	let id = grp.replace(/ /g, "");
 	let check = document.getElementById(id);
+	
 	if(check){
 		console.log("exists");
 		check.appendChild(container);
@@ -491,5 +518,5 @@ function addMatch(){
 		let mainContainer = document.getElementById("match");
 		mainContainer.appendChild(group);
 	}
-	
 }
+

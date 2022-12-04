@@ -70,7 +70,22 @@
     margin-left: -16px;
     width: 100%;
 }
-
+.deleteButton{
+	position: absolute;
+	top: 35%;
+	right: 25%;
+}
+.deleteButton:hover{
+	cursor: pointer;
+}
+.deleteGroupButton{
+	top: -100%;
+	left: 20px;
+	z-index: 7;
+}
+.deleteGroupButton:hover{
+	cursor: pointer;
+}
 /* ---------proprietees de temps------ */
 .dateHeure{
     font-size: large;
@@ -79,10 +94,10 @@
     justify-content: right;
 }
 
-.card:hover{
+/*.card:hover{
     cursor: pointer;
 
-}
+}*/
 /* --------proprietees des matches----- */
   .match{
     font-size: 405%;
