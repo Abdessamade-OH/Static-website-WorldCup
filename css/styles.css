@@ -529,8 +529,9 @@ footer:hover{
 	width: 15%;
 	height: calc(100vh - 150px);
 	z-index: 1;
-	border-right: 1px blue solid;
+	border-right: 1px  solid;
 	padding: 0;
+	box-shadow: 0 0 10px 3px;
 	background-color: #F4B29E;
 	overflow-x: hidden;
 	overflow-y: auto;

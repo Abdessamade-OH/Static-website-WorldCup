@@ -1,7 +1,7 @@
 /* --------Contenaire principale------- */
 .mainContainer{
 	display: none;
-    background-color: brown;
+    background-color: var(--color-gray);
     position: relative;
     width: 100%;
 }
@@ -10,6 +10,9 @@
 	top: 20px;
 	left: 40%;
 	width: 80px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    color:#984063 ;
 	z-index: 3;
 }
 .NewMatchForm, .modifyForm{
@@ -72,8 +75,8 @@
     height: 100px;
    
     box-shadow: 5px 5px 20px black ;
-    color: brown;
-    background-color: wheat;
+    color: #984063;
+    background-color: antiquewhite;
     border-radius: 5px 43%;
     margin-left: -16px;
     width: 100%;
