@@ -911,7 +911,7 @@
 							<label for="ModifedfirstTeam">
 								Sélectionner la première équipe.
 								<select id="ModifedfirstTeam" required>
-									<option disabled>Select Country</option>
+									<option disabled>Selectionner une Equipe</option>
 									<option value="🇦🇫">Afghanistan 🇦🇫</option>
 									<option value="🇦🇴">Angola 🇦🇴</option>
 									<option value="🇦🇱">Albania 🇦🇱</option>
@@ -1108,7 +1108,7 @@
 							<label for="ModifedsecondTeam">
 									Sélectionner la deuxième équipe.
 									<select required id="ModifedsecondTeam">
-										<option disabled>Select Country</option>
+										<option disabled>Selectionner une Equipe</option>
 										<option value="🇦🇫">Afghanistan 🇦🇫</option>
 										<option value="🇦🇴">Angola 🇦🇴</option>
 										<option value="🇦🇱">Albania 🇦🇱</option>
@@ -1326,7 +1326,8 @@
 					<i class='fas fa-window-close' onclick="closeClassForm()"></i>
 					<label for="CountrySelect">Select a country
 						<select id="selectClassTeam">
-							<option value="🇦🇫 Afghanistan ">Afghanistan 🇦🇫</option>
+							 <option disabled>Selectionner une Equipe</option>
+							 <option value="🇦🇫 Afghanistan ">Afghanistan 🇦🇫</option>
 							 <option value="🇦🇴 Angola ">Angola 🇦🇴</option>
 							 <option value="🇦🇱 Albania ">Albania 🇦🇱</option>
 							 <option value="🇦🇩 Andorra ">Andorra 🇦🇩</option>
@@ -1520,14 +1521,35 @@
 						</select>
 					</label>
 					
+					<label for="MJClass">
+						Enter le Nombre de MJC pour l'équipe:
+						<input type="number" id="MJClass" min="-10" max="10"/>
+					</label>
+					<label for="GClass">
+						Enter le Nombre de G pour l'équipe:
+						<input type="number" id="GClass" min="-10" max="10"/>
+					</label>
+					<label for="NClass">
+						Enter le Nombre de N pour l'équipe:
+						<input type="number" id="NClass" min="-10" max="10"/>
+					</label>
+					<label for="PClass">
+						Enter le Nombre de PC pour l'équipe:
+						<input type="number" id="PClass" min="-10" max="10"/>
+					</label>
+					<label for="PTSClass">
+						Enter le Nombre de PTS pour l'équipe:
+						<input type="number" id="PTSClass" min="-10" max="10"/>
+					</label>
 					
 				</div>
+				
 				<table class="styled-table">
 					
 					<thead>
 						<tr>
 
-							<th>Équipes <i class='fas fa-plus-square' onclick="classmentForm()"></i></th>
+							<th>Équipes <i class='fas fa-plus-square' onclick="newClassForm()"></i></th>
 							<th>MJ</th>
 							<th>G</th>
 							<th>N</th>
@@ -1536,7 +1558,7 @@
 						</tr>
 					</thead>
 					
-					<tbody>
+					<tbody id="ClassBody">
 						<tr>
 							<td>&#127474&#127462 Maroc <i class="fas fa-pen-square"></i> <i class="fas fa-trash"></i></td>
 							<td>3</td>
@@ -1545,6 +1567,8 @@
 							<td>0</td>
 							<td>9</td>
 						</tr>
+						
+						
 						
 					</tbody>
 				</table>

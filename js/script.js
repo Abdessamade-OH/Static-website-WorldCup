@@ -716,10 +716,13 @@ function openAds(index){
 
 function newClassForm(){
 	document.getElementById("matchFormBackground").style.display="block";
+	document.getElementById("ClassForm").style.display="block";
+	
 	
 }
 
-function CloseClassForm(){
+function closeClassForm(){
 	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("ClassForm").style.display="none";
 }
 
