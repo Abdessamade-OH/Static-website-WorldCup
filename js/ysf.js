@@ -43,21 +43,22 @@ var Teams = [];
 	Teams[0].push(new Joueur("Hakim ZIYECH", "AG", 28, 179, 7, "./IMG/ZIYACH.webp"));
 	Teams[0].push(new Joueur("Youssef EN-NSIRI", "AT", 24, 179, 9, "./IMG/NESYRI.webp"));
 	Teams[0].push(new Joueur("Soufiane BOUFAL", "AD", 29, 175, 23, "./IMG/BOUFOL.webp"));
-
+	
 	Teams[0].push(new Joueur("Mounir MOHAMDI", "GK", 32, 189, 14, "./IMG/mounir.webp"));
-	Teams[0].push(new Joueur("Ahmed-Reda TAGNAOUTI", "GK", 22, 192, 33, "/IMG/TAGNAOUTI.webp"));
-	Teams[0].push(new Joueur("Yahya ATIAT-ALAH", "DD", 27, 184, 21, "/IMG/ATIAT-ALAH.webp"));
-	Teams[0].push(new Joueur("Badr BANOUN", "DC", 28, 179, 18, "/IMG/BANOUN.webp"));
-	Teams[0].push(new Joueur("Jawad AL-YAMIQ", "DC", 29, 179, 20, "/IMG/AL-YAMIQ.webp"));
-	Teams[0].push(new Joueur("Achraf DARI", "DC", 25, 179, 21, "/IMG/DARI.webp"));
-	Teams[0].push(new Joueur("Abdelhamide SABIRI", "MDC", 23, 183, 11, "/IMG/SABIRI.webp"));
-	Teams[0].push(new Joueur("Ilias CHAIR", "MOC", 23, 183, 26, "/IMG/CHAIR.webp"));
-	Teams[0].push(new Joueur("Bilal EL KHANNOUS ", "MOC", 18, 180, 10, "/IMG/KHANNOUS.webp"));
-	Teams[0].push(new Joueur("Yahya JABRANE", "MDC", 29, 187, 22, n"/IMG/JABRANE.webp"ull));
-	Teams[0].push(new Joueur("Walid CHEDDIRA", "AT", 21, 187, "/IMG/CHEDDIRA.webp"));
-	Teams[0].push(new Joueur("Abderrazak HAMDALLAH", "AT", 32, "/IMG/HAMDALLAH.webp", null));
-	Teams[0].push(new Joueur("Zakaria ABOUKHLAL", "AD", 24, 179, "/IMG/ABOUKHLAL.webp"));
-	Teams[0].push(new Joueur("EZ ABDE", "AG", 21, 175, "/IMG/ABDE.webp"));
+
+	Teams[0].push(new Joueur("Ahmed-Reda TAGNAOUTI", "GK", 22, 192, 33, "./IMG/TAGNAOUTI.webp"));
+	Teams[0].push(new Joueur("Yahya ATIAT-ALAH", "DD", 27, 184, 21, "./IMG/ATIAT-ALAH.webp"));
+	Teams[0].push(new Joueur("Badr BANOUN", "DC", 28, 179, 18, "./IMG/BANOUN.webp"));
+	Teams[0].push(new Joueur("Jawad AL-YAMIQ", "DC", 29, 179, 20, "./IMG/AL-YAMIQ.webp"));
+	Teams[0].push(new Joueur("Achraf DARI", "DC", 25, 179, 21, "./IMG/DARI.webp"));
+	Teams[0].push(new Joueur("Abdelhamide SABIRI", "MDC", 23, 183, 11, "./IMG/SABIRI.webp"));
+	Teams[0].push(new Joueur("Ilias CHAIR", "MOC", 23, 183, 26, "./IMG/CHAIR.webp"));
+	Teams[0].push(new Joueur("Bilal EL KHANNOUS ", "MOC", 18, 180, 10, "./IMG/KHANNOUS.webp"));
+	Teams[0].push(new Joueur("Yahya JABRANE", "MDC", 29, 187, 22, "./IMG/JABRANE.webp"));
+	Teams[0].push(new Joueur("Walid CHEDDIRA", "AT", 21, 187, 21,"./IMG/CHEDDIRA.webp"));
+	Teams[0].push(new Joueur("Abderrazak HAMDALLAH", "AT", 32, 179, 16,"./IMG/HAMDALLAH.webp"));
+	Teams[0].push(new Joueur("Zakaria ABOUKHLAL", "AD", 24, 179,  14,"./IMG/ABOUKHLAL.webp"));
+	Teams[0].push(new Joueur("EZ ABDE", "AG", 21, 175,16  , "./IMG/ABDE.webp"));
 }
 
 function showTeam(event, c) {
