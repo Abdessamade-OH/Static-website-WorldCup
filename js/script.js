@@ -543,7 +543,7 @@ function addMatch(){
 	
 	let deleteButton = document.createElement("i");
 	deleteButton.classList.add('fas');
-	deleteButton.classList.add('fa-trash')
+	deleteButton.classList.add('fa-trash');
 	deleteButton.classList.add('deleteButton');
 	deleteButton.addEventListener('click', function deleteMatch(event) {
   		console.log('Match: Deleted');
@@ -553,7 +553,7 @@ function addMatch(){
 	
 	let modifyButton = document.createElement("i");
 	modifyButton.classList.add('fas');
-	modifyButton.classList.add('fa-pen-square')
+	modifyButton.classList.add('fa-pen-square');
 	modifyButton.classList.add('modifyButton'); 
 	modifyButton.addEventListener('click', function modifyMatch(event) {
   		console.log('Match: Modifed');
@@ -713,10 +713,12 @@ function openAds(index){
 	
 }
 
+function openClassForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	document.getElementById("ClassForm").style.display="flex";
+}
 
 function newClassForm(){
-	document.getElementById("matchFormBackground").style.display="block";
-	document.getElementById("ClassForm").style.display="block";
 	
 	let team = document.getElementById("selectClassTeam").value;
 	let MJClass = document.getElementById("MJClass").value;
@@ -724,6 +726,43 @@ function newClassForm(){
 	let NClass = document.getElementById("NClass").value;
 	let PClass = document.getElementById("PClass").value;
 	let PTSClass = document.getElementById("PTSClass").value;
+	
+	let row = document.createElement("tr");
+	
+	let data1 = document.createElement("td");
+	let data2 = document.createElement("td");
+	let data3 = document.createElement("td");
+	let data4 = document.createElement("td");
+	let data5 = document.createElement("td");
+	let data6 = document.createElement("td");
+	
+	let modifyButton = document.createElement("i");
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash');
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square');
+	
+	data1.innerHTML = team;
+	data1.appendChild(modifyButton);
+	data1.innerHTML += " ";
+	data1.appendChild(deleteButton);
+	data2.innerHTML = MJClass;
+	data3.innerHTML = GClass;
+	data4.innerHTML = NClass;
+	data5.innerHTML = PClass;
+	data6.innerHTML = PTSClass;
+	
+	row.appendChild(data1);
+	row.appendChild(data2);
+	row.appendChild(data3);
+	row.appendChild(data4);
+	row.appendChild(data5);
+	row.appendChild(data6);
+	
+	let body = document.getElementById("ClassBody");
+	
+	body.appendChild(row);
 	
 }
 

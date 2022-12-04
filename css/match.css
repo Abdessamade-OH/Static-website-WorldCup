@@ -27,6 +27,16 @@
 	justify-content: space-evenly;
 	align-items: center;
 }
+.ClassForm{
+	height: 350px;
+	top: calc((100% - 300px) / 2 );
+}
+.classForm i{
+	position: fixed;
+	top: calc(((100% - 280px) / 2 ) + 20px);
+	left: calc(((100% - 300px) / 2 ) + 20px);
+	z-index: 7;
+}
 .NewMatchForm label, .modifyForm label, .ClassForm label{
 	display: flex;
 	flex-direction: column;
