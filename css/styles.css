@@ -187,6 +187,12 @@ nav ul, .sous-menu ul{
 	.volet-header.teams {
 	font-size: 0.5rem;
 	}
+	.logo_img{
+    	height:50px;
+    	width: 100px;
+    	margin-left: -30px;
+	}
+
 }
 @media only screen and (min-width: 750px){
 	.sous-menu a{
@@ -239,6 +245,11 @@ nav ul, .sous-menu ul{
 	.volet-header.teams {
 		font-size: 0.7rem;
 	}
+	.logo_img{
+    height: 70px;
+    width: 154px;
+}
+
 }
 @media only screen and (min-width: 1200px){
 	.volet2 li{
@@ -324,13 +335,9 @@ nav li:hover{
 /*youssef*/
 .logo{
     position: relative;
-    left: 8%;
-    top: 34%;
+    left: 30px;
+    top: 30px;
     
-}
-.logo_img{
-    height: 70px;
-    width: 154px;
 }
 
 
@@ -529,8 +536,9 @@ footer:hover{
 	width: 15%;
 	height: calc(100vh - 150px);
 	z-index: 1;
-	border-right: 1px blue solid;
+	border-right: 1px  solid;
 	padding: 0;
+	box-shadow: 0 0 10px 3px;
 	background-color: #F4B29E;
 	overflow-x: hidden;
 	overflow-y: auto;

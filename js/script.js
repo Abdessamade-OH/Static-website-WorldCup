@@ -301,8 +301,58 @@ function classement(){
 	document.getElementById("classement").style.display='block';
 	document.getElementById("volet4").style.display="block";
 	
-	document.getElementById("volet4").style.backgroundColor="#cecece";
+	//document.getElementById("volet4").style.backgroundColor="#cecece";
+	
+	let defMod = document.getElementById("defaultClassModify");
+	if (defMod){
+		defMod.addEventListener('click', function modifyMatch(event) {
+	  		console.log('Class: Modifed');
+	  		
+	  		openClassForm();
+		
+			let button = document.getElementById("modifyClass");
+			button.style.display="block";
+			let rowData = this.parentElement.parentElement.children;
+			let	firstData = this.parentElement.children;
+			let addButton = document.getElementById("submitClass");
+			addButton.style.display="none";
+			button.addEventListener("click", function wtv(event){
+			
+				let Mteam = document.getElementById("selectClassTeam").value;
+				let MMJClass = document.getElementById("MJClass").value;
+				let MGClass = document.getElementById("GClass").value;
+				let MNClass = document.getElementById("NClass").value;
+				let MPClass = document.getElementById("PClass").value;
+				let MPTSClass = document.getElementById("PTSClass").value;
+				
+				firstData[0].innerHTML = Mteam;
+				rowData[1].innerHTML =  MMJClass;
+				rowData[2].innerHTML =  MGClass;
+				rowData[3].innerHTML =  MNClass;
+				rowData[4].innerHTML =  MPClass;
+				rowData[5].innerHTML =  MPTSClass;
+				
+				button.style.display="none";
+				addButton.style.display="block";
+			});
+	  		
+	  	});
+		
+	}
+	
+	let defDel = document.getElementById("defaultClassDelete");
+	if(defDel){
+		defDel.addEventListener('click', function deleteMatch(event) {
+  			console.log('Class: Deleted');
+  		
+  			this.parentElement.parentElement.remove();
+		});
+	}
+	
+	
 }
+
+
 function acceuil(){
 	console.log("Acceuil: done.");
 	closeVol2();
@@ -339,7 +389,7 @@ function match(){
 	document.getElementById("match").style.display='block';
 	document.getElementById("volet4").style.display="block";
 	
-	document.getElementById("volet4").style.backgroundColor="brown";
+	//document.getElementById("volet4").style.backgroundColor="brown";
 	
 	let defMod = document.getElementById("defaultModify");
 	if (defMod){
@@ -409,7 +459,7 @@ function table(){
 	else
 		document.getElementById("CONTAIN").style.width="100%";
 		
-	document.getElementById("volet4").style.backgroundColor="#cecece";
+	//document.getElementById("volet4").style.backgroundColor="#cecece";
 }
 
 function group(grp){
@@ -556,7 +606,7 @@ function addMatch(){
 	
 	let deleteButton = document.createElement("i");
 	deleteButton.classList.add('fas');
-	deleteButton.classList.add('fa-trash')
+	deleteButton.classList.add('fa-trash');
 	deleteButton.classList.add('deleteButton');
 	deleteButton.addEventListener('click', function deleteMatch(event) {
   		console.log('Match: Deleted');
@@ -566,7 +616,7 @@ function addMatch(){
 	
 	let modifyButton = document.createElement("i");
 	modifyButton.classList.add('fas');
-	modifyButton.classList.add('fa-pen-square')
+	modifyButton.classList.add('fa-pen-square');
 	modifyButton.classList.add('modifyButton'); 
 	modifyButton.addEventListener('click', function modifyMatch(event) {
   		console.log('Match: Modifed');
@@ -631,6 +681,108 @@ function addMatch(){
 		mainContainer.appendChild(group);
 	}
 }
+
+
+
+function openClassForm(){
+	document.getElementById("matchFormBackground").style.display="block";
+	document.getElementById("ClassForm").style.display="flex";
+}
+
+function newClassForm(){
+	
+	let team = document.getElementById("selectClassTeam").value;
+	let MJClass = document.getElementById("MJClass").value;
+	let GClass = document.getElementById("GClass").value;
+	let NClass = document.getElementById("NClass").value;
+	let PClass = document.getElementById("PClass").value;
+	let PTSClass = document.getElementById("PTSClass").value;
+	
+	let row = document.createElement("tr");
+	
+	let data1 = document.createElement("td");
+	let data2 = document.createElement("td");
+	let data3 = document.createElement("td");
+	let data4 = document.createElement("td");
+	let data5 = document.createElement("td");
+	let data6 = document.createElement("td");
+	
+	
+	let deleteButton = document.createElement("i");
+	deleteButton.classList.add('fas');
+	deleteButton.classList.add('fa-trash');
+	deleteButton.addEventListener("click", function deleteClass(event){
+		this.parentElement.parentElement.remove();
+		console.log('Class: Deleted');
+	});
+	
+	let modifyButton = document.createElement("i");
+	modifyButton.classList.add('fas');
+	modifyButton.classList.add('fa-pen-square');
+	
+	modifyButton.addEventListener("click", function modifyClass(event){
+		console.log('Class: Modifed');
+		openClassForm();
+		
+		let button = document.getElementById("modifyClass");
+		button.style.display="block";
+		let rowData = this.parentElement.parentElement.children;
+		let	firstData = this.parentElement.children;
+		let addButton = document.getElementById("submitClass");
+		addButton.style.display="none";
+		button.addEventListener("click", function wtv(event){
+			
+			let Mteam = document.getElementById("selectClassTeam").value;
+			let MMJClass = document.getElementById("MJClass").value;
+			let MGClass = document.getElementById("GClass").value;
+			let MNClass = document.getElementById("NClass").value;
+			let MPClass = document.getElementById("PClass").value;
+			let MPTSClass = document.getElementById("PTSClass").value;
+			
+			firstData[0].innerHTML = Mteam;
+			rowData[1].innerHTML =  MMJClass;
+			rowData[2].innerHTML =  MGClass;
+			rowData[3].innerHTML =  MNClass;
+			rowData[4].innerHTML =  MPClass;
+			rowData[5].innerHTML =  MPTSClass;
+			
+			button.style.display="none";
+			addButton.style.display="block";
+		});
+		
+		
+	});
+	
+	let TeamData = document.createElement("span");
+	TeamData.innerHTML = team + " ";
+	
+	data1.appendChild(TeamData);
+	data1.appendChild(modifyButton);
+	data1.appendChild(deleteButton);
+	data2.innerHTML = MJClass;
+	data3.innerHTML = GClass;
+	data4.innerHTML = NClass;
+	data5.innerHTML = PClass;
+	data6.innerHTML = PTSClass;
+	
+	row.appendChild(data1);
+	row.appendChild(data2);
+	row.appendChild(data3);
+	row.appendChild(data4);
+	row.appendChild(data5);
+	row.appendChild(data6);
+	
+	let body = document.getElementById("ClassBody");
+	
+	body.appendChild(row);
+	
+}
+
+function closeClassForm(){
+	document.getElementById("matchFormBackground").style.display="none";
+	document.getElementById("ClassForm").style.display="none";
+}
+
 
 function openNews(index){
 	closeVol2();
@@ -725,4 +877,3 @@ function openAds(index){
 	}
 	
 }
-
